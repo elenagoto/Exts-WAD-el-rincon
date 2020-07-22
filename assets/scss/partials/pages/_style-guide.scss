@@ -1,0 +1,130 @@
+/* =================
+* STYLE GUIDE STYLE 
+==================== */
+
+/* === General === */
+
+.style-elmnt {
+  margin: 0 0 ($pulse * 3) 0;
+
+  h3 {
+  margin: 0 0 $pulse 0;
+}
+}
+
+
+
+
+/* === ATOMS === */
+/* 01. LOGO */
+
+.atom-logo {
+  .logo {
+    width: 16rem;
+    height: 6rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+}
+
+ .atom-logo--homepage .logo {
+   background: #afbac4 url("../images/index-mountain-lake-sample.jpg") no-repeat 50% 50%/cover;
+ }
+
+ .atom-logo--basic .logo{
+   border: 1px solid #afbac4;
+ }
+
+ .atom-logo--invert .logo {
+   background: #192127;
+ }
+
+
+
+/* 03. PALETTE */
+
+.atom-palette::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.palette {
+  float: left;
+  margin: 0 2rem 2rem 0;
+}
+
+
+/* 04. TYPOGRAPHY */
+
+.table {
+  th {
+    text-align: left;
+  }
+}
+
+.font__table {
+  td {
+    color: #192127;
+    padding: 0 2rem 0 0;
+  }
+
+  .glyph {
+    font-size: 12rem;
+    line-height: 1;
+    text-align: left;
+  }
+}
+
+
+.styles__table {
+  border-collapse: collapse;
+  width: 100%;
+
+  th .delta {
+    font-weight: bold;
+  }
+
+  td {
+    height: 7rem;
+    overflow: hidden;
+  }
+
+  th, td {
+    padding: 0 0.6rem 0 0;
+    border-bottom: solid 1px #e3e5e9;
+    * {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  tr {
+    th:last-child, td:last-child {
+      padding-right: 0;
+    }
+  }
+
+}
+
+.style-btn {
+  font-size: 1.3rem;
+  line-height: 1;
+  color: #192127;
+  text-transform: uppercase;
+}
+
+/* 05. LINKS */
+
+.atom-links {
+  display: block;
+  float: none;
+  margin: 0 0 ($pulse * 2) 0;
+
+  * {
+    display: block;
+  }
+}

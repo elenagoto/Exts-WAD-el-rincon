@@ -1,0 +1,59 @@
+/* ==============================
+ * HEADER
+================================= */
+.banner {
+  // border-bottom: 1px solid $gray-4;
+  // background-color: $white;
+  color: $gray-4;
+  padding: 0;
+  margin: 0 0 ($pulse * 3);
+}
+
+.global-header {
+  margin: 0 0 $pulse 0;
+  // border-bottom: 1px solid $gray-4;
+  padding: 0;
+
+  .content-wrapper {
+    flex-direction: column;
+  }
+
+  .logo {
+    float: left;
+    margin: 1rem $pulse 1rem 0;
+  }
+
+  .search {
+    float: left;
+    flex: 1 0 auto;
+    margin: 0 0 -1px 0;
+
+    @media screen and (min-width: 700px) {
+      margin-right: $pulse;
+    }
+  }
+
+  .social-media-header {
+    width: 100%;
+  }
+
+  .main-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .content-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+
+    // &::after {
+    //   content: '';
+    //   display: table;
+    //   clear: both;
+    // }
+  }
+
+}

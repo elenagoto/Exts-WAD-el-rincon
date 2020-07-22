@@ -1,0 +1,79 @@
+/* ==============================
+* BUTTONS
+================================= */
+
+.btn {
+  font-size: 1.3rem;
+  line-height: 1;
+  background: $white;
+  border-radius: 0;
+  color: $gray-1;
+
+  padding: 1rem 1.3rem;
+  margin: 0;
+
+  border: none;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+    color: $primary-color;
+  }
+}
+
+.btn--icon {
+  display: flex;
+  align-items: center;
+  color: $gray-1;
+  padding: 1.2rem $pulse;
+  border: none;
+
+  .icon {
+    fill: currentColor;
+  }
+}
+
+.btn--cta {
+  background-color: $primary-color;
+  color: $white;
+  border: 1px solid $primary-color;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $white;
+    text-decoration: none;
+    background-color: darken($primary-color, 20);
+    border-color: darken($primary-color, 15);
+  }
+}
+
+.btn--warning {
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $white;
+    text-decoration: none;
+    background-color: $secondary-color;
+    border-color: $secondary-color;
+  }
+}
+
+.btn--tag {
+  color: $gray-1;
+  border: 1px solid $gray-4;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $yellow;
+    text-decoration: none;
+    border-color: $yellow;
+  }
+}

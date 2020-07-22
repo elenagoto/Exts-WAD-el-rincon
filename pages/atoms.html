@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Style Guide | Atoms</title>
+    <!--[if !IE]><!-->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,700,700i" rel="stylesheet">
+    <!--<![endif]-->
+    <!--[if IE]>
+    <link rel="stylesheet" href="assets/css/universal-ie6.css">
+  <![endif]-->
+  <script src="assets/js/modernizr-custom.js"></script>
+  </head>
+  <body>
+    <!-- START ICONS -->
+    <svg style="display: none;">
+      <defs>
+        <!-- Add icon -->
+        <symbol id="add-icon">
+          <title>Add icon</title>
+          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+        </symbol>
+        <!-- Clear icon -->
+        <symbol id="clear-icon">
+          <title>Clear icon</title>
+          <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+        </symbol>
+        <!-- Create icon -->
+        <symbol id="create-icon">
+          <title>Create icon</title>
+          <path
+            d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z" />
+        </symbol>
+        <!-- Date Range icon -->
+        <symbol id="date-icon">
+          <title>Date Range icon</title>
+          <path
+            d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z" />
+        </symbol>
+        <!-- Delete icon -->
+        <symbol id="delete-icon">
+          <title>Delete icon</title>
+          <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z" />
+        </symbol>
+        <!-- Done icon -->
+        <symbol id="done-icon">
+          <title>Done icon</title>
+        <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+        </symbol>
+        <!-- Favorite icon -->
+        <symbol id="favorite-icon">
+          <title>Favorite icon</title>
+          <path
+            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.093.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+        </symbol>
+        <!-- Menu icon -->
+        <symbol id="menu-icon">
+          <title>Menu icon</title>
+          <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+        </symbol>
+        <!-- Search icon -->
+        <symbol id="search-icon">
+          <title>Search icon</title>
+          <path
+            d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+        </symbol>
+      </defs>
+    </svg>
+    <!-- END ICONS -->
+    <!-- START Header -->
+    <header class="banner">
+
+      <!-- START Global header -->
+      <div class="global-header">
+        <div class="content-wrapper">
+          <div class="logo">
+            <a href="../"><span><em>My</em> Bucket List</span></a>
+          </div>
+          <form class="search search--cta" action="ideas" method="get">
+            <label for="global-search" class="input__label sr-only">Search</label>
+            <div class="search__row">
+              <input id="global-search" class="search__field" type="text" name="search" placeholder="e.g. Swimming with dolphins"/>
+              <button class="btn btn--cta" type="submit">Search</button>
+            </div>
+          </form>
+          <nav>
+            <ul class="global-nav bare-list">
+              <li><a href="inspiration.html">Inspiration</a></li>
+              <li><a href="sign-up.html">Sign Up</a></li>
+              <li><a href="log-in.html">Log In</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <!-- END Global Header -->
+
+      <!-- Masthead -->
+      <div class="masthead">
+        <div class="content-wrapper">
+          <div class="masthead__text">
+            <h1>Style Guide</h1>
+            <p>Our Style Guide is based upon the principles of Atomic Design, a methodology composed of five distinct stages working together to create interface design systems in a more deliberate and hierachical manner.</p>
+          </div>
+          <ul class="masthead__nav bare-list">
+            <li class="current">
+              <a href="atoms.html">Atoms</a>
+            </li>
+            <li>
+              <a href="molecules.html">Molecules</a>
+            </li>
+            <li>
+              <a href="organisms.html">Organisms</a>
+            </li>
+            <li>
+              <a href="#">Templates</a>
+            </li>
+            <li>
+              <a href="#">Pages</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- END Masthead -->
+    </header>
+    <!-- END Header -->
+
+    <!-- START Main-->
+    <main class="main">
+      <!-- START Main header -->
+      <div class="main__header">
+        <div class="content-wrapper">
+          <h2>Atoms</h2>
+          <p>Atoms are the basic building blocks of matter. Applied to the web interfaces, atoms are our HTML tags, such as a form label, an input or a button.</p>
+          <p>Atoms can also include more abstract elements like color palettes, fonts, and even more invisible aspects of an interface like animations.</p>
+          <p>Like atoms in nature they're fairly abstract and often not terribly useful on their own. However, they're good as a reference in the context of a pattern library, as you can see all your global styles laid out at a glance. </p>
+          <ol>
+            <li><a href="#logo">Logo</a></li>
+            <li><a href="#avatar">Avatar</a></li>
+            <li><a href="#palette">Palette</a></li>
+            <li><a href="#typography">Typography</a></li>
+            <li><a href="#links">Links</a></li>
+            <li><a href="#buttons">Buttons</a></li>
+            <li><a href="#input-elements">Input Elements</a></li>
+          </ol>
+        </div>
+      </div>
+      <!-- END Main header -->
+      <!-- START Main content -->
+      <div class="main__content">
+        <div class="content-wrapper">
+
+          <!-- START Logo -->
+          <div class="main__element atom-logo" id="logo">
+            <h2>01. Logo</h2>
+            <div class="style-elmnt atom-logo atom-logo--homepage">
+              <h3>Homepage Logo</h3>
+              <div class="logo logo--invert"><span>My Bucket List</span></div>
+            </div>
+            <div class="style-elmnt atom-logo atom-logo--basic">
+              <h3>Standard Logo</h3>
+              <div class="logo"><span><em>My</em> Bucket List</span></div>
+            </div>
+            <div class="style-elmnt atom-logo atom-logo--invert">
+              <h3>Inverted Logo</h3>
+              <div class="logo logo--invert"><span><em>My</em> Bucket List</span></div>
+            </div>
+          </div>
+          <!-- END Logo -->
+
+          <!-- START Avatar -->
+          <div class="main__element" id="avatar">
+            <h2>02. Avatar</h2>
+            <div class="style-elmnt atom-avatar">
+              <h3>Navigation Avatar</h3>
+              <img class="avatar avatar-small" src="../assets/images/avatar.png" alt="Small blue avatar" />
+            </div>
+            <div class="style-elmnt atom-avatar">
+              <h3>Content avatar</h3>
+              <img class="avatar" src="../assets/images/avatar.png" alt="Big blue avatar" />
+            </div>
+          </div>
+          <!-- END Avatar -->
+          
+          <!-- START Palette -->
+          <div class="main__element atom-palette" id="palette">
+
+            <h2>03. Palette</h2>
+
+            <div class="palette">
+              <div class="palette__color">
+                <svg width="135" height="60" xmlns="http://www.w3.org/2000/svg">
+                  <title>color sample blue</title>
+                  <rect width="135" height="60" style="fill:#2c9cf2;" />
+                </svg>
+              </div>
+              <div class="palette__text">
+                <span>#2c9cf2</span>
+              </div>
+            </div>
+
+            <div class="palette">
+              <div class="palette__color">
+                <svg width="135" height="60" xmlns="http://www.w3.org/2000/svg">
+                  <title>color sample black</title>
+                  <rect width="135" height="60" style="fill:#192127;" />
+                </svg>
+              </div>
+              <div class="palette__text">
+                <span>#192127</span>
+              </div>
+            </div>
+
+            <div class="palette">
+              <div class="palette__color">
+                <svg width="135" height="60" xmlns="http://www.w3.org/2000/svg">
+                  <title>color sample gray</title>
+                  <rect width="135" height="60" style="fill:#72797e;" />
+                </svg>
+              </div>
+              <div class="palette__text">
+                <span>#72797e</span>
+              </div>
+            </div>
+
+            <div class="palette">
+              <div class="palette__color">
+                <svg width="135" height="60" xmlns="http://www.w3.org/2000/svg">
+                  <title>color sample gray 2</title>
+                  <rect width="135" height="60" style="fill:#afbac4;" />
+                </svg>
+              </div>
+              <div class="palette__text">
+                <span>#afbac4</span>
+              </div>
+            </div>
+
+            <div class="palette">
+              <div class="palette__color">
+                <svg width="135" height="60" xmlns="http://www.w3.org/2000/svg">
+                  <title>color sample gray 3</title>
+                  <rect width="135" height="60" style="fill:#bbc1c6;" />
+                </svg>
+              </div>
+              <div class="palette__text">
+                <span>#bbc1c6</span>
+              </div>
+            </div>
+
+            <div class="palette">
+              <div class="palette__color">
+                <svg width="135" height="60" xmlns="http://www.w3.org/2000/svg">
+                  <title>color sample gray 4</title>
+                  <rect width="135" height="60" style="fill:#e3e5e9;" />
+                </svg>
+              </div>
+              <div class="palette__text">
+                <span>#e3e5e9</span>
+              </div>
+            </div>
+
+            <div class="palette">
+              <div class="palette__color">
+                <svg width="135" height="60" xmlns="http://www.w3.org/2000/svg">
+                  <title>color sample gray 5</title>
+                  <rect width="135" height="60" style="fill:#f7f9fc;" />
+                </svg>
+              </div>
+              <div class="palette__text">
+                <span>#f7f9fc</span>
+              </div>
+            </div>
+
+            <div class="palette">
+              <div class="palette__color">
+                <svg width="135" height="60" xmlns="http://www.w3.org/2000/svg">
+                  <title>color sample red</title>
+                  <rect width="135" height="60" style="fill:#e25d43;" />
+                </svg>
+              </div>
+              <div class="palette__text">
+                <span>#e25d43</span>
+              </div>
+            </div>
+
+          </div>
+          <!-- END Palette -->
+
+          <!-- START Typography -->
+          <div class=" main__element atom-typography" id="typography">
+
+            <h2>04. Typography</h2>
+
+            <div class="font">
+              <table class="style-elmnt table font__table">
+                <thead>
+                  <tr>
+                    <th>
+                      <span class="delta">Glyph</span>
+                    </th>
+                    <th>
+                      <span class="delta">Weights</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <span class="glyph">Aa</span>
+                    </td>
+                    <td>
+                      <ul class="bare-list">
+                        <li>
+                          Regular
+                        </li>
+                        <li>
+                          <em>Regular Italic</em>
+                        </li>
+                        <li>
+                          <strong>Bold</strong>
+                        </li>
+                        <li>
+                          <strong><em>Bold Italic</em></strong>
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="styles">
+              <table class="style-elmnt table styles__table">
+                <thead>
+                  <tr>
+                    <th>
+                      <span class="delta">Style</span>
+                    </th>
+                    <th>
+                      <span class="delta">Desktop</span>
+                    </th>
+                    <th>
+                      <span class="delta">Tablet</span>
+                    </th>
+                    <th>
+                      <span class="delta">Mobile</span>
+                    </th>
+                    <th>
+                      <span class="delta">Line-height</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="alpha">H1 / .alpha</span></td>
+                    <td><span>48px</span></td>
+                    <td><span>40px</span></td>
+                    <td><span>36px</span></td>
+                    <td><span>1.2</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="beta">H2 / .beta</span></td>
+                    <td><span>36px</span></td>
+                    <td><span>32px</span></td>
+                    <td><span>28px</span></td>
+                    <td><span>1.2</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="gamma">H3 / .gamma</span></td>
+                    <td><span>28px</span></td>
+                    <td><span>28px</span></td>
+                    <td><span>24px</span></td>
+                    <td><span>1.2</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="delta">h3 / .delta</span></td>
+                    <td><span>13px</span></td>
+                    <td><span>13px</span></td>
+                    <td><span>13px</span></td>
+                    <td><span>1.5</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="epsilon">H5 / .epsilon</span></td>
+                    <td><span>14px</span></td>
+                    <td><span>14px</span></td>
+                    <td><span>14px</span></td>
+                    <td><span>1.4</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="zeta">H6 / .zeta</span></td>
+                    <td><span>12px</span></td>
+                    <td><span>12px</span></td>
+                    <td><span>12px</span></td>
+                    <td><span>1.4</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="style-btn">Action / Button</span></td>
+                    <td><span>13px</span></td>
+                    <td><span>13px</span></td>
+                    <td><span>13px</span></td>
+                    <td><span>1</span></td>
+                  </tr>
+                  <tr>
+                    <td><p>Paragraph text</p></td>
+                    <td><span>15px</span></td>
+                    <td><span>15px</span></td>
+                    <td><span>15px</span></td>
+                    <td><span>1.6</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- END Typography -->
+
+          
+          <!-- START Links -->
+          <div class="main__element" id="links">
+            <h2>05. Links</h2>
+            <div class="style-elmnt atom-links global-nav">
+              <h3>Header Link</h3>
+              <a href="#">I'm a Header link</a>
+            </div>
+            <div class="style-elmnt atom-links">
+              <h3>Main link</h3>
+              <a href="#">I'm a Main link</a>
+            </div>
+            <div class="style-elmnt atom-links nav-footer">
+              <h3>Footer link</h3>
+              <a href="#">I'm a Footer link</a>
+            </div>
+          </div>
+          <!-- END Links -->
+
+          <!-- START Buttons -->
+          <div class="main__element atoms-buttons" id="buttons">
+            <h2>06. Buttons</h2>
+            <div class="style-elmnt">
+              <h3>Default button</h3>
+              <button class="btn" type="submit" name="action" value="#">
+                Default button
+              </button>
+            </div>
+            <div class="style-elmnt">
+              <h3>Call to action button</h3>
+              <button class="btn btn--cta" type="submit" name="action" value="#">
+              Call to action
+              </button>
+            </div>
+            <div class="style-elmnt">
+              <h3>Warning button</h3>
+              <button class="btn btn--warning" type="submit" name="action" value="#">
+                Warning button
+              </button>
+            </div>
+            <div class="style-elmnt">
+              <h3>Button with icon</h3>
+              <button class="btn btn--icon" type="submit" name="action" value="#">
+                <svg class="icon" height="20" viewBox="0 0 24 24" width="20">
+                  <use xlink:href="#delete-icon"></use>
+                </svg>
+                Button with icon
+              </button>
+            </div>
+            <div class="style-elmnt">
+              <h3>Tag</h3>
+              <button class="btn btn--tag" type="submit" name="action" value="#">
+                Nature
+              </button>
+            </div>
+            
+          </div>
+          <!-- END Buttons -->
+
+          <!-- START Input elements -->
+          <div class="main__element atom-inputs" id="input-elements">
+            <h2>07. Input Elements</h2>
+          
+            <div class="style-elmnt">
+              <h3>Text input</h3>
+              <div class="input">
+                <label class="input__label" for="full-name">Text input</label>
+                <input class="input__field" id="full-name" type="text" name="profile" placeholder="Text input" required>
+              </div>
+            </div>
+          
+            <div class="style-elmnt">
+              <h3>Text area</h3>
+              <div class="input input--textarea">
+                <label class="input__label" for="text-area">Text area</label>
+                <textarea class="input__field" id="text-area" name="profile" placeholder="Text area"></textarea>
+              </div>
+            </div>
+          
+            <div class="style-elmnt">
+              <h3>Email input</h3>
+              <div class="input">
+                <label class="input__label" for="email">Email</label>
+                <input class="input__field" id="email" type="email" name="email" placeholder="e.g. email.imput@example.com"
+                  required>
+              </div>
+            </div>
+          
+            <div class="style-elmnt">
+              <h3>Password input</h3>
+              <div class="input">
+                <label class="input__label" for="password">Password</label>
+                <input class="input__field" id="password" type="password" name="password" required>
+              </div>
+            </div>
+
+            <div class="style-elmnt">
+              <h3>Warning input</h3>
+              <div class="input">
+                <label class="input__label" for="warning">Warning</label>
+                <input class="input__field input__field--warning" id="warning" type="text" name="password" placeholder="Warning when missing information" required>
+              </div>
+            </div>
+          
+            <div class="style-elmnt">
+              <h3>File input</h3>
+              <div class="input">
+                <div class="input__label">
+                  <span>Add an image</span>
+                </div>
+                <div class="input--file">
+                  <label class="btn" for="goal-image">Choose file</label>
+                  <input id="goal-image" type="file" name="profile" required />
+                </div>
+              </div>
+            </div>
+          
+            <div class="style-elmnt">
+              <h3>Checkbox</h3>
+              <div class="input input--checkbox">
+                <div class="checkbox-main">
+                  <input class="input__field" id="tos" type="checkbox" name="sign-up" value="agree-terms">
+                  <label class="input__label" for="tos">Check this box to agree to something.</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END Input Elements -->
+        </div>
+      </div>
+      <!-- END Main content -->
+    </main>
+    <!-- END Main -->
+
+    <!-- START Footer -->
+    <footer class="global-footer">
+      <div class="content-wrapper">
+        <div class="nav-footer">
+          <div class="logo logo--invert"><a href="../index.html"><span><em>My</em> Bucket List</span></a></div>
+          <ul class="bare-list">
+            <li><a href="about.html">About</a></li>
+            <li><a href="styleguide.html">Style Guide</a></li>
+            <li><a href="terms.html">Terms of Use</a></li>
+          </ul>
+        </div>
+        <p>&copy; EPFL 2017</p>
+      </div>
+    </footer>
+    <!-- END Footer -->
+  </body>
+</html>

@@ -1,0 +1,65 @@
+/* ==============================
+ * MASTHEAD
+================================= */
+
+.masthead {
+  display: flex;
+  margin: 0;
+  // height: 30vh;
+  padding: 0;
+  width: 100%;
+
+  // border-bottom: 1px solid $gray-4;
+
+  h1 {
+    color: $black;
+
+  }
+
+  p {
+    color: $gray-1;
+  }
+
+  .content-wrapper {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+    @include desktop {
+      grid-template-columns: 1fr 1fr;
+      // gap: 0px ($pulse * 3);
+    }
+  }
+
+  .search {
+    align-self: stretch;
+
+    @include tablet {
+      align-self: center;
+      width: 80%
+    }
+
+    @include desktop {
+      margin: 0 auto;
+      width: 60%
+    }
+  }
+}
+
+.masthead__profile {
+  display: flex;
+  align-items: center;
+}
+
+.masthead__avatar {
+  padding: 0 2rem 0 0;
+}
+
+.masthead--index {
+  border-bottom: none;
+  padding: 0 0 ($pulse * 3);
+
+  h1 {
+    color: $white;
+  }
+}

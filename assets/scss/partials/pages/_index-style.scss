@@ -1,0 +1,30 @@
+/* INDEX STYLES */
+
+.banner--index {
+  background: $gray-2 url("../images/mountain-lake.jpg") no-repeat 50% 50% / cover;
+  color: $white;
+  padding: 0 0 ($pulse * 3) 0;
+  margin: 0 0 ($pulse * 3) 0;
+
+  a {
+    color:$gray-4;
+  }
+}
+
+.masthead--index {
+  @include tablet {
+      text-align: center;
+    }
+} 
+
+/* MAIN See more */
+.see-more {
+  border-top: 1px solid $gray-4;
+  text-align: center;
+  padding: 1.2em 0;
+  width: 100%;
+
+  a {
+    color: $black;
+  }
+}

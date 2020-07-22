@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Style Guide | Organisms</title>
+    <!--[if !IE]><!-->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,700,700i" rel="stylesheet">
+    <!--<![endif]-->
+    <!--[if IE]>
+    <link rel="stylesheet" href="assets/css/universal-ie6.css">
+  <![endif]-->
+  <script src="assets/js/modernizr-custom.js"></script>
+  </head>
+  <body>
+    <!-- ICONS -->
+    <svg style="display: none;">
+      <defs>
+        <!-- Add icon -->
+        <symbol id="add-icon">
+          <title>Add icon</title>
+          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+          <path d="M0 0h24v24H0z" fill="none" />
+        </symbol>
+        <!-- Clear icon -->
+        <symbol id="clear-icon">
+          <title>Clear icon</title>
+          <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+          <path d="M0 0h24v24H0z" fill="none" />
+        </symbol>
+        <!-- Create icon -->
+        <symbol id="create-icon">
+          <title>Create icon</title>
+          <path
+            d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z" />
+          <path d="M0 0h24v24H0z" fill="none" />
+        </symbol>
+        <!-- Date Range icon -->
+        <symbol id="date-icon">
+          <title>Date Range icon</title>
+          <path
+            d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z" />
+          <path d="M0 0h24v24H0z" fill="none" />
+        </symbol>
+        <!-- Delete icon -->
+        <symbol id="delete-icon">
+          <title>Delete icon</title>
+          <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z" />
+          <path d="M0 0h24v24H0z" fill="none" />
+        </symbol>
+        <!-- Done icon -->
+        <symbol id="done-icon">
+          <title>Done icon</title>
+          <path d="M0 0h24v24H0z" fill="none" />
+          <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+        </symbol>
+        <!-- Favorite icon -->
+        <symbol id="favorite-icon">
+          <title>Favorite icon</title>
+          <path d="M0 0h24v24H0z" fill="none" />
+          <path
+            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+        </symbol>
+        <!-- Menu icon -->
+        <symbol id="menu-icon">
+          <title>Menu icon</title>
+          <path d="M0 0h24v24H0z" fill="none" />
+          <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+        </symbol>
+        <!-- Search icon -->
+        <symbol id="search-icon">
+          <title>Search icon</title>
+          <path
+            d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+          <path d="M0 0h24v24H0z" fill="none" />
+        </symbol>
+      </defs>
+    </svg>
+    <!-- END ICONS -->
+    <!-- START Header section -->
+    <header class="banner">
+      <!-- START Global header -->
+      <div class="global-header">
+        <div class="content-wrapper">
+          <div class="logo">
+            <a href="../index.html"><span><em>My</em> Bucket List</span></a>
+          </div>
+          <form class="search search--cta" action="ideas" method="get">
+            <label for="global-search" class="input__label sr-only">Search</label>
+            <div class="search__row">
+              <input id="global-search" class="search__field" type="text" name="search" placeholder="e.g. Swimming with dolphins"/>
+              <button class="btn btn--cta" type="submit">Search</button>
+            </div>
+          </form>
+          <nav>
+            <ul class="global-nav bare-list">
+              <li><a href="inspiration.html">Inspiration</a></li>
+              <li><a href="sign-up.html">Sign Up</a></li>
+              <li><a href="log-in.html">Log In</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <!-- END Global Header -->
+
+      <!-- Masthead -->
+      <div class="masthead">
+        <div class="content-wrapper">
+          <div class="masthead__text">
+            <h1>Style Guide</h1>
+            <p>Our Style Guide is based upon the principles of Atomic Design, a methodology composed of five distinct stages working together to create interface design systems in a more deliberate and hierachical manner.</p>
+          </div>
+          <ul class="masthead__nav bare-list">
+            <li>
+              <a href="atoms.html">Atoms</a>
+            </li>
+            <li>
+              <a href="molecules.html">Molecules</a>
+            </li>
+            <li class="current">
+              <a href="organisms.html">Organisms</a>
+            </li>
+            <li>
+              <a href="#">Templates</a>
+            </li>
+            <li>
+              <a href="#">Pages</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </header>
+
+    <!-- Main Section -->
+    <main class="main">
+      <!-- START Main Header -->
+      <div class="main__header">
+        <div class="content-wrapper">
+          <h2>Organisms</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+          <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          <p> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+          <ol>
+            <li><a href="#goal">Goal</a></li>
+            <li><a href="#discussion">Discussion</a></li>
+            <li><a href="#followers">Followers</a></li>
+            <li><a href="#form-create-goal">Create Goal</a></li>
+            <li><a href="#form-log-in">Log in</a></li>
+          </ol>
+        </div>
+      </div>
+      <!-- END Main header -->
+      <!-- Start Main content -->
+      <div class="main__content">
+        <div class="content-wrapper">
+
+          <!-- START Goal -->
+          <div class="main__element" id="goal">
+            <h2>01. Goal</h2>
+            <div class="goal">
+              <div class="goal__owner">
+                <img class="avatar avatar-small" src="../assets/images/avatar.png" alt="Big blue avatar" />
+                <span>Created by <a href="#">John Smith</a></span>
+              </div>
+              <div class="goal__title">
+                <!-- should be h1 -->
+                <span class="alpha">Swim with a sea turtle</span>
+              </div>
+              <div class="goal__img">
+                <img src="../assets/images/sea-turtle.jpg" alt="Sea turtle swimming in blue sea">
+              </div>
+              <div class="goal__content">
+                <div class="goal__btn">
+                  <button class="btn btn--icon" type="submit" name="action" value="#">
+                    <svg class="icon" height="20" viewBox="0 0 24 24" width="20">
+                      <use xlink:href="#done-icon"></use>
+                    </svg>
+                    Complete
+                  </button>
+                  <button class="btn btn--icon" type="submit" name="action" value="#">
+                    <svg class="icon" height="20" viewBox="0 0 24 24" width="20">
+                      <use xlink:href="#favorite-icon"></use>
+                    </svg>
+                    Like
+                  </button>
+                  <button class="btn btn--icon btn--warning" type="submit" name="action" value="#">
+                    <svg class="icon" height="20" viewBox="0 0 24 24" width="20">
+                      <use xlink:href="#delete-icon"></use>
+                    </svg>
+                    Remove
+                  </button>
+                </div>
+                <div class="goal__description">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid praesentium blanditiis vitae id repellat aut
+                    reprehenderit. Officiis nisi laborum ullam ducimus laudantium esse.</p>
+                </div>
+                <div class="goal__stats">
+                  <div class="stats__likes">
+                    <span>592 likes</span>
+                  </div>
+                  <div class="stats__doing">
+                    <span>1,148 doing this</span>
+                  </div>
+                  <div class="stats__comments"><a href="#">3 comments</a></div>
+                </div>
+                <div class="goal__tags">
+              </div>
+                <button class="btn btn--tag" type="submit" name="action" value="#">
+                  Nature
+                </button>
+                <button class="btn btn--tag" type="submit" name="action" value="#">
+                  Travel
+                </button>
+                <button class="btn btn--tag" type="submit" name="action" value="#">
+                  Swimming
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- END Goal -->
+          <!-- START Discussion -->
+          <div class="main__element" id="discussion">
+            <h2>02. Discussion</h2>
+            <div class="discussion">
+              <div class="comments comments__title">
+                <h2>Discussion</h2>
+                <span class="comments__number">3 comments</span>
+              </div>
+              <div class="comments comments--add">
+                <div class="comments__avatar">
+                  <img class="avatar" src="../assets/images/avatar.png" alt="Big blue avatar" />
+                </div>
+                <div class="comments__text">
+                  <form class="input input--textarea" action="add-comment" method="POST">
+                    <label class="input__label" for="add-comment">Add a comment</label>
+                    <textarea class="input__field" id="add-comment" name="add-comment"></textarea>
+                    <button class="btn btn--cta" type="submit" name="action" value="#">
+                      Post
+                    </button>
+                  </form>
+                </div>
+              </div>
+
+              <div class="comments comments--display">
+                <div class="comments__avatar">
+                  <img class="avatar" src="../assets/images/avatar.png" alt="Big blue avatar" />
+                </div>
+                <div class="comments__text">
+                  <div class="comments__user">
+                    <span class="user__name"><a href="#">William Barnes</a> <span class="comments__time">25 minutes ago</span>
+                    </span>
+                  </div>
+                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus quis saepe et dignissimos beatae. </p>
+                </div>
+              </div>
+              <div class="comments comments--display">
+                <div class="comments__avatar">
+                  <img class="avatar" src="../assets/images/avatar.png" alt="Big blue avatar" />
+                </div>
+                <div class="comments__text">
+                  <div class="comments__user">
+                    <span class="user__name"><a href="#">Todd Carey</a> <span class="comments__time">3 days ago</span>
+                    </span>
+                  </div>
+                  <p>Eveniet perspiciatis quas, cupiditate earum, veritatis consequuntur tempora, facilis nemo molestias ex nostrum animi!</p>
+                </div>
+              </div>
+              <div class="comments comments--display">
+                <div class="comments__avatar">
+                  <img class="avatar" src="../assets/images/avatar.png" alt="Big blue avatar" />
+                </div>
+                <div class="comments__text">
+                  <div class="comments__user">
+                    <span class="user__name"><a href="#">Jennifer Douglas</a> <span class="comments__time">1 week ago</span>
+                    </span>
+                  </div>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, a harum? </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END Discussion -->
+          
+          <!-- START Followers -->
+          <div class="main__element" id="followers">
+            <h2>03. Followers</h2>
+            <div class="followers">
+              <div class="follower">
+                <div class="follower__profile">
+                  <div class="follower__avatar">
+                    <img class="avatar" src="../assets/images/avatar.png" alt="Big blue avatar" />
+                  </div>
+                  <div class="follower__info">
+                    <span class="follower__name"><a href="#">William Barnes</a></span>
+                    <span class="follower__nmbr-goals">4 Goals</span>
+                  </div>
+                </div>
+                <div class="follower__btn">
+                  <button class="btn" type="submit" name="action" value="#">
+                    Follow
+                  </button>
+                </div>
+              </div>
+              <div class="follower">
+                <div class="follower__profile">
+                  <div class="follower__avatar">
+                    <img class="avatar" src="../assets/images/avatar.png" alt="Big blue avatar" />
+                  </div>
+                  <div class="follower__info">
+                    <span class="follower__name"><a href="#">Jennifer Douglas</a></span>
+                    <span class="follower__nmbr-goals">5 Goals</span>
+                  </div>
+                </div>
+                <div class="follower__btn">
+                  <button class="btn" type="submit" name="action" value="#">
+                    Follow
+                  </button>
+                </div>
+              </div>
+              <div class="follower">
+                <div class="follower__profile">
+                  <div class="follower__avatar">
+                    <img class="avatar" src="../assets/images/avatar.png" alt="Big blue avatar" />
+                  </div>
+                  <div class="follower__info">
+                    <span class="follower__name"><a href="#">Sarah Smith</a></span>
+                    <span class="follower__nmbr-goals">1 Goal</span>
+                  </div>
+                </div>
+                <div class="follower__btn">
+                  <button class="btn btn--warning" type="submit" name="action" value="#">
+                    Unfollow
+                  </button>
+                </div>
+              </div>
+              <div class="follower">
+                <div class="follower__profile">
+                  <div class="follower__avatar">
+                    <img class="avatar" src="../assets/images/avatar.png" alt="Big blue avatar" />
+                  </div>
+                  <div class="follower__info">
+                    <span class="follower__name"><a href="#">James Farrow</a></span>
+                    <span class="follower__nmbr-goals">3 Goals</span>
+                  </div>
+                </div>
+                <div class="follower__btn">
+                  <button class="btn" type="submit" name="action" value="#">
+                    Follow
+                  </button>
+                </div>
+              </div>
+              <div class="follower">
+                <div class="follower__profile">
+                  <div class="follower__avatar">
+                    <img class="avatar" src="../assets/images/avatar.png" alt="Big blue avatar" />
+                  </div>
+                  <div class="follower__info">
+                    <span class="follower__name"><a href="#">Mary Davis</a></span>
+                    <span class="follower__nmbr-goals">7 Goals</span>
+                  </div>
+                </div>
+                <div class="follower__btn">
+                  <button class="btn btn--warning" type="submit" name="action" value="#">
+                    Unfollow
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END Followers -->
+
+          <!-- START Form Create Goal -->
+          <div class="main__element" id="form-create-goal">
+            <h2>04. Create Goal</h2>
+            <div class="style-elmnt">
+              <h3>Basic form</h3>
+              <form class="form" action="create-goal.html" method="post">
+                <div class="alert alert--wide form__text">
+                  <p>Please fill all required fields</p>
+                </div>
+            
+                <div class="input input--horizontal">
+                  <label class="input__label" for="goal-title">Title</label>
+                  <input class="input__field" id="goal-title" type="text" name="goal-title" placeholder="e.g. Ride a camel"
+                    required />
+                </div>
+              
+                <div class="input input--horizontal">
+                  <div class="input__label">
+                    <span>Add an image</span>
+                  </div>
+                  <div class="input--file">
+                    <label class="btn" for="goal-image">Choose file</label>
+                    <input id="goal-image" type="file" name="profile" required />
+                  </div>
+                </div>
+                <div class="form__text input__description">
+                  <span>Your image will be displayed at a 4:3 aspect ratio, croped if necessary. 5MB limit</span>
+                </div>
+              
+                <div class="input input--horizontal">
+                  <label class="input__label" for="goal-tags">Add tags</label>
+                  <input class="input__field" id="goal-tags" type="text" name="goal-tags" placeholder="Separate multiple tags with commas" required />
+                </div>
+              
+                <div class="input input--horizontal input--textarea">
+                  <label class="input__label" for="goal-description">Description</label>
+                  <textarea class="input__field" id="goal-description"></textarea>
+                </div>
+              
+                <div class="input input--horizontal input__btn">
+                  <div class="input__label"><a class="prompt__cancel" href="#">Cancel</a>
+                  </div>
+                  <div class="prompt">
+                    <button class="btn btn--cta prompt__confirm" type="submit">Create Goal</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+
+            <div class="style-elmnt">
+              <h3>Missing information form</h3>
+              <form class="form form--warning" action="create-goal.html" method="post">
+                <div class="alert alert--wide form__text">
+                  <p>Please fill all required fields</p>
+                </div>
+              
+                <div class="input input--horizontal">
+                  <label class="input__label" for="goal-title-missing">Title</label>
+                  <input class="input__field" id="goal-title-missing" type="text" name="goal-title" placeholder="e.g. Ride a camel"
+                    required />
+                </div>
+
+                <div class="input input--horizontal">
+                  <div class="input__label">
+                    <span>Add an image</span>
+                  </div>
+                  <div class="input--file">
+                    <label class="btn input__field--warning" for="goal-image-missing">Choose file</label>
+                    <input id="goal-image-missing" type="file" name="profile" required />
+                  </div>
+                </div>
+                <div class="form__text input__description">
+                  <span>Your image will be displayed at a 4:3 aspect ratio, croped if necessary. 5MB limit</span>
+                </div>
+              
+                <div class="input input--horizontal">
+                  <label class="input__label" for="goal-tags-missing">Add tags</label>
+                  <input class="input__field" id="goal-tags-missing" type="text" name="goal-tags"
+                    placeholder="Separate multiple tags with commas" required />
+                </div>
+              
+                <div class="input input--horizontal input--textarea">
+                  <label class="input__label" for="goal-description-missing">Description</label>
+                  <textarea class="input__field input__field--warning" id="goal-description-missing"></textarea>
+                </div>
+              
+                <div class="input input--horizontal input__btn"> 
+                  <div class="input__label"><a class="prompt__cancel" href="#">Cancel</a>
+                  </div>
+                  <div class="prompt">
+                    <button class="btn btn--cta prompt__confirm" type="submit">Create Goal</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- END From Create Goal -->
+
+          <!-- START From Sign in -->
+          <div class="main__element" id="form-log-in">
+            <h2>05. Log in</h2>
+            <div class="style-elmnt">
+              <h3>Basic form</h3>
+              <form class="form" action="log-in.html" method="post">
+                <div class="alert alert--wide">
+                  <p>Incorrect email/password combination.</p>
+                </div>
+              
+                <div class="input input--horizontal">
+                  <label for="email" class="input__label">Email</label>
+                  <input id="email" class="input__field" type="email" name="email" placeholder="e.g. diana.prince@wonder.com"
+                    required>
+                </div>
+              
+                <div class="input input--horizontal">
+                  <label for="password" class="input__label">Password</label>
+                  <input class="input__field" id="password" type="password" name="password" required>
+                </div>
+              
+                <div class="form__text input--horizontal input--checkbox">
+                  <div class="input">
+                    <div class="checkbox-main">
+                      <input class="input__field" id="remember-me" type="checkbox" name="sign-up" value="agree-terms">
+                      <label class="input__label" for="remember-me">Remember me</label>
+                    </div>
+                  </div>
+                  <div class="input__label">
+                    <a href="forgot-password.html">Forgot password</a>
+                  </div>
+                </div>
+                
+                <div class="form__text input__btn--alone">
+                  <div class="prompt">
+                    <button class="btn btn--cta prompt__confirm" type="submit">Log in</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          
+            <div class="style-elmnt">
+              <h3>Missing information form</h3>
+              <form class="form form--warning" action="log-in.html" method="post">
+                <div class="alert alert--wide form__text">
+                  <p>Incorrect email/password combination.</p>
+                </div>
+            
+                <div class="input input--horizontal">
+                  <label class="input__label" for="email-missing">Email</label>
+                  <input class="input__field input__field--warning" id="email-missing" type="email" name="email-missing" placeholder="e.g. diana.prince@wonder.com"
+                    required>
+                </div>
+            
+                <div class="input input--horizontal">
+                  <label class="input__label" for="password-missing">Password</label>
+                  <input class="input__field input__field--warning" id="password-missing" type="password" name="password" required>
+                </div>
+
+                <div class="form__text input--horizontal input--checkbox">
+                  <div class="input">
+                    <div class="checkbox-main">
+                      <input class="input__field" id="remember-me-missing" type="checkbox" name="sign-up" value="agree-terms">
+                      <label class="input__label" for="remember-me-missing">Remember me</label>
+                    </div>
+                  </div>
+                  <div class="input__label">
+                    <a href="forgot-password.html">Forgot password</a>
+                  </div>
+                </div>
+                <div class="form__text input__btn--alone">
+                  <div class="prompt">
+                    <button class="btn btn--cta prompt__confirm" type="submit">Log in</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- END From Sign in -->
+        </div>
+      </div>
+      <!-- END Main content -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="global-footer">
+      <div class="content-wrapper">
+        <div class="nav-footer">
+          <div class="logo logo--invert"><a href="../index.html"><span><em>My</em> Bucket List</span></a></div>
+          <ul class="bare-list">
+            <li><a href="about.html">About</a></li>
+            <li><a href="styleguide.html">Style Guide</a></li>
+            <li><a href="terms.html">Terms of Use</a></li>
+          </ul>
+        </div>
+        <p>&copy; EPFL 2017</p>
+      </div>
+    </footer>
+
+  </body>
+</html>

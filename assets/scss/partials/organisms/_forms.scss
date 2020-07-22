@@ -1,0 +1,96 @@
+
+/* ==============================
+ * FORMS
+================================= */
+.form {
+  display: flex;
+  flex-direction: column;
+
+  &__text {
+    color: $gray-3; 
+
+    @include tablet {
+      align-self: flex-end;
+      width: 76%;
+    }
+
+    @include desktop {
+      width: 64%;
+    }
+  }
+
+  > div:nth-child(2) {
+    margin-top: 5.6rem;
+  }
+  .alert {
+    color: $secondary-color;
+    padding: $pulse 0;
+    display: none;
+  }
+
+  @include desktop {
+    width: 60%;
+  }
+
+  .input__field, .input--file {
+    @include tablet {
+      width: 76%;
+    }
+
+    @include desktop {
+      width: 64%;
+    }
+  }
+}
+
+.input__description {
+  margin: -3rem 0 $pulse 0;
+}
+
+.input--horizontal {
+  .prompt {
+    width: 100%;
+
+    @include tablet {
+      width: 76%;
+    }
+
+    @include desktop {
+      width: 64%;
+    }
+
+    .btn {
+      width: 100%;
+    }
+  }
+}
+
+.input--checkbox{
+  display: flex;
+  justify-content: space-between;
+
+  .input__label {
+    margin: 0;
+  }
+}
+
+.input__btn {
+  @include tablet{
+    align-items: center;
+  }
+}
+
+.form--warning {
+  > div:nth-child(2) {
+    margin-top: 0;
+  }
+  .alert {
+    display: block;
+  }
+}
+
+.input__btn--alone {
+  .btn {
+      width: 100%;
+  }
+}

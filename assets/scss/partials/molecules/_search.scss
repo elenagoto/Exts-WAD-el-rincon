@@ -1,0 +1,51 @@
+/* ==============================
+ * SEARCH FORM
+================================= */
+
+.search {
+  font-size: 1.5rem;
+  color: $gray-1;
+
+  &__label {
+    display: inline-block;
+    cursor: pointer;
+    margin-bottom: 0.5em;
+  }
+
+  &__field {
+    background-color: $white;
+    border: 1px solid $gray-4;
+    padding-left: 1rem;
+    font-size: inherit;
+    margin: 0;
+
+    @include tablet {
+      padding-left: 1em;
+    }
+
+    &:focus {
+      border-color: $gray-1;
+    }
+  }
+
+  &__row {
+    display: flex;
+
+    & .btn {
+      border-left-width: 0;
+      padding: 1.6em;
+    }
+  }
+
+  &__row &__field {
+    flex: 1 0 10em;
+  }
+}
+
+.search--cta .search__field {
+  border-color: $primary-color;
+
+  &:focus {
+    border-color: darken($primary-color, 15);
+  }
+}

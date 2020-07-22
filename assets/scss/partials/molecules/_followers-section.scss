@@ -1,0 +1,50 @@
+/* ==============================
+* FOLLOWERS SECTION
+================================= */
+.follower {
+  border-bottom: 1px solid $gray-4;
+  color: $gray-3;
+  padding: $pulse 0;
+
+  &::after {
+    display: table;
+    content: " ";
+    clear: both;
+  }
+  
+  &__profile {
+    float: left;
+
+    &::after {
+      display: table;
+      content: " ";
+      clear: both;
+    }
+  }
+
+  &__avatar {
+    float: left;
+    padding-right: $pulse;
+  }
+
+  &__info {
+    float: right;
+    > * {
+      display: block;
+    }
+  }
+  
+  &__btn {
+    float: right;
+    .btn {
+      display: block;
+      padding: $pulse 1.2rem;
+      text-align: center;
+      width: 13rem;
+
+      @include tablet {
+        width: 17rem;
+      }
+    }
+  }
+}
