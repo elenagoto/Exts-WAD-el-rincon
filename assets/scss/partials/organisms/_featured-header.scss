@@ -7,6 +7,10 @@
   gap: ($pulse * 3) 0;
   margin-bottom: $pulse;
   width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
 
   @include desktop {
     grid-template-columns: 1fr 1fr;
