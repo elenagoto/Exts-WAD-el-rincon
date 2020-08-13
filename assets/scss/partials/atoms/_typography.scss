@@ -48,6 +48,23 @@ h1,
   }
 }
 
+.eta {
+  font-size: 5rem;
+  font-weight: 700;
+  /* 36px/10px */
+  line-height: 1.2;
+  color: $gray-4;
+
+  // @include tablet {
+  //   font-size: 4rem;
+  //   /* 40px/10px */
+  // }
+
+  @include desktop {
+    font-size: ($pulse * 5);
+  }
+}
+
 h2,
 .beta {
   font-size: 2.8rem;

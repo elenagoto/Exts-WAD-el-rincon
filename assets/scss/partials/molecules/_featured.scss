@@ -16,7 +16,7 @@
 
   &--left {
     &::after {
-      height: 30vh;
+      height: 35vh;
       display: block;
       content: "";
 
@@ -109,12 +109,13 @@
     position: absolute;
     width: 86%;
     top: 60%;
-    padding: $pulse * 3;
+    padding: $pulse * 2;
   }
 
   @include desktop {
     &__main {
       max-width: 60rem;
+      padding: $pulse * 5 $pulse * 4;
       // border: 1px black solid;
 
     }
