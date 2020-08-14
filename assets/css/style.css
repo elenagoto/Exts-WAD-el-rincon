@@ -18,14 +18,10 @@ body {
   color: #72797e;
   margin: 0;
   padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  height: 100vh; }
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr; }
 
 /* ==============================
 * GLOBAL
@@ -85,7 +81,7 @@ h1,
   /* 36px/10px */
   line-height: 1.2;
   color: #192127; }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 600px) and (min-height: 450px) {
     h1,
     .alpha {
       font-size: 4rem;
@@ -112,7 +108,7 @@ h2,
   /* 36px/10px */
   line-height: 1.2;
   color: #192127; }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 600px) and (min-height: 450px) {
     h2,
     .beta {
       font-size: 3.2rem;
@@ -129,7 +125,7 @@ h3,
   /* 28px/10px */
   line-height: 1.2;
   color: #192127; }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 600px) and (min-height: 450px) {
     h3,
     .gamma {
       font-size: 2.8rem;
@@ -280,7 +276,7 @@ a {
     cursor: pointer;
     white-space: nowrap;
     margin: 0 1.6rem 1rem 0; }
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: 600px) and (min-height: 450px) {
       .input__label {
         margin-bottom: 0; } }
   .input__field {
@@ -320,7 +316,7 @@ a {
     text-align: center;
     width: 100%; }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 600px) and (min-height: 450px) {
   .input {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -356,7 +352,7 @@ a {
   display: grid;
   gap: 20px;
   width: 100%; }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 600px) and (min-height: 450px) {
     .cards {
       -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
@@ -491,7 +487,7 @@ a {
     padding-left: 1rem;
     font-size: inherit;
     margin: 0; }
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: 600px) and (min-height: 450px) {
       .search__field {
         padding-left: 1em; } }
     .search__field:focus {
@@ -539,16 +535,16 @@ a {
   padding: 0;
   -ms-flex-item-align: start;
   align-self: flex-start; }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 600px) and (min-height: 450px) {
     .masthead__nav {
       float: left; } }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 600px) and (min-height: 450px) {
     .masthead__nav li {
       display: inline-block;
       padding: 0; } }
   .masthead__nav a {
     margin: 2rem 1.6rem -1px 0; }
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: 600px) and (min-height: 450px) {
       .masthead__nav a {
         display: block;
         margin: 0 1.6rem -1px 0;
@@ -654,7 +650,7 @@ a {
     flex-direction: column; }
     .comments__text .input > * {
       margin-bottom: 1.6rem; }
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: 600px) and (min-height: 450px) {
       .comments__text .input_field {
         width: 100%; } }
 
@@ -676,7 +672,6 @@ a {
 /* ==================
 * FEATURED
 ===================== */
-/* IMAGE */
 .featured {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -690,17 +685,17 @@ a {
   align-items: center;
   position: relative;
   width: 100%; }
+  .featured--right {
+    display: none; }
+    @media screen and (min-width: 1024px) {
+      .featured--right {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; } }
   .featured:hover .featured__thumb img {
     -webkit-transform: scale(1.15);
     -ms-transform: scale(1.15);
     transform: scale(1.15); }
-  .featured--left::after {
-    height: 35vh;
-    display: block;
-    content: ""; }
-    @media screen and (min-width: 600px) {
-      .featured--left::after {
-        height: 20vh; } }
   .featured__background {
     overflow: hidden;
     position: absolute;
@@ -734,7 +729,7 @@ a {
     margin-top: 13%;
     width: 100%;
     position: relative; }
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: 600px) and (min-height: 450px) {
       .featured__front {
         margin-top: 8%; } }
     .featured__front .featured__thumb {
@@ -875,7 +870,7 @@ a {
       padding: 1.6rem 1.2rem;
       text-align: center;
       width: 13rem; }
-      @media screen and (min-width: 600px) {
+      @media screen and (min-width: 600px) and (min-height: 450px) {
         .follower__btn .btn {
           width: 17rem; } }
 
@@ -884,7 +879,17 @@ a {
 ================================= */
 .banner {
   padding: 0;
-  margin: 0 0 4.8rem; }
+  margin: 0;
+  height: 250vh; }
+  @media screen and (min-height: 450px) {
+    .banner {
+      height: 100vh; } }
+  @media screen and (min-width: 600px) and (min-height: 450px) {
+    .banner {
+      height: 80vh; } }
+  @media screen and (min-width: 1024px) {
+    .banner {
+      height: 100vh; } }
 
 .global-header {
   margin: 0 0 1.6rem 0;
@@ -963,7 +968,7 @@ a {
     -ms-flex-item-align: stretch;
     -ms-grid-row-align: stretch;
     align-self: stretch; }
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: 600px) and (min-height: 450px) {
       .masthead .search {
         -ms-flex-item-align: center;
         -ms-grid-row-align: center;
@@ -1012,14 +1017,7 @@ main {
   align-items: center;
   width: 100vw;
   padding-bottom: 8rem; }
-  .main::before {
-    height: 150vh;
-    display: block;
-    content: ""; }
-    @media screen and (min-width: 1024px) {
-      .main::before {
-        height: 90vh; } }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 600px) and (min-height: 450px) {
     .main--index h2 {
       text-align: center; } }
   .main .content-wrapper {
@@ -1060,13 +1058,19 @@ main {
 .featured__header {
   display: -ms-grid;
   display: grid;
-  gap: 4.8rem 0;
+  gap: 14.4rem 0;
   margin-bottom: 1.6rem;
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
   right: 0; }
+  @media screen and (min-height: 450px) {
+    .featured__header {
+      gap: 28.8rem 0; } }
+  @media screen and (min-width: 600px) and (min-height: 450px) {
+    .featured__header {
+      gap: 14.4rem 0; } }
   @media screen and (min-width: 1024px) {
     .featured__header {
       -ms-grid-columns: 1fr 1fr;
@@ -1091,7 +1095,7 @@ main {
   flex-direction: column; }
   .form__text {
     color: #bbc1c6; }
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: 600px) and (min-height: 450px) {
       .form__text {
         -ms-flex-item-align: end;
         align-self: flex-end;
@@ -1108,7 +1112,7 @@ main {
   @media screen and (min-width: 1024px) {
     .form {
       width: 60%; } }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 600px) and (min-height: 450px) {
     .form .input__field, .form .input--file {
       width: 76%; } }
   @media screen and (min-width: 1024px) {
@@ -1120,7 +1124,7 @@ main {
 
 .input--horizontal .prompt {
   width: 100%; }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 600px) and (min-height: 450px) {
     .input--horizontal .prompt {
       width: 76%; } }
   @media screen and (min-width: 1024px) {
@@ -1139,7 +1143,7 @@ main {
   .input--checkbox .input__label {
     margin: 0; }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 600px) and (min-height: 450px) {
   .input__btn {
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -1178,15 +1182,10 @@ main {
       padding: 1.6rem 0; }
 
 /* INDEX STYLES */
-.banner--index {
-  background: #afbac4 url("../images/mountain-lake.jpg") no-repeat 50% 50%/cover;
-  color: #fafafa;
-  padding: 0 0 4.8rem 0;
-  margin: 0 0 4.8rem 0; }
-  .banner--index a {
-    color: #e3e5e9; }
+.banner--index a {
+  color: #e3e5e9; }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 600px) and (min-height: 450px) {
   .masthead--index {
     text-align: center; } }
 

@@ -12,16 +12,6 @@ main {
   width: 100vw;
   padding-bottom: $pulse * 5;
 
-  &::before {
-    height: 150vh;
-    display: block;
-    content: "";
-
-    @include desktop {
-      height: 90vh;
-    }
-  }
-
   &--index h2 {
     @include tablet {
       text-align: center;

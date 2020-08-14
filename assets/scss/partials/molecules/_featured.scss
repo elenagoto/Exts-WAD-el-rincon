@@ -2,7 +2,6 @@
 * FEATURED
 ===================== */
 
-/* IMAGE */
 .featured {
   display: flex;
   flex-direction: column;
@@ -10,20 +9,16 @@
   position: relative;
   width: 100%;
 
-  &:hover .featured__thumb img {
-    transform: scale(1.15);
+  &--right {
+    display: none;
+
+    @include desktop {
+      display: flex;
+    }
   }
 
-  &--left {
-    &::after {
-      height: 35vh;
-      display: block;
-      content: "";
-
-      @include tablet {
-        height: 20vh;
-      }
-    }
+  &:hover .featured__thumb img {
+    transform: scale(1.15);
   }
 
 

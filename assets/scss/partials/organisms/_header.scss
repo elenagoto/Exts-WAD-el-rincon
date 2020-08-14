@@ -5,7 +5,20 @@
   // border-bottom: 1px solid $gray-4;
   // background-color: $white;
   padding: 0;
-  margin: 0 0 ($pulse * 3);
+  margin: 0;
+  height: 250vh;
+
+  @include mobile {
+    height: 100vh;
+  }
+
+  @include tablet {
+    height: 80vh;
+  }
+
+  @include desktop {
+    height: 100vh;
+  }
 }
 
 
