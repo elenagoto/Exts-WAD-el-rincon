@@ -18,6 +18,16 @@ body {
   color: #72797e;
   margin: 0;
   padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100vh; }
+
+.index {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
