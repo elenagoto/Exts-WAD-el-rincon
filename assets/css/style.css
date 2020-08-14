@@ -697,6 +697,7 @@ a {
     -ms-transform: scale(1.15);
     transform: scale(1.15); }
   .featured__background {
+    background: #fafafa;
     overflow: hidden;
     position: absolute;
     top: 0;
@@ -886,9 +887,12 @@ a {
       height: 115vh; } }
 
 .global-header {
+  background: #f9a66c;
+  background: -webkit-radial-gradient(circle, #e0915f 0%, #fbb87d 50%, #fcc98d 100%);
+  background: -o-radial-gradient(circle, #e0915f 0%, #fbb87d 50%, #fcc98d 100%);
+  background: radial-gradient(circle, #e0915f 0%, #fbb87d 50%, #fcc98d 100%);
   margin: 0 0 1.6rem 0;
   padding: 0;
-  z-index: 44;
   position: relative; }
   .global-header .content-wrapper {
     -webkit-box-orient: vertical;
@@ -898,17 +902,9 @@ a {
   .global-header .logo {
     float: left;
     margin: 1rem 1.6rem 1rem 0; }
-  .global-header .search {
-    float: left;
-    -webkit-box-flex: 1;
-    -ms-flex: 1 0 auto;
-    flex: 1 0 auto;
-    margin: 0 0 -1px 0; }
-    @media screen and (min-width: 700px) {
-      .global-header .search {
-        margin-right: 1.6rem; } }
   .global-header .social-media-header {
-    width: 100%; }
+    width: 100%;
+    z-index: 44; }
   .global-header .main-header {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -917,7 +913,8 @@ a {
     -ms-flex-pack: justify;
     justify-content: space-between;
     padding-top: 1em;
-    width: 100%; }
+    width: 100%;
+    z-index: 44; }
   .global-header .content-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;

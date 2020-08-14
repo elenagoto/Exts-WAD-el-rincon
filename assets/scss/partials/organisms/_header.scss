@@ -24,10 +24,11 @@
 
 
 .global-header {
+  background: $primary-color;
+  background: radial-gradient(circle, rgba(224, 145, 95, 1) 0%, rgba(251, 184, 125, 1) 50%, rgba(252, 201, 141, 1) 100%);
   margin: 0 0 $pulse 0;
   // border-bottom: 1px solid $gray-4;
   padding: 0;
-  z-index: 44;
   position: relative;
 
   .content-wrapper {
@@ -39,18 +40,19 @@
     margin: 1rem $pulse 1rem 0;
   }
 
-  .search {
-    float: left;
-    flex: 1 0 auto;
-    margin: 0 0 -1px 0;
+  // .search {
+  //   float: left;
+  //   flex: 1 0 auto;
+  //   margin: 0 0 -1px 0;
 
-    @media screen and (min-width: 700px) {
-      margin-right: $pulse;
-    }
-  }
+  //   @media screen and (min-width: 700px) {
+  //     margin-right: $pulse;
+  //   }
+  // }
 
   .social-media-header {
     width: 100%;
+    z-index: 44;
   }
 
   .main-header {
@@ -58,6 +60,7 @@
     justify-content: space-between;
     padding-top: 1em;
     width: 100%;
+    z-index: 44;
   }
 
   .content-wrapper {
