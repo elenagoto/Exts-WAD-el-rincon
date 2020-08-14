@@ -9,6 +9,7 @@
   position: relative;
   width: 100%;
 
+
   &--right {
     display: none;
 
@@ -51,6 +52,8 @@
     width: 100%;
     position: relative;
 
+
+
     @include tablet {
       margin-top: 8%;
     }
@@ -84,12 +87,12 @@
       max-width: 95%;
     }
 
-    &--left .featured__thumb {
-      align-self: end;
+    &--left .featured__front {
+      align-items: flex-end;
     }
 
-    &--right .featured__thumb {
-      align-self: start;
+    &--right .featured__front {
+      align-items: flex-start;
     }
   }
 }
@@ -116,12 +119,10 @@
     }
 
     &--left .featured__main {
-      align-self: end;
       border-radius: 5px 0 0 5px;
     }
 
     &--right .featured__main {
-      align-self: start;
       border-radius: 0 5px 5px 0;
     }
   }
