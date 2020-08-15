@@ -9,7 +9,6 @@
   position: relative;
   width: 100%;
 
-
   &--right {
     display: none;
 
@@ -21,7 +20,6 @@
   &:hover .featured__thumb img {
     transform: scale(1.15);
   }
-
 
   &__background {
     background: $white;
@@ -41,10 +39,11 @@
       height: 100%;
       width: 100%;
       filter: blur(12px);
-
     }
   }
+}
 
+.featured {
   &__front {
     display: flex;
     flex-direction: column;
@@ -52,8 +51,6 @@
     margin-top: 13%;
     width: 100%;
     position: relative;
-
-
 
     @include tablet {
       margin-top: 8%;
@@ -64,8 +61,12 @@
       position: relative;
       display: block;
       padding-top: 80%;
-      width: 95%;
+      width: 90%;
       overflow: hidden;
+
+      @include desktop {
+        width: 85%;
+      }
 
       img {
         margin: 0;
@@ -116,7 +117,6 @@
       max-width: 60rem;
       padding: $pulse * 5 $pulse * 4;
       // border: 1px black solid;
-
     }
 
     &--left .featured__main {
@@ -130,7 +130,6 @@
 }
 
 .featured {
-
   /* AUTHOR */
   &__meta {
     display: flex;
