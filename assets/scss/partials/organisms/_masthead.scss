@@ -8,7 +8,7 @@
   padding: 0;
   width: 100%;
 
-  // border-bottom: 1px solid $gray-4;
+  // border: 1px solid red;
 
   h1 {
     color: $black;
@@ -20,45 +20,23 @@
   }
 
   .content-wrapper {
-    display: grid;
+    // border: 1px solid blue;
+    display: flex;
     justify-content: center;
     align-items: center;
-
-    @include desktop {
-      grid-template-columns: 1fr 1fr;
-      // gap: 0px ($pulse * 3);
-    }
   }
 
   .search {
-    align-self: stretch;
+    // align-self: stretch;
 
-    @include tablet {
-      align-self: center;
-      width: 80%
-    }
+    // @include tablet {
+    //   align-self: center;
+    //   width: 80%
+    // }
 
-    @include desktop {
-      margin: 0 auto;
-      width: 60%
-    }
-  }
-}
-
-.masthead__profile {
-  display: flex;
-  align-items: center;
-}
-
-.masthead__avatar {
-  padding: 0 2rem 0 0;
-}
-
-.masthead--index {
-  border-bottom: none;
-  padding: 0 0 ($pulse * 3);
-
-  h1 {
-    color: $white;
+    // @include desktop {
+    //   margin: 0 auto;
+    //   width: 60%
+    // }
   }
 }

@@ -5,6 +5,10 @@
 .search {
   font-size: 1.5rem;
   color: $gray-1;
+  border-color: $primary-color;
+  border-bottom: 3px solid $black;
+  margin-bottom: $pulse * 2;
+  width: 100%;
 
   &__label {
     display: inline-block;
@@ -14,38 +18,43 @@
 
   &__field {
     background-color: $white;
-    border: 1px solid $gray-4;
-    padding-left: 1rem;
-    font-size: inherit;
+    border: 0px none;
+    color: $gray-3;
+    font-size: $pulse * 3;
+    font-weight: 700;
     margin: 0;
+    padding: $pulse 0;
+    width: 100%;
 
     @include tablet {
-      padding-left: 1em;
+      font-size: $pulse * 5;
     }
 
     &:focus {
-      border-color: $gray-1;
+      outline: none;
     }
   }
 
   &__row {
-    display: flex;
+    // display: flex;
+    // width: 90%;
+    // grid-template-columns: 6fr 1fr;
 
-    & .btn {
-      border-left-width: 0;
-      padding: 1.6em;
-    }
+    // & .btn {
+    //   border-left-width: 0;
+    //   padding: 1.6em;
+    // }
   }
 
   &__row &__field {
-    flex: 1 0 10em;
+    // flex: 1 0 10em;
   }
 }
 
 .search--cta .search__field {
-  border-color: $primary-color;
+  // border-color: $primary-color;
 
   &:focus {
-    border-color: darken($primary-color, 15);
+    // border-color: darken($primary-color, 15);
   }
 }

@@ -486,38 +486,29 @@ a {
 ================================= */
 .search {
   font-size: 1.5rem;
-  color: #72797e; }
+  color: #72797e;
+  border-color: #f9a66c;
+  border-bottom: 3px solid #192127;
+  margin-bottom: 3.2rem;
+  width: 100%; }
   .search__label {
     display: inline-block;
     cursor: pointer;
     margin-bottom: 0.5em; }
   .search__field {
     background-color: #fafafa;
-    border: 1px solid #e3e5e9;
-    padding-left: 1rem;
-    font-size: inherit;
-    margin: 0; }
+    border: 0px none;
+    color: #bbc1c6;
+    font-size: 4.8rem;
+    font-weight: 700;
+    margin: 0;
+    padding: 1.6rem 0;
+    width: 100%; }
     @media screen and (min-width: 600px) and (min-height: 450px) {
       .search__field {
-        padding-left: 1em; } }
+        font-size: 8rem; } }
     .search__field:focus {
-      border-color: #72797e; }
-  .search__row {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; }
-    .search__row .btn {
-      border-left-width: 0;
-      padding: 1.6em; }
-  .search__row .search__field {
-    -webkit-box-flex: 1;
-    -ms-flex: 1 0 10em;
-    flex: 1 0 10em; }
-
-.search--cta .search__field {
-  border-color: #f9a66c; }
-  .search--cta .search__field:focus {
-    border-color: #f67a23; }
+      outline: none; }
 
 /* ==============================
 * NAVIGATION
@@ -958,49 +949,15 @@ a {
   .masthead p {
     color: #72797e; }
   .masthead .content-wrapper {
-    display: -ms-grid;
-    display: grid;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center; }
-    @media screen and (min-width: 1024px) {
-      .masthead .content-wrapper {
-        -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr; } }
-  .masthead .search {
-    -ms-flex-item-align: stretch;
-    -ms-grid-row-align: stretch;
-    align-self: stretch; }
-    @media screen and (min-width: 600px) and (min-height: 450px) {
-      .masthead .search {
-        -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-        width: 80%; } }
-    @media screen and (min-width: 1024px) {
-      .masthead .search {
-        margin: 0 auto;
-        width: 60%; } }
-
-.masthead__profile {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
-
-.masthead__avatar {
-  padding: 0 2rem 0 0; }
-
-.masthead--index {
-  border-bottom: none;
-  padding: 0 0 4.8rem; }
-  .masthead--index h1 {
-    color: #fafafa; }
 
 /* ==============================
  * MAIN
