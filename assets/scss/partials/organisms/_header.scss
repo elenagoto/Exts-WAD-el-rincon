@@ -5,22 +5,8 @@
   // border-bottom: 1px solid $gray-4;
   // background-color: $white;
   padding: 0;
-  margin: 0;
-  height: 250vh;
-
-  @include mobile {
-    height: 100vh;
-  }
-
-  @include tablet {
-    height: 80vh;
-  }
-
-  @include desktop {
-    height: 115vh;
-  }
+  margin: 0 0 ($pulse * 3);
 }
-
 
 
 .global-header {
@@ -32,27 +18,11 @@
   position: relative;
 
   .content-wrapper {
+    display: flex;
     flex-direction: column;
-  }
-
-  .logo {
-    float: left;
-    margin: 1rem $pulse 1rem 0;
-  }
-
-  // .search {
-  //   float: left;
-  //   flex: 1 0 auto;
-  //   margin: 0 0 -1px 0;
-
-  //   @media screen and (min-width: 700px) {
-  //     margin-right: $pulse;
-  //   }
-  // }
-
-  .social-media-header {
-    width: 100%;
-    z-index: 44;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
   }
 
   .main-header {
@@ -61,13 +31,19 @@
     padding-top: 1em;
     width: 100%;
     z-index: 44;
+
+    &__item {
+      display: flex;
+      align-items: flex-end;
+
+      padding: $pulse $pulse $pulse 0;
+    }
+
+    .logo {
+      flex: 1 0 50%;
+    }
   }
 
-  .content-wrapper {
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    align-items: center;
-  }
+
 
 }

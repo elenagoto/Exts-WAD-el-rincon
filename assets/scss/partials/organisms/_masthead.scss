@@ -4,7 +4,7 @@
 
 .masthead {
   display: flex;
-  margin: 0;
+  margin-top: $pulse * 3;
   padding: 0;
   width: 100%;
 
@@ -22,8 +22,7 @@
   .content-wrapper {
     // border: 1px solid blue;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
   }
 
   .search {

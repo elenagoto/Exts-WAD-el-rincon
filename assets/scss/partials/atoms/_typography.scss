@@ -24,7 +24,8 @@ h6 .alpha,
 .delta,
 .gamma,
 .epsilon,
-.zeta {
+.zeta,
+.eta {
   font-weight: normal;
   margin: 0 0 0.5rem 0;
   padding: 0;
@@ -55,10 +56,9 @@ h1,
   line-height: 1.2;
   color: $gray-4;
 
-  // @include tablet {
-  //   font-size: 4rem;
-  //   /* 40px/10px */
-  // }
+  @include tablet {
+    font-size: ($pulse * 4);
+  }
 
   @include desktop {
     font-size: ($pulse * 5);
