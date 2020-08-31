@@ -92,7 +92,7 @@ h1,
   /* 36px/10px */
   line-height: 1.2;
   color: #192127; }
-  @media screen and (min-width: 600px) and (min-height: 450px) {
+  @media screen and (min-width: 768px) {
     h1,
     .alpha {
       font-size: 4rem;
@@ -109,7 +109,7 @@ h1,
   /* 36px/10px */
   line-height: 1.2;
   color: #e3e5e9; }
-  @media screen and (min-width: 600px) and (min-height: 450px) {
+  @media screen and (min-width: 768px) {
     .eta {
       font-size: 6.4rem; } }
   @media screen and (min-width: 1024px) {
@@ -122,7 +122,7 @@ h2,
   /* 36px/10px */
   line-height: 1.2;
   color: #192127; }
-  @media screen and (min-width: 600px) and (min-height: 450px) {
+  @media screen and (min-width: 768px) {
     h2,
     .beta {
       font-size: 3.2rem;
@@ -139,7 +139,7 @@ h3,
   /* 28px/10px */
   line-height: 1.2;
   color: #192127; }
-  @media screen and (min-width: 600px) and (min-height: 450px) {
+  @media screen and (min-width: 768px) {
     h3,
     .gamma {
       font-size: 2.8rem;
@@ -289,7 +289,7 @@ a {
     cursor: pointer;
     white-space: nowrap;
     margin: 0 1.6rem 1rem 0; }
-    @media screen and (min-width: 600px) and (min-height: 450px) {
+    @media screen and (min-width: 768px) {
       .input__label {
         margin-bottom: 0; } }
   .input__field {
@@ -329,7 +329,7 @@ a {
     text-align: center;
     width: 100%; }
 
-@media screen and (min-width: 600px) and (min-height: 450px) {
+@media screen and (min-width: 768px) {
   .input {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -365,7 +365,7 @@ a {
   display: grid;
   gap: 20px;
   width: 100%; }
-  @media screen and (min-width: 600px) and (min-height: 450px) {
+  @media screen and (min-width: 768px) {
     .cards {
       -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
@@ -507,7 +507,7 @@ a {
     margin: 0;
     padding: 1.6rem 0;
     width: 100%; }
-    @media screen and (min-width: 600px) and (min-height: 450px) {
+    @media screen and (min-width: 768px) {
       .search__field {
         font-size: 8rem; } }
     .search__field:focus {
@@ -541,13 +541,13 @@ a {
   padding: 0;
   -ms-flex-item-align: start;
   align-self: flex-start; }
-  @media screen and (min-width: 600px) and (min-height: 450px) {
+  @media screen and (min-width: 768px) {
     .masthead__nav li {
       display: inline-block;
       padding: 0; } }
   .masthead__nav a {
     margin: 2rem 1.6rem -1px 0; }
-    @media screen and (min-width: 600px) and (min-height: 450px) {
+    @media screen and (min-width: 768px) {
       .masthead__nav a {
         display: block;
         margin: 0 1.6rem -1px 0;
@@ -651,7 +651,7 @@ a {
     flex-direction: column; }
     .comments__text .input > * {
       margin-bottom: 1.6rem; }
-    @media screen and (min-width: 600px) and (min-height: 450px) {
+    @media screen and (min-width: 768px) {
       .comments__text .input_field {
         width: 100%; } }
 
@@ -677,7 +677,7 @@ a {
   width: 100%;
   height: 100%;
   position: relative; }
-  @media screen and (min-width: 600px) and (min-height: 450px) {
+  @media screen and (min-width: 768px) {
     .featured {
       display: -ms-grid;
       display: grid;
@@ -688,7 +688,7 @@ a {
     background: #fafafa;
     padding: 1.6rem 0;
     width: 100%; }
-    @media screen and (min-width: 600px) and (min-height: 450px) {
+    @media screen and (min-width: 768px) {
       .featured__main {
         padding: 0; } }
   .featured__tags {
@@ -698,7 +698,7 @@ a {
     display: -ms-flexbox;
     display: flex;
     margin: 0; }
-    @media screen and (min-width: 600px) and (min-height: 450px) {
+    @media screen and (min-width: 768px) {
       .featured__tags {
         position: static; } }
     .featured__tags a {
@@ -714,7 +714,7 @@ a {
   flex-direction: column;
   width: 100%;
   margin: 1rem 0; }
-  @media screen and (min-width: 600px) and (min-height: 450px) {
+  @media screen and (min-width: 768px) {
     .featured__intro {
       margin: 3.2rem 0; } }
 
@@ -727,7 +727,7 @@ a {
   align-items: center;
   -ms-flex-item-align: end;
   align-self: flex-end; }
-  @media screen and (min-width: 600px) and (min-height: 450px) {
+  @media screen and (min-width: 768px) {
     .featured__meta {
       -ms-flex-item-align: start;
       align-self: flex-start; } }
@@ -735,14 +735,14 @@ a {
     margin-right: 0.8rem; }
   .featured__meta span, .featured__meta a {
     font-size: 1rem; }
-    @media screen and (min-width: 600px) and (min-height: 450px) {
+    @media screen and (min-width: 768px) {
       .featured__meta span, .featured__meta a {
         font-size: 1.3rem; } }
 
 .featured__title {
   margin: 1.6rem 0; }
 
-@media screen and (min-width: 600px) and (min-height: 450px) {
+@media screen and (min-width: 768px) {
   .featured__text {
     font-size: 1.5rem;
     line-height: 1.5; } }
@@ -778,7 +778,7 @@ a {
       padding: 1.6rem 1.2rem;
       text-align: center;
       width: 13rem; }
-      @media screen and (min-width: 600px) and (min-height: 450px) {
+      @media screen and (min-width: 768px) {
         .follower__btn .btn {
           width: 17rem; } }
 
@@ -880,7 +880,7 @@ main {
   align-items: center;
   width: 100vw;
   padding-bottom: 8rem; }
-  @media screen and (min-width: 600px) and (min-height: 450px) {
+  @media screen and (min-width: 768px) {
     .main--index h2 {
       text-align: center; } }
   .main .content-wrapper {
@@ -934,7 +934,7 @@ main {
   flex-direction: column; }
   .form__text {
     color: #bbc1c6; }
-    @media screen and (min-width: 600px) and (min-height: 450px) {
+    @media screen and (min-width: 768px) {
       .form__text {
         -ms-flex-item-align: end;
         align-self: flex-end;
@@ -951,7 +951,7 @@ main {
   @media screen and (min-width: 1024px) {
     .form {
       width: 60%; } }
-  @media screen and (min-width: 600px) and (min-height: 450px) {
+  @media screen and (min-width: 768px) {
     .form .input__field, .form .input--file {
       width: 76%; } }
   @media screen and (min-width: 1024px) {
@@ -963,7 +963,7 @@ main {
 
 .input--horizontal .prompt {
   width: 100%; }
-  @media screen and (min-width: 600px) and (min-height: 450px) {
+  @media screen and (min-width: 768px) {
     .input--horizontal .prompt {
       width: 76%; } }
   @media screen and (min-width: 1024px) {
@@ -982,7 +982,7 @@ main {
   .input--checkbox .input__label {
     margin: 0; }
 
-@media screen and (min-width: 600px) and (min-height: 450px) {
+@media screen and (min-width: 768px) {
   .input__btn {
     -webkit-box-align: center;
     -ms-flex-align: center;
