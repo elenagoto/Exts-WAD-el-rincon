@@ -363,14 +363,14 @@ a {
   margin: 3rem 0;
   display: -ms-grid;
   display: grid;
-  gap: 20px;
+  gap: 3.2rem;
   width: 100%; }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 600px) {
     .cards {
       -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-      gap: 20px 4.8rem; } }
-  @media screen and (min-width: 1200px) {
+      gap: 6.4rem 4.8rem; } }
+  @media screen and (min-width: 992px) {
     .cards {
       -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr; } }
@@ -425,7 +425,7 @@ a {
       z-index: -1; }
 
 .card__intro {
-  padding: 1.2em 0;
+  padding: 0.5em 0 0.1em;
   background-color: #fafafa; }
 
 .card__title {
@@ -434,9 +434,16 @@ a {
   display: block; }
   .card__title a {
     font-size: 1.2em; }
+    .card__title a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0; }
 
 .card__text {
-  display: block;
+  display: none;
   padding-top: 1em;
   font-weight: 200;
   color: #192127; }
@@ -452,19 +459,24 @@ a {
     background: rgba(0, 0, 0, 0) linear-gradient(rgba(255, 255, 255, 0) 0%, #fafafa 100%) repeat scroll 0% 0%;
     bottom: 0;
     height: 20%; }
+  @media screen and (min-width: 768px) {
+    .card__text {
+      display: block; } }
 
 .card__meta {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   font-size: 1rem;
   margin: 0.5rem 0 1.6rem 0; }
+  @media screen and (min-width: 768px) {
+    .card__meta {
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
+      justify-content: flex-end; } }
   .card__meta * {
     font-size: 1.1em; }
   .card__meta .avatar {
@@ -473,9 +485,13 @@ a {
 .card__footer {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  background-color: #fafafa;
+  z-index: 10000;
+  position: relative; }
   .card__footer .btn {
     font-size: 1rem;
+    padding-left: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

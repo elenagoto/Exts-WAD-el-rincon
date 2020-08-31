@@ -1,6 +1,6 @@
 // Media-queries
-@mixin mobile {
-  @media screen and (min-height: 576px) {
+@mixin small-tablet {
+  @media screen and (min-width: 600px) {
     @content;
   }
 }

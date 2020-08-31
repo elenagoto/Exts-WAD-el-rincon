@@ -5,15 +5,15 @@
 .cards {
   margin: 3rem 0;
   display: grid;
-  gap: 20px;
+  gap: $pulse * 2;
   width: 100%;
 
-  @include tablet {
+  @include small-tablet {
     grid-template-columns: 1fr 1fr;
-    gap: 20px ($pulse * 3);
+    gap: ($pulse * 4) ($pulse * 3);
   }
 
-  @include desktop {
+  @include small-desktop {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
@@ -70,7 +70,7 @@
 
   // Card text
   &__intro {
-    padding: 1.2em 0;
+    padding: 0.5em 0 0.1em;
     background-color: $white;
   }
 
@@ -79,22 +79,24 @@
     font-weight: 600;
     display: block;
 
+
     a {
       font-size: 1.2em;
-
-      // &::after {
-      //   content: '';
-      //   position: absolute;
-      //   top: 0;
-      //   bottom: 0;
-      //   left: 0;
-      //   right: 0;
-      // }
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+      }
     }
+
+
   }
 
   &__text {
-    display: block;
+    display: none;
     padding-top: 1em;
     font-weight: 200;
     color: $black;
@@ -109,14 +111,21 @@
       bottom: 0;
       height: 20%;
     }
+    @include tablet {
+      display: block;
+    }
+
   }
 
   &__meta {
     display: flex;
-    justify-content: flex-end;
     align-items: center;
     font-size: 1rem;
     margin: 0.5rem 0 $pulse 0;
+
+    @include tablet {
+      justify-content: flex-end;
+    }
 
     * {
       font-size: 1.1em;
@@ -129,9 +138,13 @@
 
   &__footer {
     display: flex;
+    background-color: $white;
+    z-index: 10000;
+    position: relative;
 
     .btn {
       font-size: 1rem;
+      padding-left:0;
 
       display: flex;
       align-items: center;
