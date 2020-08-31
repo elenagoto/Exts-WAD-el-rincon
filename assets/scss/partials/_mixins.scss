@@ -1,6 +1,6 @@
 // Media-queries
 @mixin mobile {
-  @media screen and (min-height: 450px) {
+  @media screen and (min-height: 576px) {
     @content;
   }
 }
@@ -11,8 +11,14 @@
   }
 }
 
+@mixin small-desktop {
+  @media screen and (min-width: 992px) {
+    @content;
+  }
+}
+
 @mixin desktop {
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1200px) {
     @content;
   }
 }

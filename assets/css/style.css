@@ -97,7 +97,7 @@ h1,
     .alpha {
       font-size: 4rem;
       /* 40px/10px */ } }
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1200px) {
     h1,
     .alpha {
       font-size: 4.8rem;
@@ -112,7 +112,7 @@ h1,
   @media screen and (min-width: 768px) {
     .eta {
       font-size: 6.4rem; } }
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1200px) {
     .eta {
       font-size: 8rem; } }
 
@@ -127,7 +127,7 @@ h2,
     .beta {
       font-size: 3.2rem;
       /* 36px/10px */ } }
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1200px) {
     h2,
     .beta {
       font-size: 3.6rem;
@@ -370,7 +370,7 @@ a {
       -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
       gap: 20px 4.8rem; } }
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1200px) {
     .cards {
       -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr; } }
@@ -635,7 +635,7 @@ a {
   display: flex;
   margin-bottom: 4rem;
   width: 100%; }
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1200px) {
     .comments {
       width: 70rem; } }
 
@@ -939,7 +939,7 @@ main {
         -ms-flex-item-align: end;
         align-self: flex-end;
         width: 76%; } }
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 1200px) {
       .form__text {
         width: 64%; } }
   .form > div:nth-child(2) {
@@ -948,13 +948,13 @@ main {
     color: #f17a7e;
     padding: 1.6rem 0;
     display: none; }
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1200px) {
     .form {
       width: 60%; } }
   @media screen and (min-width: 768px) {
     .form .input__field, .form .input--file {
       width: 76%; } }
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1200px) {
     .form .input__field, .form .input--file {
       width: 64%; } }
 
@@ -966,7 +966,7 @@ main {
   @media screen and (min-width: 768px) {
     .input--horizontal .prompt {
       width: 76%; } }
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1200px) {
     .input--horizontal .prompt {
       width: 64%; } }
   .input--horizontal .prompt .btn {
