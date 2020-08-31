@@ -29,6 +29,11 @@
     display: flex;
     margin: 0;
 
+    .btn {
+      padding-left: 0;
+
+    }
+
     @include tablet {
       position: static;
     }

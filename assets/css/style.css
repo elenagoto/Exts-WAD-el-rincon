@@ -714,6 +714,8 @@ a {
     display: -ms-flexbox;
     display: flex;
     margin: 0; }
+    .featured__tags .btn {
+      padding-left: 0; }
     @media screen and (min-width: 768px) {
       .featured__tags {
         position: static; } }
