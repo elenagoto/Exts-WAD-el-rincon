@@ -240,7 +240,7 @@ a {
 * LOGO
 ================================= */
 .logo a {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: bold;
   color: #fafafa;
   white-space: nowrap; }
@@ -500,7 +500,6 @@ a {
 ================================= */
 .search {
   font-size: 1.5rem;
-  color: #72797e;
   border-color: #f9a66c;
   border-bottom: 3px solid #192127;
   margin-bottom: 3.2rem;
@@ -510,9 +509,9 @@ a {
     cursor: pointer;
     margin-bottom: 0.5em; }
   .search__field {
-    background-color: #fafafa;
+    background-color: #4a6163;
     border: 0px none;
-    color: #bbc1c6;
+    color: #e3e5e9;
     font-size: 4.8rem;
     font-weight: 700;
     margin: 0;
@@ -812,15 +811,14 @@ a {
 /* ==============================
  * HEADER
 ================================= */
-.banner {
-  background: #f9a66c;
-  background: -webkit-radial-gradient(circle, #e0915f 0%, #fbb87d 50%, #fcc98d 100%);
-  background: -o-radial-gradient(circle, #e0915f 0%, #fbb87d 50%, #fcc98d 100%);
-  background: radial-gradient(circle, #e0915f 0%, #fbb87d 50%, #fcc98d 100%);
+.header {
+  background: #4a6163;
   margin: 0 0 1.6rem 0;
   padding: 0;
-  margin-bottom: 3.2rem;
-  min-height: 100vh; }
+  margin-bottom: 3.2rem; }
+
+.banner {
+  height: 100vh; }
 
 .global-header {
   padding: 0; }

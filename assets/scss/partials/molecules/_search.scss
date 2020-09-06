@@ -4,7 +4,7 @@
 
 .search {
   font-size: 1.5rem;
-  color: $gray-1;
+  // color: $gray-1;
   border-color: $primary-color;
   border-bottom: 3px solid $black;
   margin-bottom: $pulse * 2;
@@ -17,9 +17,9 @@
   }
 
   &__field {
-    background-color: $white;
+    background-color: $green;
     border: 0px none;
-    color: $gray-3;
+    color: $gray-4;
     font-size: $pulse * 3;
     font-weight: 700;
     margin: 0;
