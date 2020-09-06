@@ -35,8 +35,9 @@ h1,
 .alpha {
   font-size: 3.6rem;
   /* 36px/10px */
-  line-height: 1.2;
-  color: $black;
+    font-weight: 700;
+    line-height: 1.2;
+    color: $gray-3;
 
   @include tablet {
     font-size: 4rem;
@@ -49,21 +50,7 @@ h1,
   }
 }
 
-.eta {
-  font-size: 5rem;
-  font-weight: 700;
-  /* 36px/10px */
-  line-height: 1.2;
-  color: $gray-4;
 
-  @include tablet {
-    font-size: ($pulse * 4);
-  }
-
-  @include desktop {
-    font-size: ($pulse * 5);
-  }
-}
 
 h2,
 .beta {
@@ -121,6 +108,10 @@ h6,
   font-weight: normal;
   line-height: 1.4;
   color: $gray-1;
+}
+
+.eta {
+  
 }
 
 a {

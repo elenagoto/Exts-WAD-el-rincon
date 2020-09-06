@@ -3,10 +3,14 @@
  ================================ */
 
 .content-wrapper {
-  width: 90%;
+  width: 100%;
   max-width: 120rem;
   margin: 0 auto;
   padding: 0 2em;
+
+  @include tablet {
+    width: 90%;
+  }
 }
 
 .bare-list {
