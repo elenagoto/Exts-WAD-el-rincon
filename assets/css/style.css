@@ -525,9 +525,12 @@ a {
     padding: 1.6rem 0; }
   .global-nav a {
     color: #fafafa;
-    white-space: nowrap; }
+    white-space: nowrap;
+    /* Fontawesome icons*/ }
     .global-nav a:hover, .global-nav a:focus {
       text-decoration: underline; }
+    .global-nav a .svg-inline--fa {
+      font-size: 1.4em; }
 
 /* Footer Navigation */
 .nav-footer {
