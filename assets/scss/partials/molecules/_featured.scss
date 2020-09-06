@@ -3,7 +3,7 @@
 ===================== */
 
 .featured {
-  background: $white;
+  background: $gray-5;
   margin: 0 0 $pulse;
   padding: $pulse;
   width: 100%;
@@ -30,7 +30,7 @@
   margin-bottom: $pulse;
 
   @include tablet {
-    border-bottom: 1px solid $gray-4;
+    border-bottom: 1px solid $gray-3;
   }
 }
 

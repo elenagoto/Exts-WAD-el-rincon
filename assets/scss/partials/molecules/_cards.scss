@@ -25,6 +25,7 @@
   flex-direction: column;
   justify-content: flex-start;
   overflow: hidden;
+  position: relative;
 
   &:hover .card__thumb img {
     transform: scale(1.15);
