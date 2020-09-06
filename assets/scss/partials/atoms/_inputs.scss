@@ -9,7 +9,7 @@
   width: 100%;
 
   &__label {
-    display: inline-block;
+    // display: inline-block;
     cursor: pointer;
     white-space: nowrap;
     margin: 0 $pulse 1rem 0;
@@ -62,29 +62,5 @@
     display: block;
     text-align: center;
     width: 100%;
-  }
-}
-
-.input {
-  @include tablet {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-  }
-
-  .checkbox-main {
-    display: flex;
-    align-items: center;
-
-    input {
-      width: auto;
-      height: 2.5rem;
-      width: 2.5rem;
-      border-radius: 0;
-    }
-
-    label {
-      margin-left: 0.5rem;
-    }
   }
 }

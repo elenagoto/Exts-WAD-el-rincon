@@ -35,7 +35,14 @@ body {
   width: 100%;
   max-width: 120rem;
   margin: 0 auto;
-  padding: 0 2em; }
+  padding: 0 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
   @media screen and (min-width: 768px) {
     .content-wrapper {
       width: 90%; } }
@@ -280,7 +287,6 @@ a {
   color: #192127;
   width: 100%; }
   .input__label {
-    display: inline-block;
     cursor: pointer;
     white-space: nowrap;
     margin: 0 1.6rem 1rem 0; }
@@ -323,33 +329,6 @@ a {
     display: block;
     text-align: center;
     width: 100%; }
-
-@media screen and (min-width: 768px) {
-  .input {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: baseline;
-    -ms-flex-align: baseline;
-    align-items: baseline; } }
-
-.input .checkbox-main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
-  .input .checkbox-main input {
-    width: auto;
-    height: 2.5rem;
-    width: 2.5rem;
-    border-radius: 0; }
-  .input .checkbox-main label {
-    margin-left: 0.5rem; }
 
 /* ==============================
 * CARDS
@@ -958,6 +937,26 @@ main {
 /* ==============================
  * FORMS
 ================================= */
+.form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  -ms-flex-item-align: center;
+  align-self: center; }
+  @media screen and (min-width: 768px) {
+    .form-container {
+      width: 80%; } }
+  @media screen and (min-width: 992px) {
+    .form-container {
+      width: 70%; } }
+  .form-container h1 {
+    margin: 1.6rem 0 3.2rem; }
+
 .form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -965,46 +964,27 @@ main {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
-  flex-direction: column; }
+  flex-direction: column;
+  -ms-flex-item-align: center;
+  align-self: center;
+  width: 100%; }
   .form__text {
-    color: #bbc1c6; }
-    @media screen and (min-width: 768px) {
-      .form__text {
-        -ms-flex-item-align: end;
-        align-self: flex-end;
-        width: 76%; } }
-    @media screen and (min-width: 1200px) {
-      .form__text {
-        width: 64%; } }
+    margin: 0 0 1.6rem;
+    color: #192127; }
+    .form__text a {
+      color: #f9a66c; }
+      .form__text a:hover, .form__text a:focus {
+        color: #192127;
+        text-decoration: underline; }
   .form > div:nth-child(2) {
-    margin-top: 5.6rem; }
+    margin-top: 3.2rem; }
   .form .alert {
     color: #f17a7e;
     padding: 1.6rem 0;
     display: none; }
-  @media screen and (min-width: 1200px) {
-    .form {
-      width: 60%; } }
-  @media screen and (min-width: 768px) {
-    .form .input__field, .form .input--file {
-      width: 76%; } }
-  @media screen and (min-width: 1200px) {
-    .form .input__field, .form .input--file {
-      width: 64%; } }
 
 .input__description {
   margin: -3rem 0 1.6rem 0; }
-
-.input--horizontal .prompt {
-  width: 100%; }
-  @media screen and (min-width: 768px) {
-    .input--horizontal .prompt {
-      width: 76%; } }
-  @media screen and (min-width: 1200px) {
-    .input--horizontal .prompt {
-      width: 64%; } }
-  .input--horizontal .prompt .btn {
-    width: 100%; }
 
 .input--checkbox {
   display: -webkit-box;
