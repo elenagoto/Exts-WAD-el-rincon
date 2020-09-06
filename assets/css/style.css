@@ -25,7 +25,7 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 100vh; }
+  height: 100%; }
 
 .index {
   display: -ms-grid;
@@ -547,32 +547,10 @@ a {
     margin: 0 0 0 1.6rem;
     padding: 1.6rem 0; }
   .global-nav a {
-    color: #fafafa; }
+    color: #fafafa;
+    white-space: nowrap; }
     .global-nav a:hover, .global-nav a:focus {
       text-decoration: underline; }
-
-/* Masthead Navigation */
-.masthead__nav {
-  margin-top: 2rem;
-  padding: 0;
-  -ms-flex-item-align: start;
-  align-self: flex-start; }
-  @media screen and (min-width: 768px) {
-    .masthead__nav li {
-      display: inline-block;
-      padding: 0; } }
-  .masthead__nav a {
-    margin: 2rem 1.6rem -1px 0; }
-    @media screen and (min-width: 768px) {
-      .masthead__nav a {
-        display: block;
-        margin: 0 1.6rem -1px 0;
-        padding: 0 0.5rem 2.5rem; } }
-    .masthead__nav a:hover, .masthead__nav a:focus {
-      border-bottom: 1px solid #192127; }
-  .masthead__nav .current a {
-    color: #192127;
-    border-bottom: 1px solid #192127; }
 
 /* Footer Navigation */
 .nav-footer {
@@ -804,18 +782,17 @@ a {
  * HEADER
 ================================= */
 .banner {
-  padding: 0;
-  margin: 0;
-  min-height: 100vh; }
-
-.global-header {
   background: #f9a66c;
   background: -webkit-radial-gradient(circle, #e0915f 0%, #fbb87d 50%, #fcc98d 100%);
   background: -o-radial-gradient(circle, #e0915f 0%, #fbb87d 50%, #fcc98d 100%);
   background: radial-gradient(circle, #e0915f 0%, #fbb87d 50%, #fcc98d 100%);
   margin: 0 0 1.6rem 0;
   padding: 0;
-  position: relative; }
+  margin-bottom: 3.2rem;
+  min-height: 100vh; }
+
+.global-header {
+  padding: 0; }
   .global-header .content-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -833,12 +810,17 @@ a {
     -ms-flex-align: center;
     align-items: center; }
   .global-header .main-header {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     padding-top: 1em;
     width: 100%;
     z-index: 44; }
@@ -854,6 +836,9 @@ a {
       -webkit-box-flex: 1;
       -ms-flex: 1 0 50%;
       flex: 1 0 50%; }
+
+.social-media-header {
+  width: 100%; }
 
 /* ==============================
  * MASTHEAD

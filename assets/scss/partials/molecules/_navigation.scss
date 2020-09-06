@@ -18,48 +18,11 @@
 
   a {
     color: $white;
+    white-space: nowrap;
 
     &:hover,
     &:focus {
       text-decoration: underline;
-    }
-  }
-}
-
-/* Masthead Navigation */
-.masthead__nav {
-  margin-top: 2rem;
-  padding: 0;
-  align-self: flex-start;
-
-  li {
-
-    // padding: 0 0 $pulse 0;
-    @include tablet {
-      display: inline-block;
-      padding: 0;
-    }
-  }
-
-  a {
-    margin: 2rem $pulse -1px 0;
-
-    @include tablet {
-      display: block;
-      margin: 0 $pulse -1px 0;
-      padding: 0 0.5rem 2.5rem;
-    }
-
-    &:hover,
-    &:focus {
-      border-bottom: 1px solid $black;
-    }
-  }
-
-  .current {
-    a {
-      color: $black;
-      border-bottom: 1px solid $black;
     }
   }
 }
