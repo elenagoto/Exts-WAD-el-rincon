@@ -12,7 +12,8 @@ html {
   font-size: 62.5%;
   /* 10px /16px*/
   background-color: #fafafa;
-  line-height: 1.6; }
+  line-height: 1.6;
+  height: 100%; }
 
 body {
   color: #72797e;
