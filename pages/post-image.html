@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About</title>
+  <title>Post</title>
   <script src="https://kit.fontawesome.com/f31ea25433.js" crossorigin="anonymous"></script>
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,300;1,400;1,500;1,600;1,700;1,900&display=swap"
@@ -49,36 +49,105 @@
         </div>
       </div>
     </div>
-    <!-- Start masthead -->
-    <div class="masthead">
-      <!-- Start Featured -->
-      <div class="content-wrapper">
-      </div>
-    </div>
-    </div>
   </header>
   <!-- END Header -->
 
   <!-- START Main -->
   <main class="main">
-    <!-- START episode player -->
-    <!-- END episode player -->
+    <div class="content-wrapper">
+      <article class="post">
+        <div class="post__header">
+          <div class="post__tags">
+            <ul class="bare-list">
+              <li><a class="btn btn--tag" href="#">Podcast</a></li>
+              <li><a class="btn btn--tag" href="#">Historia</a></li>
+              <li><a class="btn btn--tag" href="#">Literatura</a></li>
+            </ul>
+          </div>
+          <div class="post__title">
+            <!-- Title -->
+            <h1>Episode 1: Name of the Episode</h1>
+          </div>
 
-    <!-- START episode synopsis -->
-    <!-- END episode synopsis -->
 
-    <!-- START Comments section-->
+          <div class="post__meta">
+            <img class="avatar avatar-small" src="../assets/images/passifloras/curuba_1.jpeg" alt="Big blue avatar" />
+            <div class="post__author">
+              <!-- Author -->
+              <span>por <a href="#">el Podcast</a></span>
+            </div>
+            <div class="post__date">
+              <!-- Date -->
+              <span><time>04/07/2020</time></span>
+            </div>
+          </div>
+          <div class="post__links">
 
-    <!-- START Comments form -->
-    <!-- END Comments form -->
+            <div class="share_links">
+              <!-- Share links -->
+            </div>
+            <div class="post__form">
+              <!-- Add to reading list form /Remove from list-->
+            </div>
+          </div>
 
-    <!-- START Comments display -->
-    <!-- END Comments display -->
 
-    <!-- END Comments section-->
+
+
+
+
+          <!-- Image -->
+        </div>
+        <div class="post__main">
+
+          <!-- episode player -->
+          <!-- post content -->
+        </div>
+      </article>
+      <!-- Divider -->
+      <div class="post__comments">
+        <h3>Comments</h3>
+        <div class="comments comments--add">
+          <div class="comments__avatar">
+            <img class="avatar" src="../assets/images/avatar.png" alt="Big blue avatar" />
+          </div>
+          <div class="comments__text">
+            <form class="input input--textarea" action="add-comment" method="POST">
+              <label class="input__label" for="add-comment">Add a comment</label>
+              <textarea class="input__field" id="add-comment" name="add-comment"></textarea>
+              <button class="btn btn--cta" type="submit" name="action" value="#">
+                Post
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="comments comments--display">
+          <div class="comments__avatar">
+            <img class="avatar" src="../assets/images/avatar.png" alt="Big blue avatar" />
+          </div>
+          <div class="comments__text">
+            <div class="comments__user">
+              <span class="user__name"><a href="#">Name LastName</a> <span class="comments__time">1 week
+                  ago</span>
+              </span>
+            </div>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus quis saepe et dignissimos
+              beatae maiores eos eveniet perspiciatis quas, cupiditate earum, veritatis consequuntur
+              tempora, facilis nemo molestias ex nostrum animi!</p>
+          </div>
+        </div>
+        <!-- START Comments section-->
+
+        <!-- START Comments form -->
+        <!-- END Comments form -->
+
+        <!-- START Comments display -->
+        <!-- END Comments display -->
+
+        <!-- END Comments section-->
+      </div>
+    </div>
   </main>
-
-
   <!-- END Main -->
 
   <!-- START Footer -->
@@ -90,7 +159,7 @@
       <div class="nav-footer">
         <ul class="bare-list">
           <li><a href="#">About</a></li>
-          <li><a href="">Style Guide</a></li>
+          <li><a href="atoms.html">Style Guide</a></li>
           <li><a href="#">Terms of Use</a></li>
         </ul>
       </div>
