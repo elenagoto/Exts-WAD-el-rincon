@@ -4,10 +4,10 @@
 
 .featured {
   background: $gray-5;
-  margin: 0 0 $pulse;
+  margin: 0 0 ($pulse * 4);
   padding: $pulse;
   width: 100%;
-  
+
 
   @include tablet {
     height: 65vh;
@@ -16,8 +16,8 @@
     grid-template-rows: 0.5fr 1.5fr 0.5fr;
     column-gap: $pulse * 1.5;
     grid-template-areas: "header thumb"
-                         "main thumb"
-                         "footer thumb";
+      "main thumb"
+      "footer thumb";
   }
 }
 
@@ -35,27 +35,28 @@
 }
 
 .featured__thumb {
-    grid-area: thumb;
+  grid-area: thumb;
+  width: 100%;
+  margin: 0 auto;
+
+  @include small-tablet {
+    width: 90%;
+  }
+
+  @include tablet {
     width: 100%;
-    margin: 0 auto;
+    margin: 0;
+  }
 
-    @include small-tablet {
-      width: 90%;
-    }
+  img {
+    width: 100%;
+
     @include tablet {
-      width: 100%;
-      margin:0;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
     }
-
-    img {
-      width: 100%;
-
-      @include tablet {
-        height: 100%;
-        object-fit: cover;
-        object-position: center center;
-      }
-    }
+  }
 }
 
 .featured__main {
@@ -69,17 +70,20 @@
   @include tablet {
     padding: 0;
   }
+
   .featured__title {
     margin: $pulse 0;
   }
 
   .featured__text {
     margin: $pulse 0 ($pulse * 1.5);
+
     @include tablet {
       font-size: 1.5rem;
       line-height: 1.5;
     }
   }
+
   .featured__author {
     display: flex;
     align-items: center;
@@ -94,18 +98,13 @@
   grid-area: footer;
   display: flex;
   align-items: flex-end;
-  
+
   .featured__tags {
-      display: flex;
-      margin: 0;
-  
-      .btn {
-        margin-right: 1rem;
-      }
+    display: flex;
+    margin: 0;
+
+    .btn {
+      margin-right: 1rem;
+    }
   }
 }
-
-
-
-
-

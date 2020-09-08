@@ -3,14 +3,33 @@
  ================================ */
 
 a,
-p,
 ul,
 ol,
 span,
 label {
   font-size: 1.5rem;
-  /* 15px/10px */
-  line-height: 1.6;
+  line-height: 1.5;
+
+  @include tablet {
+    font-size: 1.6rem;
+    line-height: 1.6;
+  }
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 2;
+
+  @include tablet {
+    font-size: 1.7rem;
+    line-height: 2.1;
+
+  }
+
+  @include desktop {
+    font-size: 2rem;
+    line-height: 2.2;
+  }
 }
 
 h1,
@@ -35,9 +54,11 @@ h1,
 .alpha {
   font-size: 3.6rem;
   /* 36px/10px */
-    font-weight: 700;
-    line-height: 1.2;
-    color: $gray-3;
+  font-weight: 700;
+  font-family: 'Roboto Slab',
+    serif;
+  line-height: 1.2;
+  color: $gray-3;
 
   @include tablet {
     font-size: 4rem;
@@ -56,6 +77,8 @@ h2,
 .beta {
   font-size: 2.8rem;
   /* 36px/10px */
+  font-family: 'Roboto Slab',
+    serif;
   line-height: 1.2;
   color: $black;
 
@@ -74,6 +97,8 @@ h3,
 .gamma {
   font-size: 2.3rem;
   /* 28px/10px */
+  font-family: 'Roboto Slab',
+    serif;
   line-height: 1.2;
   color: $black;
 
@@ -110,9 +135,7 @@ h6,
   color: $gray-1;
 }
 
-.eta {
-  
-}
+.eta {}
 
 a {
   text-decoration: none;

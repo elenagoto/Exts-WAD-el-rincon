@@ -8,39 +8,42 @@
   width: 100%;
 
   @include desktop {
-      width: 70rem;
-    }
+    width: 70rem;
+  }
 }
+
 .comments__avatar {
   padding-right: 2rem;
 }
+
 .comments__text {
   width: 100%;
 
   .input {
     flex-direction: column;
-    > * {
+
+    >* {
       margin-bottom: $pulse;
-  }
+    }
 
     &_field {
       @include tablet {
-      width: 100%;
+        width: 100%;
       }
     }
+  }
+
+  p {
+    color: $gray-1;
+    font-size: 1.5em;
+    line-height: 1.5;
   }
 }
 
 .comments__title {
   span {
     color: $gray-3;
-  } 
-} 
-
-.comments--add {
-  .comments__avatar {
-    padding-top: 4rem;
-  } 
+  }
 }
 
 .comments__user {
@@ -50,11 +53,13 @@
     a {
       color: $black;
     }
-    a:hover, a:focus {
+
+    a:hover,
+    a:focus {
       color: $primary-color;
     }
   }
-  
+
   .comments__time {
     color: $gray-3;
   }
