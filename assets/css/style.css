@@ -355,6 +355,7 @@ a {
 * CARDS
 ================================= */
 .cards {
+  border-radius: 2%;
   margin: 3rem 0;
   display: -ms-grid;
   display: grid;
@@ -371,6 +372,7 @@ a {
       grid-template-columns: 1fr 1fr 1fr; } }
 
 .card {
+  border-radius: 2%;
   margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -391,6 +393,7 @@ a {
   .card__main {
     position: relative; }
   .card__form {
+    background: #fafafa;
     position: absolute;
     top: 0px;
     right: 0px; }
@@ -636,66 +639,70 @@ a {
     margin: 1.6rem 0;
     padding: 1.6rem 0; }
 
-.post__header .post__tags {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 1.6rem 0 3.2rem; }
-  .post__header .post__tags > li {
-    margin-right: 1.6rem; }
-
-.post__header__media {
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap-reverse;
-  flex-wrap: wrap-reverse;
-  gap: 1.6rem;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  margin: 3.2rem 0;
-  width: 100%; }
-
-.post__header .post__meta {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-  -ms-flex: 1 0 300px;
-  flex: 1 0 300px; }
-  .post__header .post__meta .meta-text {
-    margin-left: 1.6rem; }
-    .post__header .post__meta .meta-text time {
+.post__header {
+  background: #fafafa; }
+  .post__header .post__tags {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 1.6rem 0 3.2rem; }
+    .post__header .post__tags > li {
+      margin-right: 1.6rem; }
+  .post__header__media {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap-reverse;
+    flex-wrap: wrap-reverse;
+    gap: 1.6rem;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin: 3.2rem 0;
+    width: 100%; }
+  .post__header .post__meta {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 300px;
+    flex: 1 0 300px; }
+    .post__header .post__meta .meta-text {
+      margin-left: 1.6rem; }
+      .post__header .post__meta .meta-text a {
+        text-decoration: underline;
+        font-weight: 500;
+        font-family: 'Roboto Slab', serif; }
+      .post__header .post__meta .meta-text time {
+        color: #72797e;
+        font-size: 0.8em; }
+  .post__header .post__links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end; }
+    .post__header .post__links > li {
+      margin-left: 1.6rem; }
+    .post__header .post__links a,
+    .post__header .post__links .svg-inline--fa {
+      font-size: 2.5rem;
       color: #72797e; }
-
-.post__header .post__links {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-  -ms-flex-align: end;
-  align-items: flex-end; }
-  .post__header .post__links > li {
-    margin-left: 1.6rem; }
-  .post__header .post__links a,
-  .post__header .post__links .svg-inline--fa {
-    font-size: 2.5rem;
-    color: #72797e; }
-  .post__header .post__links a:focus,
-  .post__header .post__links a:hover,
-  .post__header .post__links .svg-inline--fa:focus,
-  .post__header .post__links .svg-inline--fa:hover {
-    color: #f9a66c; }
-  .post__header .post__links .post__form {
-    -ms-flex-item-align: center;
-    -ms-grid-row-align: center;
-    align-self: center; }
-    .post__header .post__links .post__form .btn {
-      padding: 0; }
+    .post__header .post__links a:focus,
+    .post__header .post__links a:hover,
+    .post__header .post__links .svg-inline--fa:focus,
+    .post__header .post__links .svg-inline--fa:hover {
+      color: #f9a66c; }
+    .post__header .post__links .post__form {
+      -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center; }
+      .post__header .post__links .post__form .btn {
+        padding: 0; }
 
 .post__thumb {
   display: -webkit-box;
@@ -764,7 +771,7 @@ a {
 ===================== */
 .featured {
   background: #f7f9fc;
-  margin: 0 0 6.4rem;
+  margin: 0 0 4.8rem;
   padding: 1.6rem;
   width: 100%; }
   @media screen and (min-width: 768px) {
@@ -853,6 +860,10 @@ a {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center; }
+    .featured__main .featured__author a {
+      font-family: 'Roboto Slab', serif;
+      text-decoration: underline;
+      font-weight: 500; }
     .featured__main .featured__author img {
       margin-right: 0.8rem; }
 
@@ -911,13 +922,39 @@ a {
  * HEADER
 ================================= */
 .header {
-  background: #4a6163;
+  background: #f9a66c;
+  background: -webkit-radial-gradient(circle, #e0915f 0%, #fbb87d 50%, #fcc98d 100%);
+  background: -o-radial-gradient(circle, #e0915f 0%, #fbb87d 50%, #fcc98d 100%);
+  background: radial-gradient(circle, #e0915f 0%, #fbb87d 50%, #fcc98d 100%);
   margin: 0 0 6.4rem 0;
   padding: 0;
-  margin-bottom: 3.2rem; }
+  position: relative; }
+  .header__image {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%; }
+    .header__image img {
+      display: block;
+      padding: 0;
+      margin: 0;
+      -o-object-fit: cover;
+      object-fit: cover;
+      -o-object-position: center center;
+      object-position: center center;
+      width: 105%;
+      height: 105%;
+      margin: -5px -5% -5% -10px;
+      -webkit-filter: blur(5px);
+      filter: blur(5px); }
 
 .global-header {
-  padding: 0; }
+  padding: 1.6rem 0 0;
+  position: relative;
+  z-index: 1; }
   .global-header .content-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -963,7 +1000,8 @@ a {
       flex: 1 0 50%; }
 
 .social-media-header {
-  width: 100%; }
+  width: 100%;
+  z-index: 1; }
 
 /* ==============================
  * MASTHEAD
@@ -973,8 +1011,10 @@ a {
   display: -ms-flexbox;
   display: flex;
   margin-top: 4.8rem;
-  padding: 0;
-  width: 100%; }
+  padding: 0 0 1.6rem;
+  width: 100%;
+  position: relative;
+  z-index: 1; }
   .masthead p {
     color: #72797e; }
   .masthead .content-wrapper {

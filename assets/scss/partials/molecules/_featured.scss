@@ -4,7 +4,7 @@
 
 .featured {
   background: $gray-5;
-  margin: 0 0 ($pulse * 4);
+  margin: 0 0 ($pulse * 3);
   padding: $pulse;
   width: 100%;
 
@@ -87,6 +87,13 @@
   .featured__author {
     display: flex;
     align-items: center;
+
+    a {
+      font-family: 'Roboto Slab',
+        serif;
+      text-decoration: underline;
+      font-weight: 500;
+    }
 
     img {
       margin-right: 0.8rem;
