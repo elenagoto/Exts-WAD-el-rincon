@@ -102,4 +102,12 @@
   }
 }
 
-.post__main {}
+.post__main {
+  .post__content {
+    padding: $pulse 0 ($pulse * 3);
+  }
+
+  .post__episode {
+    padding: $pulse 0 ($pulse * 3);
+  }
+}
