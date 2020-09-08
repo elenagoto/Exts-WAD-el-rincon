@@ -22,6 +22,7 @@
 }
 
 .featured__header {
+  color: $gray-1;
   grid-area: header;
   display: flex;
   flex-direction: column;
@@ -30,6 +31,7 @@
   margin-bottom: $pulse;
 
   @include tablet {
+    padding-bottom: $pulse;
     border-bottom: 1px solid $gray-3;
   }
 }
@@ -73,6 +75,10 @@
 
   .featured__title {
     margin: $pulse 0;
+
+    a {
+      font-weight: 600;
+    }
   }
 
   .featured__text {
