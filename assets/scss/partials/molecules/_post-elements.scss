@@ -5,20 +5,10 @@
 
 
   &__section {
-    display: flex;
-    // border-bottom: 1px solid $gray-4;
+    border-bottom: 1px solid $gray-4;
     flex-direction: column;
     margin: $pulse 0;
     padding: $pulse 0;
-  }
-
-  &__comments {
-    align-items: center;
-
-    h3 {
-      align-self: flex-start;
-      margin-bottom: $pulse;
-    }
   }
 
 }
@@ -115,12 +105,6 @@
 .post__main {
   .post__content {
     padding: $pulse 0 ($pulse * 3);
-    max-width: 75em;
-    align-self: center;
-
-    p {
-      padding: $pulse;
-    }
   }
 
   .post__episode {

@@ -17,9 +17,9 @@
   }
 
   &__field {
-    background-color: transparent;
+    background-color: $green;
     border: 0px none;
-    color: $white;
+    color: $gray-4;
     font-size: $pulse * 3;
     font-weight: 700;
     margin: 0;

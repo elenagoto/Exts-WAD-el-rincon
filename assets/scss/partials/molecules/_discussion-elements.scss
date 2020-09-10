@@ -4,7 +4,7 @@
 .comments {
   align-items: flex-start;
   display: flex;
-  margin-bottom: ($pulse);
+  margin-bottom: ($pulse * 2.5);
   width: 100%;
 
   @include desktop {
@@ -20,7 +20,6 @@
   width: 100%;
 
   .input {
-    display: flex;
     flex-direction: column;
 
     >* {
@@ -31,11 +30,6 @@
       @include tablet {
         width: 100%;
       }
-    }
-
-    .btn {
-      width: 100px;
-      align-self: flex-end;
     }
   }
 
@@ -58,7 +52,6 @@
   .user__name {
     a {
       color: $black;
-      font-family: 'Roboto Slab',
     }
 
     a:hover,
@@ -69,7 +62,6 @@
 
   .comments__time {
     color: $gray-3;
-    font-size: 0.85em;
   }
 
 }
