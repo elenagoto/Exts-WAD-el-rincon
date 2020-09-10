@@ -14,7 +14,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 0.5fr 1.5fr 0.5fr;
-    column-gap: $pulse * 1.5;
+    column-gap: $pulse * 2.5;
+    padding-left: $pulse * 2.5;
     grid-template-areas: "header thumb"
       "main thumb"
       "footer thumb";
