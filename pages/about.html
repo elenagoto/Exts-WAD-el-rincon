@@ -17,6 +17,7 @@
       <link rel="stylesheet" href="assets/css/universal-ie6.css" />
     <![endif]-->
   <script src="../assets/js/modernizr-custom.js"></script>
+  <script src="../assets/js/script.js"></script>
 </head>
 
 <body>
@@ -26,37 +27,49 @@
     <!-- Start global header -->
     <div class="global-header">
       <div class="content-wrapper">
-        <div class="social-media-header">
-          <nav>
-            <ul class="global-nav bare-list social-media-nav">
-              <li><a href="#">Spotify</a></li>
-              <li><a href="#">Instagram</a></li>
-              <li><a href="#">Twitter</a></li>
-            </ul>
-          </nav>
+        <div class="logo">
+          <a href="/">El Rincón de la Curuba</a>
         </div>
-        <div class="main-header">
-          <div class="logo">
-            <a href="/">El Rincón de la Curuba</a>
+        <div class="headers" id="show">
+          <div class="hamburger" id="hamburger">
+            <div></div>
           </div>
-          <nav>
-            <ul class="global-nav bare-list">
-              <li><a href="about.html">Nosotros</a></li>
-              <li><a href="#">El Podcast</a></li>
-              <li><a href="#">El Blog</a></li>
-              <li><a href="#">Iniciar Sesión</a></li>
-              <li><a href="search.html">Buscar</a></li>
-            </ul>
-          </nav>
+          <div class="social-media-header">
+            <nav>
+              <ul class="global-nav bare-list social-media-nav">
+                <li>
+                  <a href="#" aria-label="Link to Spotify">
+                    <i class="fab fa-spotify"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" aria-label="Link to Instagram">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" aria-label="Link to Twitter">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="main-header">
+            <nav>
+              <ul class="global-nav bare-list">
+                <li><a href="pages/about.html">Nosotros</a></li>
+                <li><a href="#">El Podcast</a></li>
+                <li><a href="#">El Blog</a></li>
+                <li><a href="pages/log-in.html">Iniciar Sesión</a></li>
+                <li><a href="pages/search.html"><i class="far fa-search fa-lg"></i> <span
+                      class="sr-only">Buscar</span></a>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
       </div>
-    </div>
-    <!-- Start masthead -->
-    <div class="masthead">
-      <!-- Start Featured -->
-      <div class="content-wrapper">
-      </div>
-    </div>
     </div>
   </header>
   <!-- END Header -->

@@ -1,0 +1,62 @@
+/* ==============================
+* HAMBURGER
+================================= */
+
+.hamburger {
+  margin: $pulse 0;
+  width: 60px;
+  height: 60px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  z-index: 9;
+
+  /* Hamburger line */
+  &>div {
+    position: relative;
+    width: 100px;
+    height: 2px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+  }
+
+
+  /* Top and bottom lines */
+  &>div::before,
+  &>div::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    width: 100%;
+    height: 2px;
+    background: inherit;
+  }
+
+  /* Moves line down */
+  &>div::after {
+    top: 10px;
+  }
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.toggle {
+  &>div {
+    transform: rotate(135deg);
+  }
+
+  &>div::before,
+  &>div::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+}

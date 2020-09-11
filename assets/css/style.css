@@ -253,6 +253,73 @@ a {
     text-decoration: none; }
 
 /* ==============================
+* HAMBURGER
+================================= */
+.hamburger {
+  margin: 1.6rem 0;
+  width: 60px;
+  height: 60px;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  z-index: 9;
+  /* Hamburger line */
+  /* Top and bottom lines */
+  /* Moves line down */ }
+  .hamburger > div {
+    position: relative;
+    width: 100px;
+    height: 2px;
+    background-color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease; }
+  .hamburger > div::before,
+  .hamburger > div::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    width: 100%;
+    height: 2px;
+    background: inherit; }
+  .hamburger > div::after {
+    top: 10px; }
+  @media screen and (min-width: 768px) {
+    .hamburger {
+      display: none; } }
+
+.toggle > div {
+  -webkit-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg); }
+
+.toggle > div::before,
+.toggle > div::after {
+  top: 0;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg); }
+
+/* ==============================
 * ICONS
 ================================= */
 .icon {
@@ -268,18 +335,18 @@ a {
 /* ==============================
 * LOGO
 ================================= */
-.logo a {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #fafafa;
-  white-space: nowrap; }
-
-.logo em {
-  font-style: normal;
-  color: #f9a66c; }
-
-.logo--invert a {
-  color: #fafafa; }
+.logo {
+  padding: 2.4rem 0; }
+  .logo a {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fafafa;
+    white-space: nowrap; }
+  .logo em {
+    font-style: normal;
+    color: #f9a66c; }
+  .logo--invert a {
+    color: #fafafa; }
 
 /* ==============================
 * AVATAR
@@ -545,7 +612,6 @@ a {
   justify-content: flex-end;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-left: -1em;
   display: flex; }
   .global-nav > li {
     list-style-type: none;
@@ -993,55 +1059,108 @@ a {
 
 .global-header {
   padding: 1.6rem 0 0;
-  position: relative;
-  z-index: 1; }
+  position: relative; }
   .global-header .content-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center; }
-  .global-header .main-header {
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    padding: 1em 0;
-    width: 100%;
-    z-index: 44; }
-    .global-header .main-header__item {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end; }
+
+.headers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.main-header {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: none;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 1em 0;
+  width: 100%; }
+  @media screen and (min-width: 768px) {
+    .main-header {
       display: -webkit-box;
       display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: end;
-      -ms-flex-align: end;
-      align-items: flex-end;
-      padding: 1.6rem 1.6rem 1.6rem 0; }
-    .global-header .main-header .logo {
-      -webkit-box-flex: 1;
-      -ms-flex: 1 0 50%;
-      flex: 1 0 50%; }
+      display: flex; } }
 
 .social-media-header {
   width: 100%;
-  z-index: 1; }
+  display: none; }
+  @media screen and (min-width: 768px) {
+    .social-media-header {
+      display: block; } }
+
+.visible {
+  background-color: #f17a7e;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 4;
+  height: 100vh; }
+  .visible .hamburger {
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+    margin: 3.2rem; }
+  .visible .main-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 0; }
+    .visible .main-header .global-nav {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
+      .visible .main-header .global-nav li {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center; }
+        .visible .main-header .global-nav li a {
+          font-size: 1.4em; }
+        .visible .main-header .global-nav li .svg-inline--fa {
+          font-size: 2em; }
+  .visible .social-media-header {
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 11.2rem; }
+    .visible .social-media-header .global-nav {
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
+      .visible .social-media-header .global-nav li {
+        padding: 1.6rem; }
+      .visible .social-media-header .global-nav .svg-inline--fa {
+        font-size: 2em; }
 
 /* ==============================
  * MASTHEAD
