@@ -9,9 +9,16 @@
   object-fit: cover;
   object-position: center center;
 
-}
+  &-small {
+    width: ($pulse * 1.5);
+    height: ($pulse * 1.5);
+  }
 
-.avatar-small {
-  width: ($pulse * 1.5);
-  height: ($pulse * 1.5);
+  &-medium {
+    width: ($pulse * 1.5);
+    width: ($pulse * 2);
+    height: ($pulse * 1.5);
+    height: ($pulse * 2);
+  }
+
 }
