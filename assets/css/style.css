@@ -874,10 +874,12 @@ a {
   background: #f7f9fc;
   margin: 0 0 4.8rem;
   padding: 1.6rem;
-  width: 100%; }
+  width: 100%;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 65vh;
+  flex: 1 0 65vh; }
   @media screen and (min-width: 768px) {
     .featured {
-      height: 65vh;
       display: -ms-grid;
       display: grid;
       -ms-grid-columns: 1fr 4rem 1fr;

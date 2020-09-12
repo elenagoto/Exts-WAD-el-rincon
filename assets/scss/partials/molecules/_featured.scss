@@ -7,10 +7,10 @@
   margin: 0 0 ($pulse * 3);
   padding: $pulse;
   width: 100%;
+  flex: 1 0 65vh;
 
 
   @include tablet {
-    height: 65vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 0.5fr 1.5fr 0.5fr;
