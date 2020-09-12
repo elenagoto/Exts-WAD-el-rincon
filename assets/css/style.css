@@ -557,7 +557,7 @@ a {
   display: -ms-flexbox;
   display: flex;
   background-color: #fafafa;
-  z-index: 10000;
+  z-index: 2;
   position: relative;
   padding: 0.8rem 0;
   overflow: hidden; }
