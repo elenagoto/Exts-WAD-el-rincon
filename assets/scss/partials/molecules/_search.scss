@@ -4,7 +4,6 @@
 
 .search {
   font-size: 1.5rem;
-  // color: $gray-1;
   border-color: $primary-color;
   border-bottom: 3px solid $gray-4;
   margin-bottom: $pulse * 2;
@@ -21,11 +20,10 @@
     border: 0px none;
     color: $white;
     font-size: $pulse * 3;
-    // line-height: 3;
     font-weight: 700;
     margin: 0;
     padding: $pulse 0;
-    width: 85%;
+    max-width: 90%;
 
     @include tablet {
       font-size: $pulse * 4;
@@ -41,30 +39,20 @@
   }
 
   &__row {
-    // display: grid;
     width: 100%;
-    // grid-template-columns: 6fr 1fr;
     display: flex;
     justify-content: space-between;
 
     .icon {
       opacity: 0;
+      flex: 1 0 auto;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
     }
 
     .show {
       opacity: 1;
     }
-  }
-
-  &__row &__field {
-    // flex: 1 0 10em;
-  }
-}
-
-.search--cta .search__field {
-  // border-color: $primary-color;
-
-  &:focus {
-    // border-color: darken($primary-color, 15);
   }
 }
