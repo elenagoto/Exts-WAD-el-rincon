@@ -252,6 +252,20 @@ a {
     color: #f9a66c;
     text-decoration: none; }
 
+.icon {
+  border: none;
+  background-color: transparent;
+  color: #fafafa;
+  cursor: pointer; }
+  .icon .svg-inline--fa {
+    font-size: 3.2rem; }
+    @media screen and (min-width: 768px) {
+      .icon .svg-inline--fa {
+        font-size: 4.8rem; } }
+    @media screen and (min-width: 992px) {
+      .icon .svg-inline--fa {
+        font-size: 6.4rem; } }
+
 /* ==============================
 * HAMBURGER
 ================================= */
@@ -592,12 +606,27 @@ a {
     font-weight: 700;
     margin: 0;
     padding: 1.6rem 0;
-    width: 100%; }
+    width: 85%; }
     @media screen and (min-width: 768px) {
+      .search__field {
+        font-size: 6.4rem; } }
+    @media screen and (min-width: 1200px) {
       .search__field {
         font-size: 8rem; } }
     .search__field:focus {
       outline: none; }
+  .search__row {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    .search__row .icon {
+      opacity: 0; }
+    .search__row .show {
+      opacity: 1; }
 
 /* ==============================
 * NAVIGATION

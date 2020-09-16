@@ -21,12 +21,17 @@
     border: 0px none;
     color: $white;
     font-size: $pulse * 3;
+    // line-height: 3;
     font-weight: 700;
     margin: 0;
     padding: $pulse 0;
-    width: 100%;
+    width: 85%;
 
     @include tablet {
+      font-size: $pulse * 4;
+    }
+
+    @include desktop {
       font-size: $pulse * 5;
     }
 
@@ -36,14 +41,19 @@
   }
 
   &__row {
-    // display: flex;
-    // width: 90%;
+    // display: grid;
+    width: 100%;
     // grid-template-columns: 6fr 1fr;
+    display: flex;
+    justify-content: space-between;
 
-    // & .btn {
-    //   border-left-width: 0;
-    //   padding: 1.6em;
-    // }
+    .icon {
+      opacity: 0;
+    }
+
+    .show {
+      opacity: 1;
+    }
   }
 
   &__row &__field {
