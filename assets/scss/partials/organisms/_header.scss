@@ -4,7 +4,7 @@
 .header {
   // border-bottom: 1px solid $gray-4;
   background: $primary-color;
-  background: radial-gradient(circle, rgba(224, 145, 95, 1) 0%, rgba(251, 184, 125, 1) 50%, rgba(252, 201, 141, 1) 100%);
+  background-image: linear-gradient(to right top, #f7893b, #f26d60, #d95e7e, #b15c90, #815c92);
   margin: 0 0 ($pulse * 4) 0;
   padding: 0;
   position: relative;
@@ -83,6 +83,7 @@
 
 .visible {
   background-color: $secondary-color;
+  background-image: linear-gradient(to right top, #f7893b, #f26d60, #d95e7e, #b15c90, #815c92);
   position: fixed;
   top: 0;
   left: 0;
