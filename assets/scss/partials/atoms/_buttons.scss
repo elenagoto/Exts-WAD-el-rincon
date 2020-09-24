@@ -8,6 +8,7 @@
   background: $white;
   border-radius: 0;
   color: $gray-1;
+  border: 1px solid $primary-color;
 
   padding: 1rem 1.3rem;
   margin: 0;
@@ -26,15 +27,18 @@
   }
 }
 
-.btn--icon {
-  display: flex;
-  align-items: center;
-  color: $gray-1;
-  padding: 1.2rem $pulse;
-  border: none;
+.btn--invert {
+  background-color: $white;
+  color: $primary-color;
+  border: 1px solid $primary-color;
 
-  .icon {
-    fill: currentColor;
+  &:hover,
+  &:active,
+  &:focus {
+    color: $white;
+    text-decoration: none;
+    background-color: $primary-color;
+    border-color: darken($primary-color, 15);
   }
 }
 

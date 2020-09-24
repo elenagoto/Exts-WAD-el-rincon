@@ -8,6 +8,7 @@
   flex-direction: column;
   background-color: $white;
   overflow: hidden;
+  position: relative;
 
   &__thumb {
     display: flex;

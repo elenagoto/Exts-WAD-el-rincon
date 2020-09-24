@@ -197,6 +197,7 @@ a {
   background: #fafafa;
   border-radius: 0;
   color: #72797e;
+  border: 1px solid #f7893b;
   padding: 1rem 1.3rem;
   margin: 0;
   border: none;
@@ -207,18 +208,15 @@ a {
     text-decoration: none;
     color: #f7893b; }
 
-.btn--icon {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: #72797e;
-  padding: 1.2rem 1.6rem;
-  border: none; }
-  .btn--icon .icon {
-    fill: currentColor; }
+.btn--invert {
+  background-color: #fafafa;
+  color: #f7893b;
+  border: 1px solid #f7893b; }
+  .btn--invert:hover, .btn--invert:active, .btn--invert:focus {
+    color: #fafafa;
+    text-decoration: none;
+    background-color: #f7893b;
+    border-color: #dd6109; }
 
 .btn--cta {
   background-color: #c05b8c;
@@ -597,7 +595,8 @@ a {
   -ms-flex-direction: column;
   flex-direction: column;
   background-color: #fafafa;
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative; }
   .user-card__thumb {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1081,6 +1080,122 @@ a {
     margin: 0; }
     .featured__footer .featured__tags .btn {
       margin-right: 1rem; }
+
+/* ==================
+* USER
+===================== */
+.user {
+  background: #f7f9fc;
+  margin: 0 0 4.8rem;
+  padding: 1.6rem;
+  width: 100%;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 50vh;
+  flex: 1 0 50vh; }
+  @media screen and (min-width: 768px) {
+    .user {
+      display: -ms-grid;
+      display: grid;
+      -ms-grid-columns: 1fr 4rem 1fr;
+      grid-template-columns: 1fr 1fr;
+      -ms-grid-rows: 0.5fr 1.5fr 0.2fr;
+      grid-template-rows: 0.5fr 1.5fr 0.2fr;
+      -webkit-column-gap: 4rem;
+      column-gap: 4rem;
+      padding-left: 4rem;
+      grid-template-areas: "thumb header" "thumb main" "thumb footer"; }
+    .user > .featured__header {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3; }
+    .user > .featured__thumb {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 1; }
+    .user > .featured__main {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3; }
+    .user > .featured__footer {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3; } }
+
+.user__header {
+  color: #72797e;
+  grid-area: header;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: 1.6rem; }
+  @media screen and (min-width: 768px) {
+    .user__header {
+      padding-bottom: 1.6rem;
+      border-bottom: 1px solid #bbc1c6; } }
+
+.user__thumb {
+  grid-area: thumb;
+  width: 100%;
+  margin: 0 auto; }
+  @media screen and (min-width: 600px) {
+    .user__thumb {
+      width: 90%; } }
+  @media screen and (min-width: 768px) {
+    .user__thumb {
+      width: 100%;
+      margin: 0; } }
+  .user__thumb img {
+    width: 100%; }
+    @media screen and (min-width: 768px) {
+      .user__thumb img {
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        -o-object-position: center center;
+        object-position: center center; } }
+
+.user__main {
+  grid-area: main;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  padding: 1.6rem 0;
+  width: 100%; }
+  @media screen and (min-width: 768px) {
+    .user__main {
+      padding: 0; } }
+  .user__main .user__title {
+    margin: 1.6rem 0;
+    font-weight: 600; }
+  .user__main .user__bio {
+    margin: 1.6rem 0 2.4rem; }
+    @media screen and (min-width: 768px) {
+      .user__main .user__bio {
+        font-size: 1.6rem;
+        line-height: 1.8; } }
+
+.user__footer {
+  grid-area: footer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end; }
 
 /* ==============================
 * FOLLOWERS SECTION
