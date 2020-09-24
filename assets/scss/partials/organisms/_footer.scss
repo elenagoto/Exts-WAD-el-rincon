@@ -3,7 +3,7 @@
 ================================= */
 .global-footer {
   background: $black;
-  padding: ($pulse * 3) 0 ($pulse * 3);
+  padding: $pulse 0 $pulse;
 
   .content-wrapper {
     display: flex;
@@ -12,9 +12,10 @@
     align-items: center;
 
     p {
-    margin: 0;
-    display: block;
-    padding: $pulse 0;
+      margin: 0;
+      display: block;
+      padding: $pulse 0;
+      color: $white;
     }
   }
 }

@@ -1428,7 +1428,7 @@ main {
 ================================= */
 .global-footer {
   background: #192127;
-  padding: 4.8rem 0 4.8rem; }
+  padding: 1.6rem 0 1.6rem; }
   .global-footer .content-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1444,7 +1444,8 @@ main {
     .global-footer .content-wrapper p {
       margin: 0;
       display: block;
-      padding: 1.6rem 0; }
+      padding: 1.6rem 0;
+      color: #fafafa; }
 
 /* INDEX STYLES */
 .banner--index a {
