@@ -196,43 +196,50 @@ a {
   line-height: 1;
   background: #fafafa;
   border-radius: 0;
-  color: #72797e;
-  border: 1px solid #f7893b;
+  color: #f7893b;
+  border: 2px solid #f7893b;
   padding: 1rem 1.3rem;
   margin: 0;
-  border: none;
   text-decoration: none;
   text-transform: uppercase;
   cursor: pointer; }
   .btn:hover, .btn:active, .btn:focus {
     text-decoration: none;
-    color: #f7893b; }
-
-.btn--invert {
-  background-color: #fafafa;
-  color: #f7893b;
-  border: 1px solid #f7893b; }
-  .btn--invert:hover, .btn--invert:active, .btn--invert:focus {
     color: #fafafa;
-    text-decoration: none;
-    background-color: #f7893b;
-    border-color: #dd6109; }
+    background: #f7893b; }
+
+.btn--icon {
+  font-size: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1.6rem;
+  width: 100%; }
+  .btn--icon .svg-inline--fa {
+    display: block;
+    margin-right: 5%;
+    font-size: 1.2em; }
 
 .btn--cta {
   background-color: #c05b8c;
   color: #fafafa;
-  border: 1px solid #c05b8c; }
+  border-color: #c05b8c; }
   .btn--cta:hover, .btn--cta:active, .btn--cta:focus {
     color: #fafafa;
     text-decoration: none;
     background-color: #833259;
     border-color: #953966; }
 
-.btn--warning:hover, .btn--warning:active, .btn--warning:focus {
-  color: #fafafa;
-  text-decoration: none;
-  background-color: #ec666b;
+.btn--warning {
+  color: #ec666b;
   border-color: #ec666b; }
+  .btn--warning:hover, .btn--warning:active, .btn--warning:focus {
+    color: #fafafa;
+    text-decoration: none;
+    background-color: #ec666b; }
 
 .btn--tag {
   display: -webkit-box;
@@ -251,18 +258,12 @@ a {
     text-decoration: none; }
 
 .icon {
-  border: none;
   background-color: transparent;
-  color: #fafafa;
-  cursor: pointer; }
-  .icon .svg-inline--fa {
-    font-size: 3.2rem; }
-    @media screen and (min-width: 768px) {
-      .icon .svg-inline--fa {
-        font-size: 4.8rem; } }
-    @media screen and (min-width: 992px) {
-      .icon .svg-inline--fa {
-        font-size: 6.4rem; } }
+  border: none;
+  color: #72797e; }
+  .icon:hover, .icon:active, .icon:focus {
+    color: #f7893b;
+    background-color: transparent; }
 
 /* ==============================
 * HAMBURGER
@@ -332,19 +333,6 @@ a {
   transform: rotate(90deg); }
 
 /* ==============================
-* ICONS
-================================= */
-.icon {
-  padding-right: 0.3em;
-  fill: #bbc1c6; }
-  .btn:hover .icon,
-  .btn:active .icon,
-  .btn:focus .icon {
-    fill: currentColor; }
-  .icon--liked {
-    fill: #c05b8c; }
-
-/* ==============================
 * LOGO
 ================================= */
 .logo {
@@ -394,9 +382,6 @@ a {
     cursor: pointer;
     white-space: nowrap;
     margin: 0 1.6rem 1rem 0; }
-    @media screen and (min-width: 768px) {
-      .input__label {
-        margin-bottom: 0; } }
   .input__field {
     background-color: #fafafa;
     border: 1px solid #fafafa;
@@ -420,19 +405,14 @@ a {
 .input--file {
   width: 100%; }
   .input--file input[type=file] {
-    border: 0;
-    clip: rect(0, 0, 0, 0);
-    height: 1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px; }
+    font-size: 1.6rem; }
   .input--file .btn {
     padding: 1.6em;
-    display: block;
     text-align: center;
     width: 100%; }
+
+.input select {
+  font-size: 1.6rem; }
 
 /* ==============================
 * POST CARDS
@@ -1086,8 +1066,7 @@ a {
 ===================== */
 .user {
   background: #f7f9fc;
-  margin: 0 0 4.8rem;
-  padding: 1.6rem;
+  margin: 3.2rem 0 4.8rem;
   width: 100%;
   -webkit-box-flex: 1;
   -ms-flex: 1 0 50vh;
@@ -1102,7 +1081,6 @@ a {
       grid-template-rows: 0.5fr 1.5fr 0.2fr;
       -webkit-column-gap: 4rem;
       column-gap: 4rem;
-      padding-left: 4rem;
       grid-template-areas: "thumb header" "thumb main" "thumb footer"; }
     .user > .featured__header {
     -ms-grid-row: 1;
@@ -1232,6 +1210,26 @@ a {
         .follower__btn .btn {
           width: 17rem; } }
 
+/* ==================
+* MODIFY BAR
+===================== */
+.modify-bar {
+  background-color: #afbac4;
+  width: 100%;
+  padding: 1.6rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .modify-bar ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end; }
+    .modify-bar ul li {
+      margin-left: 1.6rem; }
+
 /* ==============================
  * HEADER
 ================================= */
@@ -1241,7 +1239,7 @@ a {
   background-image: -webkit-linear-gradient(left bottom, #f7893b, #f26d60, #d95e7e, #b15c90, #815c92);
   background-image: -o-linear-gradient(left bottom, #f7893b, #f26d60, #d95e7e, #b15c90, #815c92);
   background-image: linear-gradient(to right top, #f7893b, #f26d60, #d95e7e, #b15c90, #815c92);
-  margin: 0 0 6.4rem 0;
+  margin: 0 0 4.8rem 0;
   padding: 0;
   position: relative; }
   .header__image {

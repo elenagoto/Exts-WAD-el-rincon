@@ -4,8 +4,8 @@
 
 .user {
   background: $gray-5;
-  margin: 0 0 ($pulse * 3);
-  padding: $pulse;
+  margin: ($pulse * 2) 0 ($pulse * 3);
+  // padding: $pulse;
   width: 100%;
   flex: 1 0 50vh;
 
@@ -15,7 +15,7 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 0.5fr 1.5fr 0.2fr;
     column-gap: $pulse * 2.5;
-    padding-left: $pulse * 2.5;
+    // padding-left: $pulse * 2.5;
     grid-template-areas: "thumb header"
       "thumb main"
       "thumb footer";

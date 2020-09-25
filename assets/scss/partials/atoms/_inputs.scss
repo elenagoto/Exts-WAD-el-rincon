@@ -15,7 +15,7 @@
     margin: 0 $pulse 1rem 0;
 
     @include tablet {
-      margin-bottom: 0;
+      // margin-bottom: 0;
     }
   }
 
@@ -47,20 +47,19 @@
   width: 100%;
 
   input[type=file] {
-    border: 0;
-    clip: rect(0, 0, 0, 0);
-    height: 1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
+    font-size: 1.6rem;
   }
 
   .btn {
     padding: 1.6em;
-    display: block;
+    // display: block;
     text-align: center;
     width: 100%;
+  }
+}
+
+.input {
+  select {
+    font-size: 1.6rem;
   }
 }

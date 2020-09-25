@@ -34,29 +34,48 @@
     </div>
     <!-- Start global header -->
     <div class="global-header">
+
       <div class="content-wrapper">
-        <div class="social-media-header">
-          <nav>
-            <ul class="global-nav bare-list social-media-nav">
-              <li><a href="#">Spotify</a></li>
-              <li><a href="#">Instagram</a></li>
-              <li><a href="#">Twitter</a></li>
-            </ul>
-          </nav>
+        <div class="logo">
+          <a href="/">El Rincón de la Curuba</a>
         </div>
-        <div class="main-header">
-          <div class="logo">
-            <a href="/">El Rincón de la Curuba</a>
+        <div class="headers" id="show">
+          <div class="hamburger" id="hamburger">
+            <div></div>
           </div>
-          <nav>
-            <ul class="global-nav bare-list">
-              <li><a href="about.html">Nosotros</a></li>
-              <li><a href="#">El Podcast</a></li>
-              <li><a href="#">El Blog</a></li>
-              <li><a href="#">Iniciar Sesión</a></li>
-              <li><a href="search.html">Buscar</a></li>
-            </ul>
-          </nav>
+          <div class="social-media-header">
+            <nav>
+              <ul class="global-nav bare-list social-media-nav">
+                <li>
+                  <a href="#" aria-label="Link to Spotify">
+                    <i class="fab fa-spotify"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" aria-label="Link to Instagram">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" aria-label="Link to Twitter">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="main-header">
+            <nav>
+              <ul class="global-nav bare-list">
+                <li><a href="about.html">Nosotros</a></li>
+                <li><a href="#">El Podcast</a></li>
+                <li><a href="#">El Blog</a></li>
+                <li><a href="log-in.html">Iniciar Sesión</a></li>
+                <li><a href="search.html"><i class="far fa-search fa-lg"></i> <span class="sr-only">Buscar</span></a>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
       </div>
     </div>
@@ -65,6 +84,15 @@
 
   <!-- START Main -->
   <main class="main">
+    <div class="modify-bar">
+      <div class="content-wrapper">
+        <ul class="bare-list">
+
+          <li><a class="btn btn--icon" href=""><i class="fal fa-edit"></i> Modify</a></li>
+          <li><a class="btn btn--icon btn--warning" href=""> <i class="fal fa-trash"></i> delete</a></li>
+        </ul>
+      </div>
+    </div>
     <div class="content-wrapper">
       <article class="post">
         <div class="post__header post__section">
@@ -79,11 +107,11 @@
           </div>
           <div class="post__header__media">
             <div class="post__meta">
-              <img class="avatar" src="../assets/images/passifloras/curuba_1.jpeg" alt="Big blue avatar" />
+              <img class="avatar" src="../assets/images/passifloras/gulupa_1.jpeg" alt="Big blue avatar" />
               <div class="meta-text">
                 <div class="post__author">
                   <!-- Author -->
-                  <span>por <a href="#">el Podcast</a></span>
+                  <span>por <a href="user.html">Pepito Perez</a></span>
                 </div>
                 <div class="post__date">
                   <!-- Date -->
@@ -104,7 +132,7 @@
               </li>
               <li class="post__form">
                 <form action="">
-                  <button class="btn btn--icon" type="submit" name="action" value="like">
+                  <button class="btn icon" type="submit" name="action" value="like">
                     <i class="fal fa-bookmark"></i>
                   </button>
                 </form>

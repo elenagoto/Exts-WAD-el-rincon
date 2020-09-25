@@ -7,45 +7,41 @@
   line-height: 1;
   background: $white;
   border-radius: 0;
-  color: $gray-1;
-  border: 1px solid $primary-color;
-
+  color: $primary-color;
+  border: 2px solid $primary-color;
   padding: 1rem 1.3rem;
   margin: 0;
-
-  border: none;
   text-decoration: none;
   text-transform: uppercase;
-
   cursor: pointer;
 
   &:hover,
   &:active,
   &:focus {
     text-decoration: none;
-    color: $primary-color;
+    color: $white;
+    background: $primary-color;
   }
 }
 
-.btn--invert {
-  background-color: $white;
-  color: $primary-color;
-  border: 1px solid $primary-color;
+.btn--icon {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  padding: $pulse;
+  width: 100%;
 
-  &:hover,
-  &:active,
-  &:focus {
-    color: $white;
-    text-decoration: none;
-    background-color: $primary-color;
-    border-color: darken($primary-color, 15);
+  .svg-inline--fa {
+    display: block;
+    margin-right: 5%;
+    font-size: 1.2em;
   }
 }
 
 .btn--cta {
   background-color: $secondary-color;
   color: $white;
-  border: 1px solid $secondary-color;
+  border-color: $secondary-color;
 
   &:hover,
   &:active,
@@ -58,6 +54,8 @@
 }
 
 .btn--warning {
+  color: $red;
+  border-color: $red;
 
   &:hover,
   &:active,
@@ -65,7 +63,6 @@
     color: $white;
     text-decoration: none;
     background-color: $red;
-    border-color: $red;
   }
 }
 
@@ -87,20 +84,14 @@
 }
 
 .icon {
-  border: none;
   background-color: transparent;
-  color: $white;
-  cursor: pointer;
+  border: none;
+  color: $gray-1;
 
-  .svg-inline--fa {
-    font-size: $pulse * 2;
-
-    @include tablet {
-      font-size: $pulse * 3;
-    }
-
-    @include small-desktop {
-      font-size: $pulse * 4;
-    }
+  &:hover,
+  &:active,
+  &:focus {
+    color: $primary-color;
+    background-color: transparent;
   }
 }

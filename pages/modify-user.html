@@ -17,6 +17,7 @@
       <link rel="stylesheet" href="assets/css/universal-ie6.css" />
     <![endif]-->
   <script src="../assets/js/modernizr-custom.js"></script>
+  <script src="../assets/js/script.js"></script>
 </head>
 
 <body>
@@ -25,36 +26,49 @@
   <header class="header">
     <!-- Start global header -->
     <div class="global-header">
+
       <div class="content-wrapper">
-        <div class="social-media-header">
-          <nav>
-            <ul class="global-nav bare-list social-media-nav">
-              <li><a href="#">Spotify</a></li>
-              <li><a href="#">Instagram</a></li>
-              <li><a href="#">Twitter</a></li>
-            </ul>
-          </nav>
+        <div class="logo">
+          <a href="/">El Rincón de la Curuba</a>
         </div>
-        <div class="main-header">
-          <div class="logo">
-            <a href="/">El Rincón de la Curuba</a>
+        <div class="headers" id="show">
+          <div class="hamburger" id="hamburger">
+            <div></div>
           </div>
-          <nav>
-            <ul class="global-nav bare-list">
-              <li><a href="about.html">Nosotros</a></li>
-              <li><a href="#">El Podcast</a></li>
-              <li><a href="#">El Blog</a></li>
-              <li><a href="#">Iniciar Sesión</a></li>
-              <li><a href="search.html">Buscar</a></li>
-            </ul>
-          </nav>
+          <div class="social-media-header">
+            <nav>
+              <ul class="global-nav bare-list social-media-nav">
+                <li>
+                  <a href="#" aria-label="Link to Spotify">
+                    <i class="fab fa-spotify"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" aria-label="Link to Instagram">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" aria-label="Link to Twitter">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="main-header">
+            <nav>
+              <ul class="global-nav bare-list">
+                <li><a href="about.html">Nosotros</a></li>
+                <li><a href="#">El Podcast</a></li>
+                <li><a href="#">El Blog</a></li>
+                <li><a href="log-in.html">Iniciar Sesión</a></li>
+                <li><a href="search.html"><i class="far fa-search fa-lg"></i> <span class="sr-only">Buscar</span></a>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
-      </div>
-    </div>
-    <!-- Start masthead -->
-    <div class="masthead">
-      <!-- Start Featured -->
-      <div class="content-wrapper">
       </div>
     </div>
     </div>
@@ -64,13 +78,70 @@
   <!-- START Main -->
   <main class="main">
     <div class="content-wrapper">
-      <h1 class="eta">Nosotros</h1>
-      <!-- START About content -->
-      <p>Nostros Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id quisquam exercitationem deserunt
-        perferendis voluptate magni molestiae dignissimos? Ex amet et nostrum ducimus dolorem adipisci ipsum quasi.
-        Veniam facilis maiores totam?
-      </p>
-      <!-- END About content -->
+      <!-- START Form -->
+      <div class="form-container">
+        <h1 class="alpha">Modificar usuario</h1>
+
+        <form class="form" action="log-in.html" method="post">
+          <div class="alert alert--wide">
+            <p>Incorrect email/password combination.</p>
+          </div>
+          <!-- Name -->
+          <div class="input">
+            <div class="">
+              <label for="name" class="input__label">Nombre</label>
+            </div>
+            <div class="">
+              <input id="name" class="input__field" type="text" name="name" placeholder="e.g. Pepito Perez" required>
+            </div>
+          </div>
+          <!-- Email -->
+          <div class="input">
+            <div class="">
+              <label for="email" class="input__label">E-mail</label>
+            </div>
+            <div class="">
+              <input id="email" class="input__field" type="email" name="email" placeholder="e.g. pepito@perez.com"
+                required>
+            </div>
+          </div>
+          <!-- Avatar -->
+          <div class="input">
+            <div class="input--file">
+              <label class="input__label" for="goal-image">Avatar</label>
+              <input id="goal-image" type="file" name="profile" required />
+            </div>
+          </div>
+          <!-- Role -->
+          <div class="input">
+            <div class="">
+              <label for="role" class="input__label">Role</label>
+              <select name="role" id="role">
+                <option value="admin">Admin</option>
+                <option value="author">Author</option>
+                <option value="registred">Registred</option>
+              </select>
+            </div>
+          </div>
+          <!-- Bio - only for Authors  -->
+          <div class="input">
+            <div>
+              <label for="tags" class="input__label">Biografía</label>
+            </div>
+            <div class="input--textarea">
+              <textarea class="input__field" id="goal-description"></textarea>
+            </div>
+          </div>
+          <!-- Submit -->
+          <div class="form__text input__btn--alone">
+            <div class="prompt"></div>
+            <div class="prompt">
+              <button class="btn btn--cta prompt__confirm" type="submit">Modificar</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- END Form -->
     </div>
   </main>
 

@@ -1,0 +1,20 @@
+/* ==================
+* MODIFY BAR
+===================== */
+
+.modify-bar {
+  background-color: $gray-2;
+  width: 100%;
+  padding: $pulse 0;
+  display: flex;
+
+  ul {
+    display: flex;
+    justify-content: flex-end;
+
+    li {
+      margin-left: $pulse;
+    }
+  }
+
+}
