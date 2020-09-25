@@ -1176,39 +1176,57 @@ a {
   align-items: flex-end; }
 
 /* ==============================
-* FOLLOWERS SECTION
+* POST CARD LONG
 ================================= */
-.follower {
+.post-long__list {
+  display: block; }
+
+.post-long {
   border-bottom: 1px solid #e3e5e9;
   color: #bbc1c6;
-  padding: 1.6rem 0; }
-  .follower::after {
-    display: table;
-    content: " ";
-    clear: both; }
-  .follower__profile {
-    float: left; }
-    .follower__profile::after {
-      display: table;
-      content: " ";
-      clear: both; }
-  .follower__avatar {
-    float: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 100%; }
+  .post-long__main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 1.6rem 0; }
+  .post-long__thumb {
     padding-right: 1.6rem; }
-  .follower__info {
-    float: right; }
-    .follower__info > * {
-      display: block; }
-  .follower__btn {
-    float: right; }
-    .follower__btn .btn {
-      display: block;
-      padding: 1.6rem 1.2rem;
-      text-align: center;
-      width: 13rem; }
-      @media screen and (min-width: 768px) {
-        .follower__btn .btn {
-          width: 17rem; } }
+  .post-long__title {
+    display: block;
+    font-family: 'Roboto Slab', serif; }
+    .post-long__title a {
+      font-size: 1.1em; }
+  .post-long__date {
+    font-size: 1.3rem; }
+  .post-long__btn {
+    float: right;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin: 0 0 1.6rem; }
+    .post-long__btn .btn:nth-child(2) {
+      margin-left: 1.6rem; }
 
 /* ==================
 * MODIFY BAR
