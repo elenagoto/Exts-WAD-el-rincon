@@ -16,6 +16,26 @@ let show;
 let searchField;
 let reset;
 let form;
+let postContent;
+
+const autoExpand = function (field) {
+
+  // Reset field height
+  field.style.height = 'inherit';
+
+  // Get the computed styles for the element
+  var computed = window.getComputedStyle(field);
+
+  // Calculate the height
+  var height = parseInt(computed.getPropertyValue('border-top-width'), 10) +
+    parseInt(computed.getPropertyValue('padding-top'), 10) +
+    field.scrollHeight +
+    parseInt(computed.getPropertyValue('padding-bottom'), 10) +
+    parseInt(computed.getPropertyValue('border-bottom-width'), 10);
+
+  field.style.height = height + 'px';
+
+};
 
 window.onload = () => {
   // Make hamburger work
@@ -50,6 +70,16 @@ window.onload = () => {
         searchField.focus();
       }
     })
+  }
+
+  // Make post text input grow with content
+  postContent = document.getElementById('postContent');
+
+  if (postContent) {
+    document.addEventListener('input', function (event) {
+      if (event.target !== postContent) return;
+      autoExpand(event.target);
+    }, false);
   }
 
 }

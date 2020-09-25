@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>El Rincón de la Curuba</title>
+  <!--[if !IE]><!-->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,300;1,400;1,500;1,600;1,700;1,900&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <script src="https://kit.fontawesome.com/350b853717.js" crossorigin="anonymous"></script>
+  <!--<![endif]-->
+  <!--[if IE]>
+      <link rel="stylesheet" href="assets/css/universal-ie6.css" />
+    <![endif]-->
+  <script src="../assets/js/modernizr-custom.js"></script>
+  <script src="../assets/js/script.js"></script>
+</head>
+
+<body>
+  <!-- START Header -->
+
+  <header class="header">
+    <!-- Start global header -->
+    <div class="global-header">
+
+      <div class="content-wrapper">
+        <div class="logo">
+          <a href="/">El Rincón de la Curuba</a>
+        </div>
+        <div class="headers" id="show">
+          <div class="hamburger" id="hamburger">
+            <div></div>
+          </div>
+          <div class="social-media-header">
+            <nav>
+              <ul class="global-nav bare-list social-media-nav">
+                <li>
+                  <a href="#" aria-label="Link to Spotify">
+                    <i class="fab fa-spotify"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" aria-label="Link to Instagram">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" aria-label="Link to Twitter">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="main-header">
+            <nav>
+              <ul class="global-nav bare-list">
+                <li><a href="about.html">Nosotros</a></li>
+                <li><a href="#">El Podcast</a></li>
+                <li><a href="#">El Blog</a></li>
+                <li><a href="log-in.html">Iniciar Sesión</a></li>
+                <li><a href="search.html"><i class="far fa-search fa-lg"></i> <span class="sr-only">Buscar</span></a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </header>
+  <!-- END Header -->
+
+  <!-- START Main -->
+  <main class="main">
+    <div class="content-wrapper">
+      <!-- START Form -->
+      <div class="form-container">
+        <h1 class="alpha">Nueva entrada</h1>
+
+        <form class="form" action="log-in.html" method="post">
+          <div class="alert alert--wide">
+            <p>Incorrect email/password combination.</p>
+          </div>
+          <!-- Name -->
+          <div class="input">
+            <div class="">
+              <label for="title" class="input__label">Título</label>
+            </div>
+            <div class="">
+              <input id="title" class="input__field" type="text" name="title" placeholder="" required>
+            </div>
+          </div>
+          <!-- Email -->
+          <div class="input">
+            <div class="">
+              <label for="tags" class="input__label">Etiquetas</label>
+            </div>
+            <div class="">
+              <input id="tags" class="input__field" type="text" name="tags"
+                placeholder="Separate multiple tags with commas" required>
+            </div>
+          </div>
+          <!-- Avatar -->
+          <div class="input">
+            <div class="input--file">
+              <label class="input__label" for="goal-image">Imagen</label>
+              <input id="goal-image" type="file" name="profile" required />
+            </div>
+          </div>
+          <!-- Role -->
+          <div class="input">
+            <div class="">
+              <label for="episode" class="input__label">Código Spotify</label>
+            </div>
+            <div class="">
+              <input id="episode" class="input__field" type="text" name="episode" placeholder="">
+            </div>
+          </div>
+          <!-- Bio - only for Authors  -->
+          <div class="input">
+            <div>
+              <label for="tags" class="input__label">Contenido</label>
+            </div>
+            <div class="input--textarea input--post-text">
+              <textarea class="input__field" id="postContent"></textarea>
+            </div>
+          </div>
+          <!-- Submit -->
+          <div class="form__text input__btn--alone">
+            <div class="prompt"></div>
+            <div class="prompt">
+              <button class="btn btn--cta prompt__confirm" type="submit">Modificar</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- END Form -->
+    </div>
+  </main>
+
+
+  <!-- END Main -->
+
+  <!-- START Footer -->
+  <footer class="global-footer">
+    <div class="content-wrapper">
+      <div class="logo logo--invert">
+        <a href="/epfl/style-guide">El Rincón de la <em>Curuba</em></a>
+      </div>
+      <div class="nav-footer">
+        <ul class="bare-list">
+          <li><a href="#">About</a></li>
+          <li><a href="">Style Guide</a></li>
+          <li><a href="#">Terms of Use</a></li>
+        </ul>
+      </div>
+      <p>&copy; EPFL 2017</p>
+    </div>
+  </footer>
+  <!-- END Footer -->
+</body>
+
+</html>
