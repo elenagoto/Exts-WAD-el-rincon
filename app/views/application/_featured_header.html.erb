@@ -9,17 +9,14 @@
           </div>
           <div class="featured__thumb">
             <img
-              src="https://images.unsplash.com/photo-1567596275753-92607c3ce1ae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80"
-              alt="Podcast" srcset="" />
+              src="<%= featured.image_url %>" srcset="" />
           </div>
           <div class="featured__main">
             <h3 class="featured__title">
-              <a class="featured_link gamma" href="pages/post-image.html">Episode 1: Name of the Episode</a>
+              <a class="featured_link gamma" href="pages/post-image.html"><%= featured.title %></a>
             </h3>
             <p class="featured__text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Eveniet enim voluptatibus deserunt repellendus. Quisquam nisi
-              repellat earum repudiandae porro ullam molestiae dolores
+              <%= featured.preview_text %>
             </p>
             <div class="featured__author">
             <%= image_tag('passifloras/gulupa_1.jpeg', alt: 'Avatar', class: 'avatar avatar-medium') %>

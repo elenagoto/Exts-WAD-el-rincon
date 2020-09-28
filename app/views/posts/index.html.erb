@@ -1,6 +1,4 @@
 <div class="content-wrapper">
-  <h2 class="alpha">Lo más reciente</h2>
-
   <ul class="bare-list cards">
     <% @posts.each do |post| %>
       <%= render partial: 'post_card', locals: { post: post} %>
