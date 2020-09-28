@@ -1,7 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RinconCuruba</title>
+    <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>El Rincón de la Curuba</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,300;1,400;1,500;1,600;1,700;1,900&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/350b853717.js" crossorigin="anonymous"></script>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +16,13 @@
   </head>
 
   <body>
-    <%= yield %>
+    <!-- START HEADER -->
+    <%= render partial: 'header' %>
+    <!-- START MAIN -->
+    <main class="main">
+      <%= yield %>
+    </main>
+    <!-- START FOOTER -->
+    <%= render partial: 'footer' %>
   </body>
 </html>
