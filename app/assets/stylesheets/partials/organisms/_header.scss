@@ -1,0 +1,141 @@
+/* ==============================
+ * HEADER
+================================= */
+.header {
+  // border-bottom: 1px solid $gray-4;
+  background: $primary-color;
+  background-image: linear-gradient(to right top, #f7893b, #f26d60, #d95e7e, #b15c90, #815c92);
+  margin: 0 0 ($pulse * 3) 0;
+  padding: 0;
+  position: relative;
+
+  &__image {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+
+
+    img {
+      display: block;
+      padding: 0;
+      margin: 0;
+      object-fit: cover;
+      object-position: center center;
+      width: 105%;
+      height: 105%;
+      margin: -5px -5% -5% -10px;
+      filter: blur(5px);
+    }
+  }
+}
+
+
+
+.global-header {
+  // background: $primary-color;
+  // border-bottom: 1px solid $gray-4;
+  padding: $pulse 0 0;
+  position: relative;
+  // z-index: 1;
+
+  .content-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    // flex-wrap: wrap;
+  }
+
+
+}
+
+.headers {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-header {
+  align-items: center;
+  display: none;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1em 0;
+  width: 100%;
+
+  @include tablet {
+    display: flex;
+  }
+
+}
+
+.social-media-header {
+  width: 100%;
+  display: none;
+
+  @include tablet {
+    display: block;
+  }
+}
+
+.visible {
+  background-color: $secondary-color;
+  background-image: linear-gradient(to right top, #f7893b, #f26d60, #d95e7e, #b15c90, #815c92);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 4;
+  height: 100vh;
+
+  .hamburger {
+    align-self: flex-end;
+    margin: ($pulse * 2);
+  }
+
+  .main-header {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+
+    .global-nav {
+      flex-direction: column;
+      justify-content: center;
+
+      li {
+        display: flex;
+        justify-content: center;
+
+        a {
+          font-size: 1.4em;
+        }
+
+        .svg-inline--fa {
+          font-size: 2em;
+        }
+      }
+    }
+  }
+
+  .social-media-header {
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    bottom: ($pulse * 7);
+
+    .global-nav {
+      justify-content: center;
+
+      li {
+        padding: $pulse;
+      }
+
+      .svg-inline--fa {
+        font-size: 2em;
+      }
+    }
+  }
+}

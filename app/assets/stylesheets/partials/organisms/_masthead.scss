@@ -1,0 +1,38 @@
+/* ==============================
+ * MASTHEAD
+================================= */
+
+.masthead {
+  display: flex;
+  margin-top: $pulse * 3;
+  padding: 0 0 $pulse;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+
+  // border: 1px solid red;
+
+  p {
+    color: $gray-1;
+  }
+
+  .content-wrapper {
+    // border: 1px solid blue;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .search {
+    // align-self: stretch;
+
+    // @include tablet {
+    //   align-self: center;
+    //   width: 80%
+    // }
+
+    // @include desktop {
+    //   margin: 0 auto;
+    //   width: 60%
+    // }
+  }
+}

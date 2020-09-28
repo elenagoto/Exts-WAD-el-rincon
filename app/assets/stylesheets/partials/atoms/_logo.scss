@@ -1,0 +1,23 @@
+/* ==============================
+* LOGO
+================================= */
+
+.logo {
+  padding: ($pulse * 1.5) 0;
+
+  a {
+    font-size: 2rem;
+    font-weight: bold;
+    color: $white;
+    white-space: nowrap;
+  }
+
+  em {
+    font-style: normal;
+    color: $primary-color;
+  }
+
+  &--invert a {
+    color: $white;
+  }
+}

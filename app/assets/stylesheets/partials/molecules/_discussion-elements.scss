@@ -1,0 +1,77 @@
+/* ======================
+* DISCUSSION ELEMENTS
+========================= */
+.comments {
+  align-items: flex-start;
+  display: flex;
+  margin-bottom: $pulse;
+  width: 100%;
+
+  @include desktop {
+    width: 70rem;
+  }
+}
+
+.comments__avatar {
+  padding-right: 2rem;
+}
+
+.comments__text {
+  width: 100%;
+
+  .input {
+    display: flex;
+    flex-direction: column;
+
+    >* {
+      margin-bottom: $pulse;
+    }
+
+
+    &_field {
+      @include tablet {
+        width: 100%;
+      }
+    }
+
+    .btn {
+      width: 100px;
+      align-self: flex-end;
+    }
+  }
+
+  p {
+    color: $gray-1;
+    font-size: 1.5em;
+    line-height: 1.5;
+  }
+}
+
+.comments__title {
+  span {
+    color: $gray-3;
+  }
+}
+
+.comments__user {
+  margin: 0 0 $pulse 0;
+
+  .user__name {
+    a {
+      color: $black;
+      font-family: 'Roboto Slab',
+        serif;
+    }
+
+    a:hover,
+    a:focus {
+      color: $primary-color;
+    }
+  }
+
+  .comments__time {
+    color: $gray-3;
+    font-size: 0.85em;
+  }
+
+}

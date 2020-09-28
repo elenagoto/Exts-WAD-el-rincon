@@ -1,0 +1,89 @@
+
+/* ==============================
+ * FORMS
+================================= */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-self: center;
+
+  @include tablet {
+    width: 80%;
+  }
+
+  @include small-desktop {
+    width: 70%;
+  }
+
+  h1 {
+    margin: $pulse 0 ($pulse * 2);
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 100%;
+
+  &__text {
+    margin: 0 0 $pulse;
+    color: $black;
+
+    a {
+      color: $primary-color;
+
+      &:hover,
+      &:focus {
+        color: $black;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  > div:nth-child(2) {
+    margin-top: $pulse * 2;
+  }
+  
+  .alert {
+    color: $secondary-color;
+    padding: $pulse 0;
+    display: none;
+  }
+}
+
+
+.input__description {
+  margin: -3rem 0 $pulse 0;
+}
+
+.input--checkbox{
+  display: flex;
+  justify-content: space-between;
+
+  .input__label {
+    margin: 0;
+  }
+}
+
+.input__btn {
+  @include tablet{
+    align-items: center;
+  }
+}
+
+.form--warning {
+  > div:nth-child(2) {
+    margin-top: 0;
+  }
+  .alert {
+    display: block;
+  }
+}
+
+.input__btn--alone {
+  .btn {
+      width: 100%;
+  }
+}
