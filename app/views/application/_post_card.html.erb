@@ -10,7 +10,9 @@
     </ul>
     <div class="card__intro">
       <h3 class="card__title gamma">
-        <a class="card_link" href=""><%= post.title %></a>
+      <%= link_to post_path(post), class: 'card_link' do %>
+        <%= post.title %>
+      <% end %>
       </h3>
 
       <h5 class="card__text">

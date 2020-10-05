@@ -1,4 +1,3 @@
-
 /* ==============================
  * FORMS
 ================================= */
@@ -42,10 +41,10 @@
     }
   }
 
-  > div:nth-child(2) {
+  >div:nth-child(2) {
     margin-top: $pulse * 2;
   }
-  
+
   .alert {
     color: $secondary-color;
     padding: $pulse 0;
@@ -58,7 +57,7 @@
   margin: -3rem 0 $pulse 0;
 }
 
-.input--checkbox{
+.input--checkbox {
   display: flex;
   justify-content: space-between;
 
@@ -68,22 +67,27 @@
 }
 
 .input__btn {
-  @include tablet{
+  @include tablet {
     align-items: center;
-  }
-}
-
-.form--warning {
-  > div:nth-child(2) {
-    margin-top: 0;
-  }
-  .alert {
-    display: block;
   }
 }
 
 .input__btn--alone {
   .btn {
-      width: 100%;
+    width: 100%;
+  }
+}
+
+.input__item {
+  margin-bottom: $pulse;
+}
+
+.form--warning {
+  >div:nth-child(2) {
+    margin-top: 0;
+  }
+
+  .alert {
+    display: block;
   }
 }

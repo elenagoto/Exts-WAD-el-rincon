@@ -1,0 +1,124 @@
+<div class="modify-bar">
+      <div class="content-wrapper">
+        <ul class="bare-list">
+
+          <li><a class="btn btn--icon" href="create-modify-post.html"><i class="fal fa-edit"></i> Modify</a></li>
+          <li><a class="btn btn--icon btn--warning" href=""> <i class="fal fa-trash"></i> delete</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="content-wrapper">
+      <article class="post">
+        <div class="post__header post__section">
+          <ul class="post__tags bare-list">
+            <li><a class="btn btn--tag" href="#">Podcast</a></li>
+            <li><a class="btn btn--tag" href="#">Historia</a></li>
+            <li><a class="btn btn--tag" href="#">Literatura</a></li>
+          </ul>
+          <div class="post__title">
+            <!-- Title -->
+            
+            <h1><%= @post.title %></h1>
+          </div>
+          <div class="post__header__media">
+            <div class="post__meta">
+              <img class="avatar" src="../assets/images/passifloras/gulupa_1.jpeg" alt="Big blue avatar" />
+              <div class="meta-text">
+                <div class="post__author">
+                  <!-- Author -->
+                  <span>por <a href="user.html">Pepito Perez</a></span>
+                </div>
+                <div class="post__date">
+                  <!-- Date -->
+                  
+                  <span><time datetime="<%= @post.created_at %>"><%= @post.created_at.strftime("%d %b '%y") %></time></span>
+                </div>
+              </div>
+            </div>
+            <ul class="post__links bare-list">
+              <li>
+                <a href="#" aria-label="Share on Twitter">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#" aria-label="Share on Facebook">
+                  <i class="fab fa-facebook-square"></i>
+                </a>
+              </li>
+              <li class="post__form">
+                <form action="">
+                  <button class="btn icon" type="submit" name="action" value="like">
+                    <i class="fal fa-bookmark"></i>
+                  </button>
+                </form>
+              </li>
+            </ul>
+            <!-- Add to reading list form /Remove from list-->
+          </div>
+
+          <div class="post__thumb">
+            <img
+              src="<%= @post.image_url %>"
+              alt="Podcast" srcset="" />
+          </div>
+        </div>
+        <div class="post__main post__section">
+          <div class="post__content">
+            <p>
+              <%= @post.body %>
+            </p>
+          </div>
+          <div class="post__episode">
+            <iframe src="https://open.spotify.com/embed-podcast/episode/7cgCONJBauNLweDPv5cxtK" width="100%"
+              height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+          </div>
+        </div>
+      </article>
+      <!-- START Comments section-->
+      <div class="post__comments post__section">
+        <h3>Comentarios</h3>
+        <div class="comments comments--add">
+          <!-- <div class="comments__avatar">
+            <img class="avatar avatar-small" src="../assets/images/avatar.png" alt="Big blue avatar" />
+          </div> -->
+          <div class="comments__text">
+            <!-- START Comments form -->
+
+            <form class="input input--textarea" action="add-comment" method="POST">
+              <label class="input__label sr-only" for="add-comment">Add a comment</label>
+              <textarea class="input__field" id="add-comment" name="add-comment"
+                placeholder="What are your thoughts?"></textarea>
+              <!-- <input id="add-comment" name="add-comment" placeholder="What are your thoughts?" type="hidden"></input>
+              <trix-editor input="add-comment"></trix-editor> -->
+              <button class="btn btn--cta" type="submit" name="action" value="#">
+                Post
+              </button>
+            </form>
+          </div>
+        </div>
+        <!-- END Comments form -->
+        <!-- START Comments display -->
+        <div class="comments comments--display">
+          <div class="comments__avatar">
+            <img class="avatar avatar" src="../assets/images/avatar.png" alt="Big blue avatar" />
+          </div>
+          <div class="comments__text">
+            <div class="comments__user">
+              <span class="user__name">
+                <a href="#">Name LastName</a>
+                <span class="comments__time">1 week ago</span>
+              </span>
+            </div>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Ducimus quis saepe et dignissimos beatae maiores eos eveniet
+              perspiciatis quas, cupiditate earum, veritatis consequuntur
+              tempora, facilis nemo molestias ex nostrum animi!
+            </p>
+          </div>
+        </div>
+        <!-- END Comments display -->
+        <!-- END Comments section-->
+      </div>
+    </div>

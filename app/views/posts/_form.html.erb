@@ -1,0 +1,99 @@
+<%= form_for post, html: { class: 'form'} do |f| %>
+  <div class="alert alert--wide">
+    <p>Incorrect email/password combination.</p>
+  </div>
+  <!-- Title -->
+  <div class="input">
+    <div class="input__item">
+      <%= f.label :title, class: 'input__label' %>
+    </div>
+    <div class="input__item">
+      <%= f.text_field :title, class: 'input__field' %>
+    </div>
+  <!-- Title -->
+  <div class="input">
+    <div class="input__item">
+      <%= f.label :image_url, class: 'input__label' %>
+    </div>
+    <div class="input__item">
+      <%= f.text_field :image_url, class: 'input__field' %>
+    </div>
+    <!-- body  -->
+    <div class="input">
+      <div class="input__item">
+      <%= f.label :body, "Contenido", class: 'input__label' %>
+      </div>
+      <div class="input--textarea input--post-text">
+        <%= f.text_area :body, class: 'input__field', id: 'postContent' %>
+      </div>
+    </div>
+  </div>
+  <div class="form__text">
+    <a href="#"> Cancel</a>
+  </div>
+  <!-- Submit -->
+  <div class="form__text input__btn--alone">
+    <div class="prompt">
+    <%= f.submit class: 'btn btn--cta prompt__confirm'%>
+    </div>
+  </div>
+<% end %>
+
+<!-- <form class="form" action="log-in.html" method="post">
+  <div class="alert alert--wide">
+    <p>Incorrect email/password combination.</p>
+  </div>
+
+  <div class="input">
+    <div class="input__item">
+      <label for="title" class="input__label">Título</label>
+    </div>
+    <div class="input__item">
+      <input id="title" class="input__field" type="text" name="title" placeholder="input__item" required>
+    </div>
+  </div>
+
+  <div class="input">
+    <div class="input__item">
+      <label for="tags" class="input__label">Etiquetas</label>
+    </div>
+    <div class="input__item">
+      <input id="tags" class="input__field" type="text" name="tags"
+        placeholder="Separate multiple tags with commas" required>
+    </div>
+  </div>
+
+  <div class="input">
+    <div class="input--file">
+      <label class="input__label" for="goal-image">Imagen</label>
+      <input id="goal-image" type="file" name="profile" required />
+    </div>
+  </div>
+
+  <div class="input">
+    <div class="input__item">
+      <label for="episode" class="input__label">Código Spotify</label>
+    </div>
+    <div class="input__item">
+      <input id="episode" class="input__field" type="text" name="episode" placeholder="input__item">
+    </div>
+  </div>
+
+  <div class="input">
+    <div>
+      <label for="tags" class="input__label">Contenido</label>
+    </div>
+    <div class="input--textarea input--post-text">
+      <textarea class="input__field" id="postContent"></textarea>
+    </div>
+  </div>
+  
+
+  <div class="form__text input__btn--alone">
+    <div class="prompt"></div>
+    <div class="prompt">
+      <button class="btn btn--cta prompt__confirm" type="submit">Modificar</button>
+    </div>
+  </div>
+</form> -->
+

@@ -55,9 +55,11 @@
   a {
     color: $gray-3;
 
+
     &:hover,
     &:focus {
       color: $primary-color;
+      text-decoration: underline;
     }
   }
 }

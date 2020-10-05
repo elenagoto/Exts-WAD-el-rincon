@@ -13,7 +13,9 @@
           </div>
           <div class="featured__main">
             <h3 class="featured__title">
-              <a class="featured_link gamma" href="pages/post-image.html"><%= featured.title %></a>
+              <%= link_to post_path(featured), class: 'featured_link gamma' do %>
+                <%= featured.title %>
+              <% end %>
             </h3>
             <p class="featured__text">
               <%= featured.preview_text %>
