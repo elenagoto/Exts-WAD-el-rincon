@@ -94,4 +94,23 @@
     color: $primary-color;
     background-color: transparent;
   }
+
+  &__big {
+    background-color: transparent;
+    border: none;
+    color: $white;
+    cursor: pointer;
+
+    .svg-inline--fa {
+      font-size: $pulse * 2;
+
+      @include tablet {
+        font-size: $pulse * 3;
+      }
+
+      @include small-desktop {
+        font-size: $pulse * 4;
+      }
+    }
+  }
 }
