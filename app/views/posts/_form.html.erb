@@ -4,30 +4,41 @@
   </div>
   <!-- Title -->
   <div class="input">
-    <div class="input__item">
+    <div>
       <%= f.label :title, class: 'input__label' %>
     </div>
-    <div class="input__item">
+    <div>
       <%= f.text_field :title, class: 'input__field' %>
     </div>
-  <!-- Title -->
+  </div>
+  <!-- Image url -->
   <div class="input">
-    <div class="input__item">
+    <div>
       <%= f.label :image_url, class: 'input__label' %>
     </div>
-    <div class="input__item">
+    <div>
       <%= f.text_field :image_url, class: 'input__field' %>
     </div>
-    <!-- body  -->
-    <div class="input">
-      <div class="input__item">
-      <%= f.label :body, "Contenido", class: 'input__label' %>
-      </div>
-      <div class="input--textarea input--post-text">
-        <%= f.text_area :body, class: 'input__field', id: 'postContent' %>
-      </div>
+  </div>
+  <!-- Preview text -->
+  <div class="input">
+    <div>
+      <%= f.label :preview_text, class: 'input__label' %>
+    </div>
+    <div>
+      <%= f.text_field :preview_text, class: 'input__field' %>
     </div>
   </div>
+  <!-- body  -->
+  <div class="input">
+    <div>
+    <%= f.label :body, "Contenido", class: 'input__label' %>
+    </div>
+    <div class="input--textarea input--post-text">
+      <%= f.text_area :body, class: 'input__field', id: 'postContent' %>
+    </div>
+  </div>
+  
   <div class="form__text">
     <a href="#"> Cancel</a>
   </div>
@@ -45,19 +56,19 @@
   </div>
 
   <div class="input">
-    <div class="input__item">
+    <div>
       <label for="title" class="input__label">Título</label>
     </div>
-    <div class="input__item">
-      <input id="title" class="input__field" type="text" name="title" placeholder="input__item" required>
+    <div>
+      <input id="title" class="input__field" type="text" name="title" placeholder="" required>
     </div>
   </div>
 
   <div class="input">
-    <div class="input__item">
+    <div>
       <label for="tags" class="input__label">Etiquetas</label>
     </div>
-    <div class="input__item">
+    <div>
       <input id="tags" class="input__field" type="text" name="tags"
         placeholder="Separate multiple tags with commas" required>
     </div>
@@ -71,11 +82,11 @@
   </div>
 
   <div class="input">
-    <div class="input__item">
+    <div>
       <label for="episode" class="input__label">Código Spotify</label>
     </div>
-    <div class="input__item">
-      <input id="episode" class="input__field" type="text" name="episode" placeholder="input__item">
+    <div>
+      <input id="episode" class="input__field" type="text" name="episode" placeholder="">
     </div>
   </div>
 
