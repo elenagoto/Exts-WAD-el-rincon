@@ -20,13 +20,22 @@
       <%= f.text_field :image_url, class: 'input__field' %>
     </div>
   </div>
-  <!-- Preview text -->
+  <!-- Spotify id -->
   <div class="input">
     <div>
-      <%= f.label :preview_text, class: 'input__label' %>
+      <%= f.label :spotify_code, class: 'input__label' %>
     </div>
     <div>
-      <%= f.text_field :preview_text, class: 'input__field' %>
+      <%= f.text_field :spotify_code, class: 'input__field' %>
+    </div>
+  </div>
+  <!-- Preview text  -->
+  <div class="input">
+    <div>
+    <%= f.label :preview_text, class: 'input__label' %>
+    </div>
+    <div class="input--textarea input--post-text">
+      <%= f.text_area :preview_text, class: 'input__field', id: 'postContent' %>
     </div>
   </div>
   <!-- body  -->

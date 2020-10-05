@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200928185926) do
+ActiveRecord::Schema.define(version: 20201005182810) do
 
   create_table "posts", force: :cascade do |t|
     t.string "title"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20200928185926) do
     t.datetime "updated_at", null: false
     t.string "image_url"
     t.string "preview_text"
+    t.string "spotify_code"
   end
 
 end
