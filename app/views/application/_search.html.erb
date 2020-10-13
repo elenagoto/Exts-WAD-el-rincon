@@ -2,21 +2,22 @@
 <div class="masthead">
   <div class="content-wrapper">
     <!-- START Search form -->
-    <form class="search search--cta" action="/" method="get">
+    <%= form_tag(search_path, class: 'search search--cta', method: 'GET') do %>
       <!-- START Label -->
-      <label id="form-search" for="global-search" class="search__label sr-only">Search</label>
+      <%= label_tag('global-search', 'Search', class: 'search__label sr-only', id: 'form-search') %>
       <!-- END Label -->
       <!-- START Search row -->
       <div class="search__row">
-        <input id="global-search" class="search__field" type="text" name="search" placeholder="Search" />
-        <input type="submit" value="Search" class="sr-only">
-        <button id="reset" class="target icon__big" type="reset" value="Reset" aria-label="Button to reset search form">
-          <i class="fal fa-times-circle target"></i>
-        </button>
-        <!-- <button class="btn btn--cta" type="submit">Search</button> -->
+        <%= text_field_tag 'q', nil, class: 'search__field', id: 'global-search', placeholder: 'Search' %>
+        <%= submit_tag 'Search', class: "sr-only" %>
+          <%= button_tag 'Reset', type: 'reset', class: 'target icon__big', id: 'reset' do %>
+        <i class="fal fa-times-circle target"></i>
+        <% end %>
       </div>
       <!-- END Search row -->
-    </form>
+
+    <% end %>
+
     <!-- END Search form -->
   </div>
 </div>

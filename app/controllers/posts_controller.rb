@@ -7,6 +7,9 @@ class PostsController < ApplicationController
   def index
     if params[:tag]
       @posts = Post.tagged_with(params[:tag])
+    elsif params[:q]
+      @search_term = params[:q]
+      @posts = Post.search(@search_term)
     else
       @posts = Post.all
     end

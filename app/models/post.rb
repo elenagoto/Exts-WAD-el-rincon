@@ -9,12 +9,13 @@ class Post < ApplicationRecord
 
   # Scopes
   scope :most_recent, -> { order(created_at: :desc).limit(6) }
+  scope :title_contains, ->(term) { where('title LIKE ?', "%#{term}%") }
+  scope :tags_contain, ->(term) { joins(:tags).where('tags.name LIKE ?', "%#{term}%") }
+  scope :search, ->(search_term) { title_contains(search_term) | tags_contain(search_term) }
+  scope :tagged_with, ->(name) { Tag.find_by!(name: name).posts }
+
 
   # Methods
-  def self.tagged_with(name)
-    Tag.find_by!(name: name).posts
-  end
-
   def self.tag_counts
     Tag.select('tags.*, count(taggings.tag_id) as count').joins(:taggins).group('taggings.tag_id')
   end
