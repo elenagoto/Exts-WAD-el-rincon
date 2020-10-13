@@ -73,9 +73,10 @@ window.onload = () => {
   }
 
   // Make post text input grow with content
-  postContent = document.getElementById('postContent');
+  postContent = document.getElementById('post_body');
 
   if (postContent) {
+    autoExpand(postContent);
     document.addEventListener('input', function (event) {
       if (event.target !== postContent) return;
       autoExpand(event.target);
