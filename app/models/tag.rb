@@ -1,5 +1,6 @@
 class Tag < ApplicationRecord
   # Callbacks
+  validates :name, presence: true
   before_validation :downcase_name
 
   # Relationships
