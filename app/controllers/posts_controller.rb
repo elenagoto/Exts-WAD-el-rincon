@@ -47,6 +47,6 @@ class PostsController < ApplicationController
   end
 
   def post_params
-    params.require(:post).permit(:title, :body, :preview_text, :image_url, :spotify_code)
+    params.require(:post).permit(:title, :body, :preview_text, :image_url, :spotify_code, :tag_list)
   end
 end
