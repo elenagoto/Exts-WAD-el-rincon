@@ -7,8 +7,10 @@ class Post < ApplicationRecord
   has_many :taggings
   has_many :tags, through: :taggings
 
-  # Methods
+  # Scopes
+  scope :most_recent, -> { order(created_at: :desc).limit(6) }
 
+  # Methods
   def self.tagged_with(name)
     Tag.find_by!(name: name).posts
   end

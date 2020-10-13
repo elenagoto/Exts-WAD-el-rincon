@@ -1,7 +1,9 @@
 class Tag < ApplicationRecord
   # Callbacks
-  validates :name, presence: true
   before_validation :downcase_name
+
+  # Validations
+  validates :name, presence: true
 
   # Relationships
   has_many :taggings

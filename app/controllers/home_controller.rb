@@ -2,7 +2,7 @@
 
 class HomeController < ApplicationController
   def index
-    @posts = Post.all.order(created_at: :desc)
+    @posts = Post.most_recent
     @featured = Post.last
   end
 end
