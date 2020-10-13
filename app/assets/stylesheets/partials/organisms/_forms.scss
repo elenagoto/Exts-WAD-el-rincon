@@ -46,9 +46,10 @@
   }
 
   .alert {
-    color: $secondary-color;
+    color: $red;
     padding: $pulse 0;
-    display: none;
+    font-size: $pulse;
+    display: block;
   }
 }
 
@@ -87,7 +88,4 @@
     margin-top: 0;
   }
 
-  .alert {
-    display: block;
-  }
 }

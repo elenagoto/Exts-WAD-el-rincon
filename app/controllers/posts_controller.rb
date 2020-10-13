@@ -5,7 +5,11 @@ class PostsController < ApplicationController
   before_action :set_post,       only: %i[show edit update destroy]
 
   def index
-    @posts = Post.all
+    if params[:tag]
+      @posts = Post.tagged_with(params[:tag])
+    else
+      @posts = Post.all
+    end
   end
 
   def show; end
@@ -47,6 +51,6 @@ class PostsController < ApplicationController
   end
 
   def post_params
-    params.require(:post).permit(:title, :body, :preview_text, :image_url, :spotify_code, :tag_list)
+    params.require(:post).permit(:title, :body, :preview_text, :image_url, :spotify_code, :tag_list, :tag, { tag_ids: []}, :tag_ids)
   end
 end

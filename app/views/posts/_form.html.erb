@@ -1,6 +1,6 @@
 <%= form_for post, html: { class: 'form'} do |f| %>
   <div class="alert alert--wide">
-    <p>Incorrect email/password combination.</p>
+     <%= post.errors.full_messages.join('<br />')  %>
   </div>
   <!-- Title -->
   <div class="input">
@@ -20,6 +20,15 @@
       <%= f.text_field :image_url, class: 'input__field' %>
     </div>
   </div>
+  <!-- Tags -->
+  <div class="input">
+    <div>
+      <%= f.label :tag_ids, class: 'input__label' %>
+    </div>
+    <div>
+      <%= f.collection_select( :tag_ids, Tag.order(:name), :id, :name, {}, html_options = { class: 'input__field', multiple: true})%>
+    </div>
+  </div>
   <!-- Spotify id -->
   <div class="input">
     <div>
@@ -35,7 +44,7 @@
     <%= f.label :preview_text, class: 'input__label' %>
     </div>
     <div class="input--textarea input--post-text">
-      <%= f.text_area :preview_text, class: 'input__field', id: 'postContent' %>
+      <%= f.text_area :preview_text, class: 'input__field'%>
     </div>
   </div>
   <!-- body  -->
@@ -58,62 +67,3 @@
     </div>
   </div>
 <% end %>
-
-<!-- <form class="form" action="log-in.html" method="post">
-  <div class="alert alert--wide">
-    <p>Incorrect email/password combination.</p>
-  </div>
-
-  <div class="input">
-    <div>
-      <label for="title" class="input__label">Título</label>
-    </div>
-    <div>
-      <input id="title" class="input__field" type="text" name="title" placeholder="" required>
-    </div>
-  </div>
-
-  <div class="input">
-    <div>
-      <label for="tags" class="input__label">Etiquetas</label>
-    </div>
-    <div>
-      <input id="tags" class="input__field" type="text" name="tags"
-        placeholder="Separate multiple tags with commas" required>
-    </div>
-  </div>
-
-  <div class="input">
-    <div class="input--file">
-      <label class="input__label" for="goal-image">Imagen</label>
-      <input id="goal-image" type="file" name="profile" required />
-    </div>
-  </div>
-
-  <div class="input">
-    <div>
-      <label for="episode" class="input__label">Código Spotify</label>
-    </div>
-    <div>
-      <input id="episode" class="input__field" type="text" name="episode" placeholder="">
-    </div>
-  </div>
-
-  <div class="input">
-    <div>
-      <label for="tags" class="input__label">Contenido</label>
-    </div>
-    <div class="input--textarea input--post-text">
-      <textarea class="input__field" id="postContent"></textarea>
-    </div>
-  </div>
-  
-
-  <div class="form__text input__btn--alone">
-    <div class="prompt"></div>
-    <div class="prompt">
-      <button class="btn btn--cta prompt__confirm" type="submit">Modificar</button>
-    </div>
-  </div>
-</form> -->
-

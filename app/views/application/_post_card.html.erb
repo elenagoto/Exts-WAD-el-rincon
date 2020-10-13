@@ -3,11 +3,15 @@
     <div class="card__thumb">
       <img src="<%= post.image_url %>" alt="Podcast" srcset="" />
     </div>
-    <ul class="bare-list card__footer">
-      <li><a class="btn btn--tag" href="">Podcast</a></li>
-      <li><a class="btn btn--tag" href="">Historia</a></li>
-      <li><a class="btn btn--tag" href="">Literatura</a></li>
-    </ul>
+    <% if post.tag_ids.present? %>
+      <ul class="card__footer bare-list">
+        <% post.tags.each do |tag| %>
+          <li>
+            <%= link_to tag.name, tag_path(tag.name), class: 'btn btn--tag' %>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
     <div class="card__intro">
       <h3 class="card__title gamma">
       <%= link_to post_path(post), class: 'card_link' do %>

@@ -19,11 +19,15 @@
 <div class="content-wrapper">
   <article class="post">
     <div class="post__header post__section">
+    <% if @post.tag_ids.present? %>
       <ul class="post__tags bare-list">
-        <li><a class="btn btn--tag" href="#">Podcast</a></li>
-        <li><a class="btn btn--tag" href="#">Historia</a></li>
-        <li><a class="btn btn--tag" href="#">Literatura</a></li>
+        <% @post.tags.each do |tag| %>
+          <li>
+            <%= link_to tag.name, tag_path(tag.name), class: 'btn btn--tag' %>
+          </li>
+        <% end %>
       </ul>
+    <% end %>
       <div class="post__title">
         <!-- Title -->
         

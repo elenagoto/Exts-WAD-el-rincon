@@ -10,6 +10,6 @@ class Tag < ApplicationRecord
   private
 
   def downcase_name
-    self.name = name.downcase
+    self.name = name.downcase.strip
   end
 end

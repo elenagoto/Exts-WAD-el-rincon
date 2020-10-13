@@ -26,11 +26,15 @@
             </div>
           </div>
           <div class="featured__footer">
-            <ul class="bare-list featured__tags">
-              <li><a class="btn btn--tag" href="#">Podcast</a></li>
-              <li><a class="btn btn--tag" href="#">Historia</a></li>
-              <li><a class="btn btn--tag" href="#">Literatura</a></li>
-            </ul>
+            <% if featured.tag_ids.present? %>
+              <ul class="featured__tags bare-list">
+                <% featured.tags.each do |tag| %>
+                  <li>
+                    <%= link_to tag.name, tag_path(tag.name), class: 'btn btn--tag' %>
+                  </li>
+                <% end %>
+              </ul>
+            <% end %>
           </div>
         </div>
       </div>

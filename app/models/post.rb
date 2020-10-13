@@ -17,7 +17,6 @@ class Post < ApplicationRecord
     Tag.select('tags.*, count(taggings.tag_id) as count').joins(:taggins).group('taggings.tag_id')
   end
 
-  private 
   def tag_list
     tags.map(&:name).join(', ')
   end
@@ -27,7 +26,8 @@ class Post < ApplicationRecord
       Tag.where(name: n.strip).first_or_create!
     end
   end
-
+  
+  private 
   def tag_list_count
     errors[:tags] << '3 tags maximum' if tags.count > 3
   end
