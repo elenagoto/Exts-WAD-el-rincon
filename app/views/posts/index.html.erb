@@ -1,4 +1,11 @@
 <div class="content-wrapper">
+<!-- The code below is temporary, I wanted to understand how it worked. I'll leave it there for now -->
+  <% if @tags.present? %>
+    <% @tags.each do |tag| %>
+      <p>name: <%= tag.name %>, count: <%= tag.count %></p>
+    <% end %>
+<!-- End of testing code -->
+  <% end %>
   <ul class="bare-list cards">
     <% @posts.each do |post| %>
       <%= render partial: 'post_card', locals: { post: post} %>

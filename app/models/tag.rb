@@ -9,6 +9,9 @@ class Tag < ApplicationRecord
   has_many :taggings
   has_many :posts, through: :taggings
 
+  # Scope
+  scope :tag_counts, -> { select('tags.*, count(taggings.tag_id) as count').joins(:taggings).group('taggings.tag_id') }
+
   # Methods
   private
 

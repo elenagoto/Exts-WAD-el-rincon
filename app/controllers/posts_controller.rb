@@ -10,6 +10,9 @@ class PostsController < ApplicationController
     elsif params[:q]
       @search_term = params[:q]
       @posts = Post.search(@search_term)
+
+      logger.info("The search results are #{@posts.map(&:title).join(', ')}")
+      @tags = Tag.tag_counts
     else
       @posts = Post.all
     end
