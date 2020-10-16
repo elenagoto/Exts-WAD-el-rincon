@@ -168,4 +168,7 @@ build-iPhoneSimulator/
 
 /node_modules
 
+# Ignore VSCode settings
+.vscode/
+
 # End of https://www.toptal.com/developers/gitignore/api/prepros,sass,macos,ruby,rails
