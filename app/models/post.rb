@@ -4,6 +4,7 @@ class Post < ApplicationRecord
   validates :title, presence: true
 
   # Relationships
+  belongs_to :user
   has_many :taggings
   has_many :tags, through: :taggings
 

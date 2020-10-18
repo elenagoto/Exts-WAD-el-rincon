@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20201013085928) do
+ActiveRecord::Schema.define(version: 20201018173241) do
 
   create_table "posts", force: :cascade do |t|
     t.string "title"
@@ -20,6 +20,8 @@ ActiveRecord::Schema.define(version: 20201013085928) do
     t.string "image_url"
     t.string "preview_text"
     t.string "spotify_code"
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
   create_table "taggings", force: :cascade do |t|
@@ -33,6 +35,14 @@ ActiveRecord::Schema.define(version: 20201013085928) do
 
   create_table "tags", force: :cascade do |t|
     t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "email"
+    t.string "name"
+    t.string "role"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
