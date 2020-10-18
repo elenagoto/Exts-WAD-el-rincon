@@ -1,6 +1,6 @@
 class Post < ApplicationRecord
   # Validation rules
-  validate :tag_list_count
+  validates :tags, length: { maximum: 3, message: ": 3 are the maximum allowed." }
   validates :title, presence: true
 
   # Relationships
@@ -23,11 +23,6 @@ class Post < ApplicationRecord
     self.tags = names.split(',').map do |n|
       Tag.where(name: n.strip).first_or_create!
     end
-  end
-  
-  private 
-  def tag_list_count
-    errors[:tags] << '3 tags maximum' if tags.count > 3
   end
 
 end
