@@ -61,8 +61,7 @@ class PostTest < ActiveSupport::TestCase
 
     post_2 = Post.new title: 'Use Capybara'
     tag_2 = Tag.new name: 'test'
-    post_2.tags << tag
-    post_2.tags << tag_2
+    post_2.tags << [tag, tag_2]
     post_2.save!
 
     result = Post.search('test')
