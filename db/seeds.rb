@@ -8,6 +8,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+
 Post.create!(title: 'Episodio 1: La historia secreta de la música',
              body: 'Cupcake ipsum dolor sit amet dragée. Tart cheesecake biscuit marzipan jelly beans carrot cake icing toffee. Candy candy jujubes. Sweet fruitcake jelly croissant. Tootsie roll candy lollipop fruitcake soufflé pudding gummies. Halvah marshmallow cake. Toffee powder oat cake chupa chups icing cake marshmallow apple pie danish. Fruitcake jelly topping. \n
              Tart croissant icing. Marzipan chocolate bar powder. Halvah brownie carrot cake bonbon wafer gingerbread jelly beans. Dessert marshmallow pastry pie chupa chups jujubes pudding. Apple pie sweet roll tiramisu sugar plum ice cream gummies gummi bears candy fruitcake. Tootsie roll gingerbread cheesecake liquorice sweet roll sweet. Caramels chupa chups jelly-o icing liquorice marzipan. Dessert biscuit donut jelly oat cake pastry oat cake pudding pudding. Soufflé carrot cake liquorice. Dessert lemon drops sesame snaps ice cream dragée topping tootsie roll.',
