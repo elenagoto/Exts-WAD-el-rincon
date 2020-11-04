@@ -5,12 +5,15 @@ class User < ApplicationRecord
 
   # Validation rules
   validates :name, presence: true
+  validates :username, presence: true
+  validates :username, uniqueness: true
   validates :email, presence: true
   validates :email, uniqueness: true
   validates :role, inclusion: { in: %w(registered author admin) }
 
   # Relationships
   has_many :posts
+  has_secure_password
 
 
   # Methods
