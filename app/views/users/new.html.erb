@@ -1,0 +1,66 @@
+<div class="content-wrapper">
+  <!-- START Form -->
+  <div class="form-container">
+    <h1 class="alpha">Crear cuenta</h1>
+    <div class="form__text">
+      <span>Ya tienes una cuenta <a href="log-in.html"> Inicia sesión aquí</a></span>
+    </div>
+    <%= form_for @user, html: { class: 'form'} do |f| %>
+      <div class="alert alert--wide">
+        <%= @user.errors.full_messages.join('<br />').html_safe  %>
+      </div>
+      <!-- Name -->
+      <div class="input">
+        <div>
+          <%= f.label :name, "Nombre", class: 'input__label' %>
+        </div>
+        <div>
+          <%= f.text_field :name, class: 'input__field' %>
+        </div>
+      </div>
+      <!-- Username -->
+      <div class="input">
+        <div>
+          <%= f.label :username, "Usuario", class: 'input__label' %>
+        </div>
+        <div>
+          <%= f.text_field :username, class: 'input__field' %>
+        </div>
+      </div>
+      <!-- Email -->
+      <div class="input">
+        <div>
+          <%= f.label :email, "Correo Electrónico", class: 'input__label' %>
+        </div>
+        <div>
+          <%= f.email_field :email, class: 'input__field' %>
+        </div>
+      </div>
+      <!-- Password -->
+      <div class="input">
+        <div>
+          <%= f.label :password, "Contraseña", class: 'input__label' %>
+        </div>
+        <div>
+          <%= f.password_field :password, class: 'input__field' %>
+        </div>
+      </div>
+      <!-- Password confirmation -->
+      <div class="input">
+        <div>
+          <%= f.label :password_confirmation, "Confirmación de la contraseña", class: 'input__label' %>
+        </div>
+        <div>
+          <%= f.password_field :password_confirmation, class: 'input__field' %>
+        </div>
+      </div>
+      <!-- Submit -->
+      <div class="form__text input__btn--alone">
+        <div class="prompt">
+          <%= f.submit 'Registrarse', class: 'btn btn--cta prompt__confirm' %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <!-- END Form -->
+</div>
