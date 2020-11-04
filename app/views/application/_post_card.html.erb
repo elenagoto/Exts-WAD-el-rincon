@@ -33,6 +33,6 @@
   </div>
   <div class="card__meta">
     <%= image_tag('passifloras/curuba_1.jpeg', alt: 'Avatar', class: 'avatar avatar-small') %>
-    <span>por <a href="pages/user.html">el Podcast</a> - <time>04/07/2020</time></span>
+    <span>por <%= link_to post.user.name, user_path(post.user) %> - <time datetime='<%= post.created_at %>'><%= post.created_at.strftime(" %d/%m/%Y") %></time></span>
   </div>
 </li>

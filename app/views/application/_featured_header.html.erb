@@ -5,7 +5,7 @@
         <div class="featured">
           <div class="featured__header">
             <h1 class="alpha">Destacado</h1>
-            <span><time>04/07/2020</time></span>
+            <span><time datetime='<%= featured.created_at %>'><%= featured.created_at.strftime(" %d/%m/%Y") %></time></span>
           </div>
           <div class="featured__thumb">
             <img
@@ -22,7 +22,7 @@
             </p>
             <div class="featured__author">
             <%= image_tag('passifloras/gulupa_1.jpeg', alt: 'Avatar', class: 'avatar avatar-medium') %>
-              <span>por <a href="pages/user.html">Pepito Perez</a></span>
+              <span>por <%= link_to featured.user.name, user_path(featured.user) %></span>
             </div>
           </div>
           <div class="featured__footer">

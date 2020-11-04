@@ -35,11 +35,11 @@
       </div>
       <div class="post__header__media">
         <div class="post__meta">
-          <img class="avatar" src="../assets/images/passifloras/gulupa_1.jpeg" alt="Big blue avatar" />
+          <%= image_tag('passifloras/gulupa_1.jpeg', alt: 'Avatar', class: 'avatar') %>
           <div class="meta-text">
             <div class="post__author">
               <!-- Author -->
-              <span>por <a href="user.html">Pepito Perez</a></span>
+              <span>por <%= link_to @post.user.name, user_path(@post.user) %></span>
             </div>
             <div class="post__date">
               <!-- Date -->
