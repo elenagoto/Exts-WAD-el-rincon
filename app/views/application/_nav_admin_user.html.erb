@@ -1,0 +1,16 @@
+<div class="main-header">
+  <nav>
+    <ul class="global-nav bare-list">
+      <li> 
+        <%= link_to search_path do %>
+          <i class="far fa-search fa-lg"></i> 
+          <span class="sr-only">Buscar</span>
+        <% end %>
+      </li>
+      <li><a href="pages/about.html">Usuarios</a></li>
+      <li><a href="#">Entradas</a></li>
+      <li><a href="#">Mi Cuenta</a></li>
+      <li><%= link_to("Cerrar Sesión", session_path(1), method: :delete) %></li>
+    </ul>
+  </nav>
+</div>

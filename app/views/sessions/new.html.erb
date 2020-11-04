@@ -1,0 +1,39 @@
+<div class="content-wrapper">
+  <!-- START Form -->
+  <div class="form-container">
+    <h1 class="alpha">Iniciar Sesión</h1>
+    <div class="form__text">
+      <span>Aún no tienes una cuenta <%= link_to  "Regístrate aquí", new_user_path %>
+    </div>
+    <%= form_tag sessions_path, html: { class: 'form' } do %>
+      <% flash.each do |name, message| %>
+        <div class="alert alert--wide" <%= name %>"> <%= message %> </div>
+      <% end %>
+      <div class="input">
+        <div>
+          <%= label_tag(:email, nil, class: 'input__label')  %>
+        </div>
+        <div>
+          <%= text_field_tag(:email, nil, class: 'input__field') %>
+        </div>
+      </div>
+      <div class="input">
+        <div>
+          <%= label_tag(:password, nil, class: 'input__label')  %>
+        </div>
+        <div>
+          <%= password_field_tag(:password, nil, class: 'input__field') %>
+        </div>
+      </div>
+      <div class="form__text">
+        <span>¿Olvidaste tu contraseña? <a href="#"> Recupérala aquí</a></span>
+      </div>
+      <div class="form__text input__btn--alone">
+        <div class="prompt">
+          <%= button_tag('Iniciar Sesión', class: 'btn btn--cta prompt__confirm', name: nil) %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <!-- END Form -->
+</div>

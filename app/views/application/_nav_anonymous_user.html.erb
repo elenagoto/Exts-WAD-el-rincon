@@ -1,0 +1,16 @@
+<div class="main-header">
+  <nav>
+    <ul class="global-nav bare-list">
+      <li> 
+        <%= link_to search_path do %>
+          <i class="far fa-search fa-lg"></i> 
+          <span class="sr-only">Buscar</span>
+        <% end %>
+      </li>
+      <li><a href="pages/about.html">Nosotros</a></li>
+      <li><a href="#">El Podcast</a></li>
+      <li><a href="#">El Blog</a></li>
+      <li><%= link_to 'Iniciar Sesión', login_path %></li>
+    </ul>
+  </nav>
+</div>
