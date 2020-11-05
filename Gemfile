@@ -57,5 +57,7 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 # For raisl 5.2
 gem 'bootsnap', require: false
 
-# For signin and login with Google
-gem 'google_sign_in'
+# For Google sign-up
+gem 'omniauth'
+gem 'dotenv-rails'
+gem 'omniauth-google-oauth2'

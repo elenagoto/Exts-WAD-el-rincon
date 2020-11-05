@@ -5,6 +5,9 @@
     <div class="form__text">
       <span>Ya tienes una cuenta <a href="log-in.html"> Inicia sesión aquí</a></span>
     </div>
+    <%= link_to '/auth/google_oauth2', class: 'btn btn--google' do %>
+      <%= image_tag('google.png', alt: 'Google Logo') %> <span>Crear cuenta con Google</span>
+    <% end %>
     <%= form_for @user, html: { class: 'form'} do |f| %>
       <div class="alert alert--wide">
         <%= @user.errors.full_messages.join('<br />').html_safe  %>
@@ -61,6 +64,8 @@
         </div>
       </div>
     <% end %>
+    
   </div>
+
   <!-- END Form -->
 </div>

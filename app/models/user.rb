@@ -5,20 +5,27 @@ class User < ApplicationRecord
   after_initialize :default_role!
 
   # Validation rules
-  validates :name, presence: true
-  validates :username, presence: true
-  validates :username, uniqueness: { case_sensitive: false } 
-  validates :email, presence: true
-  validates :email, uniqueness: { case_sensitive: false }
-  validates :password, presence: true
+  validates :username, :email, presence: true
+  validates :username, :email, uniqueness: { case_sensitive: false }
   validates :password, confirmation: true
-  validates :password_confirmation, presence: true
   validates :role, inclusion: { in: %w(registered author admin) }
+  has_secure_password
 
   # Relationships
   has_many :posts
-  has_secure_password
+  
 
+  def self.from_omniauth(auth)
+    # Creates a new user only if it doesn't exist
+    where(email: auth.info.email).first_or_initialize do |user|
+      user.username = auth.info.name
+      user.email = auth.info.email
+      if auth.info.uid
+        user.uid = auth.info.uid
+      end
+      user.password = user.password_confirmation = SecureRandom.hex
+    end
+  end
 
   # Methods
   private
@@ -26,6 +33,7 @@ class User < ApplicationRecord
   def downcase_email
     self.email = email.downcase
   end
+
   def downcase_username
     self.username = username.downcase
   end
