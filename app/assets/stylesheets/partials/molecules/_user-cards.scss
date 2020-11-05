@@ -3,11 +3,14 @@
 ================================= */
 
 .user-card {
+  border: 1px solid $gray-4;
   border-radius: 2%;
+  box-shadow: 1rem 1rem 2rem $gray-3;
   display: flex;
   flex-direction: column;
   background-color: $white;
   overflow: hidden;
+  padding: $pulse;
   position: relative;
 
   &__thumb {
@@ -50,8 +53,20 @@
     }
   }
 
-  .btn {
+  &__main {
+    flex: 1 0 auto;
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1rem;
     margin: ($pulse / 2) 0;
+  }
+
+  .btn {
+    font-size: 1.3rem;
+    padding: $pulse / 2;
     position: relative;
     z-index: 1;
   }

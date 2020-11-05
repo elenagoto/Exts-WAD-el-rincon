@@ -1,11 +1,12 @@
 class UsersController < ApplicationController
+  # Before actions
+  before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   def index
-  
+    @users = User.all
   end
 
   def show
-  
   end
 
   def new
@@ -20,19 +21,30 @@ class UsersController < ApplicationController
     redirect_to root_path
   end
 
-  def edit
-  
+  def edit  
   end
 
   def update
-  
+    if @user.update(edit_user_params)
+      redirect_to user_path(@user)
+    else
+      render 'edit'
+    end
   end
 
   def destroy
-  
+    @user.destroy
+    respond_to do |format|
+      format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
+      format.js
+    end
   end
 
   private
+
+  def set_user
+    @user = User.find(params[:id])
+  end
 
   def user_params
     params.require(:user).permit(:name, :username, :email, :password, :password_confirmation)
@@ -41,4 +53,5 @@ class UsersController < ApplicationController
   def edit_user_params
     params.require(:user).permit(:email, :name, :role, :username)
   end
+
 end
