@@ -50,11 +50,11 @@ class UsersController < ApplicationController
   private
 
   def set_user
-    @user = User.find(params[:id])
+    @user = current_user
   end
 
   def authorize_to_edit_user
-    redirect_to root_path unless can_edit_user?(@user)
+    redirect_to account_path unless can_edit_user?(@user)
   end
 
   def user_params

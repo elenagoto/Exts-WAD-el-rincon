@@ -30,7 +30,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    user = User.find(session[:user_id])
+    user = current_user
     @post = Post.new(post_params)
     @post.user = user
     if @post.save

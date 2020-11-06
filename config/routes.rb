@@ -1,12 +1,24 @@
 Rails.application.routes.draw do
   root to: 'home#index'
 
-  resources :sessions, only: [:new, :create, :destroy]
-  resources :users
+  # Account related routes
+  get 'account/saved', to: 'account/posts#saved', as: 'saved'
+
+  namespace :account do
+    resources :posts, only: [:index]
+  end
+
+  
+  # Post related routes
   resources :posts
+  # Add comments here later
 
   get 'search', to: 'posts#index', as: 'search'
   get 'tags/:tag', to: 'posts#index', as: :tag
+
+  # User and session related routes
+  resources :sessions, only: [:new, :create, :destroy]
+  resources :users
 
   # Login and Sign up routes
   get 'signup', to: 'users#new', as: 'signup'
