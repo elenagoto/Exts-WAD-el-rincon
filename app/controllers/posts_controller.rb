@@ -1,8 +1,13 @@
 # frozen_string_literal: true
 
 class PostsController < ApplicationController
+  # Includes
+  include RolesHelper
+
   # Before Actions
-  before_action :set_post,       only: %i[show edit update destroy]
+  before_action :ensure_authenticated,   only: [:new, :create, :edit, :update, :destroy] 
+  before_action :set_post,               only: %i[show edit update destroy]
+  before_action :authorize_to_edit_post, only: %i[edit update destroy]
 
   def index
     if params[:tag]
@@ -56,6 +61,10 @@ class PostsController < ApplicationController
 
   def set_post
     @post = Post.find(params[:id])
+  end
+
+  def authorize_to_edit_post
+    redirect_to root_path unless can_edit_post?(@post)
   end
 
   def post_params

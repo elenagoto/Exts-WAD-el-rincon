@@ -8,6 +8,22 @@ class ApplicationController < ActionController::Base
   end
 
   def current_user
-    return @current_user ||= User.find(session[:user_id])
+    @current_user ||= User.find(session[:user_id])
+  end
+
+  def admin?
+    current_user.role == 'admin'
+  end
+
+  def author?
+    current_user.role == 'author'
+  end
+
+  def ensure_authenticated
+    redirect_to login_path unless logged_in?
+  end
+
+  def ensure_admin
+    redirect_to account_path unless admin?
   end
 end

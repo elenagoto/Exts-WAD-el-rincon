@@ -1,7 +1,14 @@
 class UsersController < ApplicationController
-  # Before actions
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
+  # Includes
+  include RolesHelper
 
+  # Before actions
+  before_action :ensure_authenticated,   only: [:index, :edit, :update, :destroy] 
+  before_action :set_user,               only: [:show, :edit, :update, :destroy]
+  before_action :authorize_to_edit_user, only: [:edit, :update]
+  before_action :ensure_admin,           only: [:index, :destroy]
+
+  
   def index
     @users = User.all
   end
@@ -44,6 +51,10 @@ class UsersController < ApplicationController
 
   def set_user
     @user = User.find(params[:id])
+  end
+
+  def authorize_to_edit_user
+    redirect_to root_path unless can_edit_user?(@user)
   end
 
   def user_params
