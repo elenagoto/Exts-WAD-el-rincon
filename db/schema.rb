@@ -24,11 +24,6 @@ ActiveRecord::Schema.define(version: 2020_11_06_152928) do
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
-  create_table "posts_users", id: false, force: :cascade do |t|
-    t.integer "post_id", null: false
-    t.integer "user_id", null: false
-  end
-
   create_table "taggings", force: :cascade do |t|
     t.integer "tag_id"
     t.integer "post_id"
