@@ -24,6 +24,6 @@ class ApplicationController < ActionController::Base
   end
 
   def ensure_admin
-    redirect_to account_path unless admin?
+    redirect_to root_path unless admin?
   end
 end

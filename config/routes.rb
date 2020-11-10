@@ -3,6 +3,9 @@ Rails.application.routes.draw do
 
   # Account related routes
   get 'account/saved', to: 'account/posts#saved', as: 'saved'
+  get '/account/profile', to: 'account#index', as: 'profile'
+  get  '/account', to: 'account#edit'
+  post '/account', to: 'account#update'
 
   namespace :account do
     resources :posts, only: [:index]
