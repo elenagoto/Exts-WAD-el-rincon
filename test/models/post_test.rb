@@ -2,17 +2,28 @@ require 'test_helper'
 
 class PostTest < ActiveSupport::TestCase
   test 'that first created Post is first on the list' do
-    first_post = Post.new title: 'This is a title'
+    user = User.new username: 'user',
+                    email: 'user@email.com',
+                    password: 'password'
+
+    first_post = Post.new title: 'This is a title',
+                          user: user
     first_post.save!
 
-    second_post = Post.new title: 'This is another title'
+    second_post = Post.new title: 'This is another title',
+                           user: user
     second_post.save!
 
     assert_equal(first_post, Post.all.first)
   end
 
   test 'update_at is changed after updating Post title' do
-    post = Post.new title: 'This is the first title'
+    user = User.new username: 'user',
+                    email: 'user@email.com',
+                    password: 'password'
+
+    post = Post.new title: 'This is the first title',
+                    user: user
     post.save!
     first_updated_at = post.updated_at
 
@@ -23,15 +34,28 @@ class PostTest < ActiveSupport::TestCase
   end
 
   test 'validation for Post without title' do
-    post = Post.new
+    user = User.new username: 'user',
+                    email: 'user@email.com',
+                    password: 'password'
+    post = Post.new user: user
+
+    refute post.valid?
+  end
+
+  test 'validation for Post without user' do
+    post = Post.new title:'This is a title'
 
     refute post.valid?
   end
 
   # Testing scopes
-  
+
   test 'search one matching result' do
-    post = Post.new title: 'This is a post'
+    user = User.new username: 'user',
+                    email: 'user@email.com',
+                    password: 'password'
+    post = Post.new title: 'This is a post',
+                    user: user
 
     post.save!
     result = Post.search('This')
@@ -39,7 +63,11 @@ class PostTest < ActiveSupport::TestCase
   end
 
   test 'search matches tags' do
-    post = Post.new title: 'This is a post'
+    user = User.new username: 'user',
+                    email: 'user@email.com',
+                    password: 'password'
+    post = Post.new title: 'This is a post',
+                    user: user
     tag = Tag.new name: 'This is a tag'
     post.tags << tag
     post.save!
@@ -48,21 +76,30 @@ class PostTest < ActiveSupport::TestCase
   end
 
   test 'no matching result' do
-    post = Post.new title: 'This is a post'
+    user = User.new username: 'user',
+                    email: 'user@email.com',
+                    password: 'password'
+    post = Post.new title: 'This is a post',
+                    user: user
     post.save!
     assert_empty Post.search('Hello')
   end
 
   test 'search matches both title and tags' do
-    post = Post.new title: 'Tests are important'
+    user = User.new username: 'user',
+                    email: 'user@email.com',
+                    password: 'password'
+    post = Post.new title: 'Tests are important',
+                    user: user
     tag = Tag.new name: 'programming'
     post.tags << tag
     post.save!
 
-    post_2 = Post.new title: 'Use Capybara'
-    tag_2 = Tag.new name: 'test'
-    post_2.tags << [tag, tag_2]
-    post_2.save!
+    post2 = Post.new title: 'Use Capybara',
+                     user: user
+    tag2 = Tag.new name: 'test'
+    post2.tags << [tag, tag2]
+    post2.save!
 
     result = Post.search('test')
     assert_equal result.length, 2
