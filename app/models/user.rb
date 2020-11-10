@@ -13,7 +13,8 @@ class User < ApplicationRecord
 
   # Relationships
   has_many :posts
-  
+  has_many :bookmarks
+  has_many :bookmarked_posts, through: :bookmarks, source: :post
 
   def self.from_omniauth(auth)
     # Creates a new user only if it doesn't exist

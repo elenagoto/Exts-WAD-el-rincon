@@ -23,13 +23,23 @@
         <%= post.preview_text %>
       </h5>
     </div>
-    <div class="card__form">
-      <form action="">
-        <button class="btn icon" type="submit" name="action" value="like">
-          <span class="fas fa-bookmark"></span>
-        </button>
-      </form>
-    </div>
+    
+    <% if logged_in? %>
+      <div class="card__form">
+        <% if current_user.bookmarked_posts.exists?(post.id) %>
+          <%= link_to user_bookmark_path(current_user, id: post.id), class: 'btn icon', role: 'button', method: :delete do %>
+          <i class="fal fa-trash"></i>
+        <% end %>
+        <% else %>
+          <%= form_tag user_bookmarks_path(current_user), method: :post do  %>
+            <%= hidden_field_tag :post_id, post.id %>
+            <%= button_tag class: 'btn icon', type: 'submit' do %>
+              <span class="fas fa-bookmark"></span>
+            <% end %>
+          <% end %>
+        <% end %>
+      </div>
+    <% end %>
   </div>
   <div class="card__meta">
     <%= image_tag('passifloras/curuba_1.jpeg', alt: 'Avatar', class: 'avatar avatar-small') %>

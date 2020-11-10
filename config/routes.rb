@@ -18,7 +18,10 @@ Rails.application.routes.draw do
 
   # User and session related routes
   resources :sessions, only: [:new, :create, :destroy]
-  resources :users
+  resources :users do
+    resources :bookmarks, only: [:create, :destroy]
+  end
+
 
   # Login and Sign up routes
   get 'signup', to: 'users#new', as: 'signup'

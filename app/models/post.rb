@@ -7,6 +7,8 @@ class Post < ApplicationRecord
   belongs_to :user
   has_many :taggings
   has_many :tags, through: :taggings
+  has_many :bookmarks
+  has_many :users, through: :bookmarks
 
   # Scopes
   scope :most_recent, -> { order(created_at: :desc).limit(6) }
