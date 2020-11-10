@@ -40,7 +40,11 @@
             </nav>
           </div>
           <% if logged_in? %>
-            <%= render partial: 'nav_registered_user' %>
+                <% case current_user.role
+                when 'registered' %><%= render partial: 'nav_registered_user' %>
+                <% when 'author' %><%= render partial: 'nav_author_user' %>
+                <% when 'admin' %><%= render partial: 'nav_admin_user' %>
+                <% end %>
           <% else %>
             <%= render partial: 'nav_anonymous_user' %>
           <% end %>
