@@ -1,21 +1,23 @@
-<div class="modify-bar">
-  <div class="content-wrapper">
-    <ul class="bare-list">
-      <li>
-        <%= link_to edit_post_path(@post), class: 'btn btn--icon', role: 'button' do %>
-          <i class="fal fa-edit"></i> 
-          Modify
-        <% end %>
-      </li>
-      <li>
-        <%= link_to post_path(@post), class: 'btn btn--icon btn--warning', role: 'button', method: :delete do %>
-          <i class="fal fa-trash"></i>
-          Delete
-        <% end %>
-      </li>
-    </ul>
+<% if logged_in? && can_edit_post?(@post) %>
+  <div class="modify-bar">
+    <div class="content-wrapper">
+      <ul class="bare-list">
+        <li>
+          <%= link_to edit_post_path(@post), class: 'btn btn--icon', role: 'button' do %>
+            <i class="fal fa-edit"></i> 
+            Modify
+          <% end %>
+        </li>
+        <li>
+          <%= link_to post_path(@post), class: 'btn btn--icon btn--warning', role: 'button', method: :delete do %>
+            <i class="fal fa-trash"></i>
+            Delete
+          <% end %>
+        </li>
+      </ul>
+    </div>
   </div>
-</div>
+<% end %>
 <div class="content-wrapper">
   <article class="post">
     <div class="post__header post__section">

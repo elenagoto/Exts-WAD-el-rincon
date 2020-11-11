@@ -23,7 +23,9 @@ class PostsController < ApplicationController
     end
   end
 
-  def show; end
+  def show
+    logger.info("Truncated text: '#{@post.body.truncate(160)}'")
+  end
 
   def new
     @post = Post.new
