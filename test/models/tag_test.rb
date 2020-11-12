@@ -22,7 +22,11 @@ class TagTest < ActiveSupport::TestCase
   end
 
   test 'cascade saving' do
-    post = Post.new title: 'This is a title'
+    user = User.new username: 'user',
+                    email: 'user@email.com',
+                    password: 'password'
+    post = Post.new title: 'This is a title',
+                    user: user
     post.save!
     3.times do |i|
       tag = Tag.new name: "tag #{i + 1}"

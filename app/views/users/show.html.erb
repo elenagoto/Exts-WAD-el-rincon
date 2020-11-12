@@ -5,13 +5,13 @@
         <li>
           <%= link_to edit_user_path(@user), class: 'btn btn--icon', role: 'button' do %>
             <i class="fal fa-user-edit"></i> 
-            Modify
+            Modificar
           <% end %>
         </li>
         <li>
           <%= link_to user_path(@user), class: 'btn btn--icon btn--warning', role: 'button', method: :delete do %>
             <i class="fal fa-trash"></i>
-            Delete
+            Borrar
           <% end %>
         </li>
       </ul>
@@ -38,13 +38,7 @@
       <h3 class="user__title">
         Biografía:
       </h3>
-      <p class="user__bio">
-        Sweet tootsie roll marzipan halvah cake lemon drops croissant cupcake cheesecake. Caramels sugar plum sweet
-        lollipop cupcake marshmallow. Pudding sweet roll soufflé croissant icing danish. Muffin soufflé tootsie roll
-        apple pie chocolate bar gingerbread ice cream. Gummies caramels pastry. Lollipop pie chocolate bonbon.<br>
-        Dragée sweet roll sweet oat cake tart apple pie sesame snaps carrot cake muffin. Brownie chocolate bear
-        claw. Marshmallow fruitcake cookie bonbon gingerbread oat cake. Chocolate cake danish sweet. Oat cake sweet
-        roll croissant sugar plum jujubes. Liquorice danish donut bonbon sweet.</p>
+      <p class="user__bio"><%= @user.bio %></p>
     </div>
     <div class="user__footer">
       <% if @user.posts.any? %>

@@ -16,11 +16,11 @@ class UsersController < ApplicationController
   def show
     if params[:username]
       @user = User.find_by(username: params[:username])
-      return redirect_to root_path unless @user.role == 'author'
     else
       @user = User.find_by(id: params[:id])
-      return redirect_to root_path unless @user.role == 'author'
     end
+
+    return redirect_to root_path unless @user.role == 'author' || admin?
   end
 
   def new
@@ -40,11 +40,7 @@ class UsersController < ApplicationController
 
   def update
     if @user.update(edit_user_params)
-      if admin?
-        redirect_to users_path
-      else
-        redirect_to profile_path
-      end
+      redirect_to profile_path unless admin?
     else
       render 'edit'
     end
@@ -65,7 +61,7 @@ class UsersController < ApplicationController
   end
 
   def authorize_to_edit_user
-    redirect_to account_path unless can_edit_user?(@user)
+    redirect_to profile_path unless can_edit_user?(@user)
   end
 
   def user_params

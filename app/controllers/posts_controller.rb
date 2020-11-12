@@ -7,6 +7,7 @@ class PostsController < ApplicationController
   # Before Actions
   before_action :ensure_authenticated,   only: [:new, :create, :edit, :update, :destroy] 
   before_action :set_post,               only: %i[show edit update destroy]
+  before_action :authorize_to_create_post, only: %i[new create]
   before_action :authorize_to_edit_post, only: %i[edit update destroy]
   before_action :ensure_admin,           only: %i[all_posts]
 
@@ -77,6 +78,10 @@ class PostsController < ApplicationController
     redirect_to root_path unless can_edit_post?(@post)
   end
 
+  def authorize_to_create_post
+    redirect_to root_path unless author? || admin?
+  end
+  
   def post_params
     params.require(:post).permit(:title, :body, :preview_text, :image_url, :spotify_code, :tag_list, :tag, { tag_ids: []}, :tag_ids)
   end

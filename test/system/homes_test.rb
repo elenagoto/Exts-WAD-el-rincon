@@ -8,7 +8,8 @@ class HomesTest < ApplicationSystemTestCase
     3.times do |i|
       post = Post.new title: "Default title for post # #{i + 1}",
                       user: user,
-                      image_url: 'https://www.blogtyrant.com/wp-content/uploads/2017/02/how-to-write-a-good-blog-post.png'
+                      image_url: 'https://www.blogtyrant.com/wp-content/uploads/2017/02/how-to-write-a-good-blog-post.png',
+                      body: 'Cotton candy cake brownie danish carrot cake sweet halvah chocolate bar. Pastry pie lemon drops sweet roll carrot cake wafer. Marzipan tiramisu jujubes gingerbread. Donut sweet roll topping apple pie cookie. Wafer cookie toffee cupcake sugar plum cupcake. Pie toffee macaroon pudding cupcake cotton candy. Bear claw chocolate cake jelly donut tart chocolate cake. Gummies brownie carrot cake caramels cookie cake.'
       post.save!
     end
     visit '/'

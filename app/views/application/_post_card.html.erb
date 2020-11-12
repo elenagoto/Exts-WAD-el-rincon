@@ -18,10 +18,11 @@
         <%= post.title %>
       <% end %>
       </h3>
-
-      <h5 class="card__text">
-        <%= post.body.truncate(160) %>
-      </h5>
+      <% if post.body.present? %>
+        <h5 class="card__text">
+          <%= post.body.truncate(160) %>
+        </h5>
+      <% end %>
     </div>
     
     <% if logged_in? %>
