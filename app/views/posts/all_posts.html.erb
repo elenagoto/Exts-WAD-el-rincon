@@ -1,8 +1,4 @@
 <div class="content-wrapper">
-  <%= link_to new_post_path, class: 'btn btn--icon btn--alone', role: 'button' do %>
-    <i class="fal fa-marker"></i> 
-    Nuevo Artículo
-  <% end %>
   <% if @posts.any? %>
     <ul class="bare-list cards post-long__list">
       <% @posts.each do |post| %>
@@ -17,7 +13,19 @@
                   <%= post.title %>
                 <% end %>
               </div>
-              <div class="post-long__date"><time datetime='<%= post.created_at %>'><%= post.created_at.strftime(" %d/%m/%Y") %></time></div>
+              <div class="post-long__author">
+                <span> Autor: <%= link_to post.user.name, username_path(post.user.username), class: 'card_link' %></span>
+              </div>
+              <div class="post-long__date">
+                <span>Publicado el <time datetime='<%= post.created_at %>'><%= post.created_at.strftime(" %d/%m/%Y") %></time></span>
+              </div>
+              <div class="post-long__users">
+                <% if  post.users.count == 1%>
+                  <span> <%= post.users.count %> usuario lo ha agregado a sus favoritos</span>
+                <% else %>
+                  <span> <%= post.users.count %> usuarios lo han agregado a sus favoritos</span>
+                <% end %>
+              </div>
             </div>
           </div>
           <div class="post-long__btn">
@@ -34,6 +42,6 @@
       <% end %>
     </ul>
   <% else %>
-    <p>No has publicado ningún artículo</p>
+    <p>No hay ningún artículo</p>
   <% end %>
 </div>

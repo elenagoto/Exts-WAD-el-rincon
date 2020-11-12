@@ -89,6 +89,15 @@
     @include tablet {
       font-size: 1.5rem;
       line-height: 1.5;
+
+      a {
+        font-size: 1.5rem;
+        line-height: 1.5;
+      }
+    }
+
+    a {
+      text-decoration: underline;
     }
   }
 

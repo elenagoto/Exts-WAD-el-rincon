@@ -8,6 +8,7 @@ class PostsController < ApplicationController
   before_action :ensure_authenticated,   only: [:new, :create, :edit, :update, :destroy] 
   before_action :set_post,               only: %i[show edit update destroy]
   before_action :authorize_to_edit_post, only: %i[edit update destroy]
+  before_action :ensure_admin,           only: %i[all_posts]
 
   def index
     if params[:tag]
@@ -60,6 +61,10 @@ class PostsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to root_path }
     end
+  end
+
+  def all_posts
+    @posts = Post.all.order(updated_at: :desc)
   end
 
   private

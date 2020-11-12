@@ -7,9 +7,9 @@
           <span class="sr-only">Buscar</span>
         <% end %>
       </li>
-      <li><a href="pages/about.html">Usuarios</a></li>
-      <li><a href="#">Entradas</a></li>
-      <li><a href="#">Mi Cuenta</a></li>
+      <li><%= link_to 'Usuarios', users_path %></li>
+      <li><%= link_to 'Artículos',  all_posts_path %></li>
+      <li><%= link_to 'Mi cuenta', profile_path %></li>
       <li><%= link_to("Cerrar Sesión", logout_path, method: :delete) %></li>
     </ul>
   </nav>

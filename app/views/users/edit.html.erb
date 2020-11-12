@@ -42,6 +42,17 @@
           <%= f.select :role,  [["Admin", "admin"], ["Author", "author"], ["Registered", "registered"]], class: 'input__field' %>
         </div>
       </div>
+      <!-- Bio -->
+      <% if @user.role == 'author'%>
+        <div class="input">
+          <div>
+            <%= f.label :bio, "Biografía", class: 'input__label' %>
+          </div>
+          <div class="input--textarea input--post-text">
+            <%= f.text_area :bio, class: 'input__field'%>
+          </div>
+        </div>
+      <% end %>
       <!-- Submit -->
       <div class="form__text input__btn--alone">
         <div class="prompt">

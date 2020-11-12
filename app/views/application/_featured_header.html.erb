@@ -18,10 +18,14 @@
               <% end %>
             </h3>
             <p class="featured__text">
-              <%= featured.preview_text %>
+              <%= featured.body.truncate(160) %> <%= link_to post_path(featured) do %>
+                Leer más
+              <% end %>
             </p>
             <div class="featured__author">
-            <%= image_tag('passifloras/gulupa_1.jpeg', alt: 'Avatar', class: 'avatar avatar-medium') %>
+            <%= link_to username_path(featured.user.username) do %>
+              <%= image_tag('passifloras/gulupa_1.jpeg', alt: 'Avatar', class: 'avatar avatar-medium') %>
+            <% end %>
               <span>por <%= link_to featured.user.name, username_path(featured.user.username) %></span>
             </div>
           </div>

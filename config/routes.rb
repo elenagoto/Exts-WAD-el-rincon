@@ -22,6 +22,7 @@ Rails.application.routes.draw do
   get 'tags/:tag', to: 'posts#index', as: :tag
   get 'authors/:username', to: 'users#show', as: :username
   get 'authors/:username/posts', to: 'posts#index', as: :username_posts
+  get 'all-posts', to: 'posts#all_posts', as: 'all_posts'
 
   # User and session related routes
   resources :sessions, only: [:new, :create, :destroy]

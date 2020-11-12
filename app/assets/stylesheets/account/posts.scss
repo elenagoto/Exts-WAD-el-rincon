@@ -1,3 +1,17 @@
 // Place all the styles related to the account/posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.btn--alone {
+  align-self: flex-end;
+  border-color: $dark-violet;
+  color: $dark-violet;
+  width: auto;
+  white-space: nowrap;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $white;
+    background: $dark-violet;
+  }
+}

@@ -1,6 +1,5 @@
 class Post < ApplicationRecord
   # Callbacks
-  after_save :create_preview!
 
   # Validation rules
   validates :tags, length: { maximum: 3, message: ": 3 are the maximum allowed." }
@@ -30,9 +29,5 @@ class Post < ApplicationRecord
     end
   end
 
-  private
 
-  def create_preview!
-    self.preview_text = body.truncate(160)
-  end
 end

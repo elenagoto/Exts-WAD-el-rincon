@@ -61,13 +61,22 @@
               <i class="fab fa-facebook-square"></i>
             </a>
           </li>
-          <li class="post__form">
-            <form action="">
-              <button class="btn icon" type="submit" name="action" value="like">
-                <i class="fal fa-bookmark"></i>
-              </button>
-            </form>
-          </li>
+          <% if logged_in? %>
+            <li class="post__form">
+              <% if current_user.bookmarked_posts.exists?(@post.id) %>
+                <%= link_to user_bookmark_path(current_user, id: @post.id), class: 'btn icon', role: 'button', method: :delete do %>
+                  <i class="fal fa-trash"></i>
+                <% end %>
+              <% else %>
+                <%= form_tag user_bookmarks_path(current_user), method: :post do  %>
+                  <%= hidden_field_tag :post_id, @post.id %>
+                  <%= button_tag class: 'btn icon', type: 'submit' do %>
+                    <i class="fal fa-bookmark"></i>
+                  <% end %>
+                <% end %>
+              <% end %>
+            </li>
+          <% end %>
         </ul>
         <!-- Add to reading list form /Remove from list-->
       </div>

@@ -20,7 +20,7 @@
       </h3>
 
       <h5 class="card__text">
-        <%= post.preview_text %>
+        <%= post.body.truncate(160) %>
       </h5>
     </div>
     
@@ -28,8 +28,8 @@
       <div class="card__form">
         <% if current_user.bookmarked_posts.exists?(post.id) %>
           <%= link_to user_bookmark_path(current_user, id: post.id), class: 'btn icon', role: 'button', method: :delete do %>
-          <i class="fal fa-trash"></i>
-        <% end %>
+            <i class="fas fa-trash"></i>
+          <% end %>
         <% else %>
           <%= form_tag user_bookmarks_path(current_user), method: :post do  %>
             <%= hidden_field_tag :post_id, post.id %>
@@ -42,7 +42,9 @@
     <% end %>
   </div>
   <div class="card__meta">
-    <%= image_tag('passifloras/curuba_1.jpeg', alt: 'Avatar', class: 'avatar avatar-small') %>
+    <%= link_to username_path(post.user.username), class: 'card__meta__avatar' do %>
+      <%= image_tag('passifloras/curuba_1.jpeg', alt: 'Avatar', class: 'avatar avatar-small') %>
+    <% end %>
     <span>por <%= link_to post.user.name, username_path(post.user.username) %> - <time datetime='<%= post.created_at %>'><%= post.created_at.strftime(" %d/%m/%Y") %></time></span>
   </div>
 </li>
