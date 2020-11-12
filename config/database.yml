@@ -21,5 +21,9 @@ test:
   database: db/test.sqlite3
 
 production:
-  <<: *default
-  database: db/production.sqlite3
+  adapter: postgresql
+  encoding: unicode
+  database: el_rincon
+  pool: 5
+  username: el_rincon
+  password: secret
