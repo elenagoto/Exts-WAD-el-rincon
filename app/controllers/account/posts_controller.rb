@@ -7,8 +7,8 @@ class Account::PostsController < ApplicationController
     @posts = current_user.posts.order(updated_at: :desc)
   end
 
-  def saved
-    @posts = current_user.posts.order(updated_at: :desc)
+  def bookmarked
+    @posts = current_user.bookmarked_posts.order(updated_at: :desc)
   end
 
   private

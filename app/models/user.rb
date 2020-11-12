@@ -3,6 +3,7 @@ class User < ApplicationRecord
   before_validation :downcase_email
   before_validation :downcase_username
   after_initialize :default_role!
+  after_initialize :default_bio!
 
   # Validation rules
   validates :username, :email, presence: true
@@ -42,4 +43,9 @@ class User < ApplicationRecord
   def default_role!
     self.role ||= 'registered'
   end
+  def default_bio!
+    self.bio ||= 'No bio'
+  end
+
+
 end

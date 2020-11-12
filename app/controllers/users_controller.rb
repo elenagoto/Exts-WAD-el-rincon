@@ -14,7 +14,13 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    if params[:username]
+      @user = User.find_by(username: params[:username])
+      return redirect_to root_path unless @user.role == 'author'
+    else
+      @user = User.find_by(id: params[:id])
+      return redirect_to root_path unless @user.role == 'author'
+    end
   end
 
   def new
@@ -29,12 +35,16 @@ class UsersController < ApplicationController
     redirect_to root_path
   end
 
-  def edit  
+  def edit
   end
 
   def update
     if @user.update(edit_user_params)
-      redirect_to user_path(@user)
+      if admin?
+        redirect_to users_path
+      else
+        redirect_to profile_path
+      end
     else
       render 'edit'
     end
@@ -51,7 +61,7 @@ class UsersController < ApplicationController
   private
 
   def set_user
-    @user = current_user
+    @user = User.find(params[:id])
   end
 
   def authorize_to_edit_user
@@ -63,7 +73,7 @@ class UsersController < ApplicationController
   end
 
   def edit_user_params
-    params.require(:user).permit(:email, :name, :role, :username)
+    params.require(:user).permit(:email, :name, :role, :username, :bio)
   end
 
 end

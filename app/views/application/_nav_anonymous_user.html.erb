@@ -7,9 +7,8 @@
           <span class="sr-only">Buscar</span>
         <% end %>
       </li>
-      <li><a href="pages/about.html">Nosotros</a></li>
-      <li><a href="#">El Podcast</a></li>
-      <li><a href="#">El Blog</a></li>
+      <li><%= link_to 'Nosotros', about_us_path %></li>
+      <li><%= link_to 'Artículos', posts_path %></li>
       <li><%= link_to 'Iniciar Sesión', login_path %></li>
     </ul>
   </nav>

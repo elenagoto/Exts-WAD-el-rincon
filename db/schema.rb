@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_09_100329) do
+ActiveRecord::Schema.define(version: 2020_11_12_103918) do
 
   create_table "bookmarks", force: :cascade do |t|
     t.integer "post_id"
@@ -56,7 +56,7 @@ ActiveRecord::Schema.define(version: 2020_11_09_100329) do
     t.datetime "updated_at", null: false
     t.string "username"
     t.string "password_digest"
-    t.string "uid"
+    t.string "bio"
   end
 
 end

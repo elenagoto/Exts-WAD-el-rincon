@@ -10,7 +10,7 @@ class AccountController < ApplicationController
   end
 
   def update
-    redirect_to account_path
+    redirect_to profile_path
   end
 
 end

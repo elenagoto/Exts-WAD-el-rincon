@@ -26,8 +26,10 @@
     <% else %>
       <h1 class="alpha"><%= @user.username %></h1>
     <% end %>
+    <% if admin? %>
       <span>Registrado desde: <time datetime="<%= @user.created_at %>"><%= @user.created_at.strftime("%d %b '%y") %></time></span>
       <span><%= @user.role %></button>
+    <% end %>
     </div>
     <div class="user__thumb">
       <%= image_tag('passifloras/gulupa_1.jpeg', alt: 'Avatar', class: 'avatar') %>
@@ -46,7 +48,7 @@
     </div>
     <div class="user__footer">
       <% if @user.posts.any? %>
-        <a class="btn">Posts</a>
+        <%= link_to 'Artículos', username_posts_path(@user.username), class: 'btn' %>
       <% end %>
       
     </div>

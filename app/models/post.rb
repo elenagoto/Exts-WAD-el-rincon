@@ -1,6 +1,5 @@
 class Post < ApplicationRecord
   # Callbacks
-  after_initialize :create_preview!
   after_save :create_preview!
 
   # Validation rules
@@ -30,7 +29,7 @@ class Post < ApplicationRecord
       Tag.where(name: n.strip).first_or_create!
     end
   end
-  
+
   private
 
   def create_preview!

@@ -7,10 +7,10 @@
           <span class="sr-only">Buscar</span>
         <% end %>
       </li>
-      <li><a href="pages/about.html">Nosotros</a></li>
-      <li><a href="#">El Podcast</a></li>
-      <li><a href="#">Mis Artículos</a></li>
-      <li><a href="#">Mi Cuenta</a></li>
+      <li><%= link_to 'Nosotros', about_us_path %></li>
+      <li><%= link_to 'Mis favoritos', bookmarked_path %></li>
+      <li><%= link_to 'Mis Artículos', account_posts_path %></li>
+      <li><%= link_to 'Mi cuenta', profile_path %></li>
       <li><%= link_to("Cerrar Sesión", session_path(1), method: :delete) %></li>
     </ul>
   </nav>

@@ -5,4 +5,7 @@ class HomeController < ApplicationController
     @posts = Post.most_recent
     @featured = Post.last
   end
+
+  def show
+  end
 end

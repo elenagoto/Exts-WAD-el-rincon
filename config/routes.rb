@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
   root to: 'home#index'
 
+  get 'about-us', to: 'home#show', as: 'about_us'
+
   # Account related routes
-  get 'account/saved', to: 'account/posts#saved', as: 'saved'
+  get 'account/bookmarked', to: 'account/posts#bookmarked', as: 'bookmarked'
   get 'account/profile', to: 'account#index', as: 'profile'
   get  'account', to: 'account#edit'
   post 'account', to: 'account#update'
@@ -18,6 +20,8 @@ Rails.application.routes.draw do
 
   get 'search', to: 'posts#index', as: 'search'
   get 'tags/:tag', to: 'posts#index', as: :tag
+  get 'authors/:username', to: 'users#show', as: :username
+  get 'authors/:username/posts', to: 'posts#index', as: :username_posts
 
   # User and session related routes
   resources :sessions, only: [:new, :create, :destroy]

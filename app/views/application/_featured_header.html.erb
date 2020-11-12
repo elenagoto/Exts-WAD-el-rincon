@@ -22,7 +22,7 @@
             </p>
             <div class="featured__author">
             <%= image_tag('passifloras/gulupa_1.jpeg', alt: 'Avatar', class: 'avatar avatar-medium') %>
-              <span>por <%= link_to featured.user.name, user_path(featured.user) %></span>
+              <span>por <%= link_to featured.user.name, username_path(featured.user.username) %></span>
             </div>
           </div>
           <div class="featured__footer">

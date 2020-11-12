@@ -1,0 +1,51 @@
+<div class="content-wrapper">
+  <%= form_for @user, html: { class: 'form'} do |f| %>
+    <div class="alert alert--wide">
+      <%= @user.errors.full_messages.join('<br />').html_safe  %>
+    </div>
+    <!-- Name -->
+    <div class="input">
+      <div>
+        <%= f.label :name, "Nombre", class: 'input__label' %>
+      </div>
+      <div>
+        <%= f.text_field :name, class: 'input__field' %>
+      </div>
+    </div>
+    <!-- Username -->
+    <div class="input">
+      <div>
+        <%= f.label :username, "Usuario", class: 'input__label' %>
+      </div>
+      <div>
+        <%= f.text_field :username, class: 'input__field' %>
+      </div>
+    </div>
+    <!-- Email -->
+    <div class="input">
+      <div>
+        <%= f.label :email, "Correo Electrónico", class: 'input__label' %>
+      </div>
+      <div>
+        <%= f.email_field :email, class: 'input__field' %>
+      </div>
+    </div>
+    <!-- Bio -->
+    <% if current_user.role == 'author'%>
+      <div class="input">
+        <div>
+          <%= f.label :bio, "Biografía", class: 'input__label' %>
+        </div>
+        <div class="input--textarea input--post-text">
+          <%= f.text_area :bio, class: 'input__field'%>
+        </div>
+      </div>
+    <% end %>
+    <!-- Submit -->
+    <div class="form__text input__btn--alone">
+      <div class="prompt">
+        <%= f.submit 'Modificar', class: 'btn btn--cta prompt__confirm' %>
+      </div>
+    </div>
+  <% end %>
+</div>

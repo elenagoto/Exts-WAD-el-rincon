@@ -18,6 +18,9 @@ class PostsController < ApplicationController
 
       logger.info("The search results are #{@posts.map(&:title).join(', ')}")
       @tags = Tag.tag_counts
+    elsif params[:username]
+      author = User.find_by(username: params[:username])
+      @posts = author.posts.order(created_at: :desc)
     else
       @posts = Post.all
     end

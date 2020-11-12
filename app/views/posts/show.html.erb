@@ -41,7 +41,7 @@
           <div class="meta-text">
             <div class="post__author">
               <!-- Author -->
-              <span>por <%= link_to @post.user.name, user_path(@post.user) %></span>
+              <span>por <%= link_to @post.user.name, username_path(@post.user.username) %></span>
             </div>
             <div class="post__date">
               <!-- Date -->

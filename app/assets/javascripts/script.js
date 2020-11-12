@@ -74,11 +74,21 @@ window.onload = () => {
 
   // Make post text input grow with content
   postContent = document.getElementById('post_body');
+  
 
   if (postContent) {
     autoExpand(postContent);
     document.addEventListener('input', function (event) {
       if (event.target !== postContent) return;
+      autoExpand(event.target);
+    }, false);
+  }
+
+  userBio = document.getElementById('user_bio');
+  if (userBio) {
+    autoExpand(userBio);
+    document.addEventListener('input', function (event) {
+      if (event.target !== userBio) return;
       autoExpand(event.target);
     }, false);
   }

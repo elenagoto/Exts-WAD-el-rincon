@@ -1,0 +1,38 @@
+<div class="content-wrapper">
+  <div class="user">
+    <div class="user__header">
+    <% if @user.name.present? %>
+      <h1 class="alpha"><%= @user.name %></h1>
+    <% else %>
+      <h1 class="alpha"><%= @user.username %></h1>
+    <% end %>
+      <span>Registrado desde: <time datetime="<%= @user.created_at %>"><%= @user.created_at.strftime("%d %b '%y") %></time></span>
+    </div>
+    <div class="user__thumb">
+      <%= image_tag('passifloras/gulupa_1.jpeg', alt: 'Avatar', class: 'avatar') %>
+    </div>
+    <div class="user__main">
+      <h3 class="user__title">
+        Nombre:
+      </h3>
+      <p class="user__bio"><%= @user.name %></p>
+      <h3 class="user__title">
+        Usuario:
+      </h3>
+      <p class="user__bio"><%= @user.username %></p>
+      <h3 class="user__title">
+        Email:
+      </h3>
+      <p class="user__bio"><%= @user.email %></p>
+      <% if author? %>
+        <h3 class="user__title">
+          Biografía:
+        </h3>
+        <p class="user__bio"><%= @user.bio %></p>
+      <% end %>
+    </div>
+    <div class="user__footer">
+        <%= link_to 'Modificar mis datos', account_path, class: 'btn' %>
+    </div>
+  </div>
+</div>
