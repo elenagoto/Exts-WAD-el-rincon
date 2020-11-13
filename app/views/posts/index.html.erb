@@ -1,14 +1,19 @@
 <div class="content-wrapper">
-<!-- The code below is temporary, I wanted to understand how it worked. I'll leave it there for now -->
-  <% if @tags.present? %>
-    <% @tags.each do |tag| %>
-      <p>name: <%= tag.name %>, count: <%= tag.count %></p>
+  <% if @search_term.present? %>
+    <% if @posts.any? %>
+    <ul class="bare-list cards">
+      <% @posts.each do |post| %>
+        <%= render partial: 'post_card', locals: { post: post} %>
+      <% end %>
+    </ul>
+    <% else %>
+    <p>Ningún artículo corresponde a tu búsqueda</p>
     <% end %>
-<!-- End of testing code -->
+  <% else %>
+    <ul class="bare-list cards">
+      <% @posts.each do |post| %>
+        <%= render partial: 'post_card', locals: { post: post} %>
+      <% end %>
+    </ul>
   <% end %>
-  <ul class="bare-list cards">
-    <% @posts.each do |post| %>
-      <%= render partial: 'post_card', locals: { post: post} %>
-    <% end %>
-  </ul>
 </div>

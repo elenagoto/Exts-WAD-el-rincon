@@ -13,13 +13,14 @@ class PostsController < ApplicationController
 
   def index
     if params[:tag]
-      @posts = Post.tagged_with(params[:tag])
+      @posts = Post.tagged_with(params[:tag]).order(updated_at: :desc)
+      logger.info("The tag results are #{@posts}")
     elsif params[:q]
       @search_term = params[:q]
       @posts = Post.search(@search_term)
 
-      logger.info("The search results are #{@posts.map(&:title).join(', ')}")
-      @tags = Tag.tag_counts
+      logger.info(@posts)
+      # logger.info("The search results are #{@posts.map(&:title).join(', ')}")
     elsif params[:username]
       author = User.find_by(username: params[:username])
       @posts = author.posts.order(created_at: :desc)
