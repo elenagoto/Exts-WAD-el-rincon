@@ -41,6 +41,7 @@ class UsersController < ApplicationController
   def update
     if @user.update(edit_user_params)
       redirect_to profile_path unless admin?
+      redirect to users_path if admin?
     else
       render 'edit'
     end
