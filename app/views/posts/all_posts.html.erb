@@ -1,5 +1,28 @@
 <div class="content-wrapper">
   <h1>Artículos</h1>
+
+  <div class="tags">
+    <h2>Etiquetas:</h2>
+    <ul class="bare-list tags__list">
+      <% @tags.each do |tag| %>
+        <li class='btn btn--tag btn--tag--delete'>
+          <%= link_to tag.name, name_path(tag.name) %>
+          <%= link_to tag_path(tag),  role: 'button', method: :delete do %>
+              <i class="fal fa-times"></i>
+              <span class="sr-only">Borrar</span>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+    <div class="tags__form form-container">
+      <%= form_for @tag, html: { class: 'form'} do |f| %>
+        <%= f.label :name, "Etiqueta:", class: 'input__label' %>
+        <%= f.text_field :name, class: 'input__field' %>
+          <%= f.submit "Crear", class: 'btn btn--cta prompt__confirm'%>
+      <% end %>
+    </div>
+  </div>
+  
   <% if @posts.any? %>
     <ul class="bare-list cards post-long__list">
       <% @posts.each do |post| %>

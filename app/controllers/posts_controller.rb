@@ -12,8 +12,8 @@ class PostsController < ApplicationController
   before_action :ensure_admin,           only: %i[all_posts]
 
   def index
-    if params[:tag]
-      po@postssts = Post.tagged_with(params[:tag]).order(created_at: :desc)
+    if params[:name]
+      @posts = Post.tagged_with(params[:name]).order(created_at: :desc)
     elsif params[:q]
       @search_term = params[:q]
       results = Post.search(@search_term)
@@ -64,6 +64,8 @@ class PostsController < ApplicationController
 
   def all_posts
     @posts = Post.all.order(updated_at: :desc)
+    @tags = Tag.all.order(:name)
+    @tag = Tag.new
   end
 
   private

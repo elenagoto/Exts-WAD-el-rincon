@@ -17,12 +17,14 @@ Rails.application.routes.draw do
   # Post related routes
   resources :posts
   # Add comments here later
-
   get 'search', to: 'posts#index', as: 'search'
-  get 'tags/:tag', to: 'posts#index', as: :tag
   get 'authors/:username', to: 'users#show', as: :username
   get 'authors/:username/posts', to: 'posts#index', as: :username_posts
   get 'all-posts', to: 'posts#all_posts', as: 'all_posts'
+
+  # Tags related routes
+  resources :tags, only: [:create, :destroy]
+  get 'tags/:name', to: 'posts#index', as: :name
 
   # User and session related routes
   resources :sessions, only: [:new, :create, :destroy]

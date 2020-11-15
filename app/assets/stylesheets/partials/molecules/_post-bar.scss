@@ -46,6 +46,7 @@
     align-items: center;
     justify-content: space-between;
     margin: 0 0 $pulse;
+    min-width: 35rem;
 
     .btn:nth-child(2) {
       margin-left: $pulse;

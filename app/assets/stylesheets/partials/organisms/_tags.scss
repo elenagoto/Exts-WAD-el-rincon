@@ -1,0 +1,29 @@
+.tags {
+  margin: $pulse * 2 0;
+
+  h2 {
+    margin: $pulse 0;
+  }
+
+  &__list {
+    display: flex;
+  flex-wrap: wrap;
+  gap: $pulse;
+
+  }
+}
+
+.tags__form {
+  margin: $pulse 0;
+  font-size: 1.4rem;
+  .form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .input__field {
+    margin-right: $pulse;
+    max-width: 23rem;
+  }
+}

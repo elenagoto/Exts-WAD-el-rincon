@@ -4,6 +4,7 @@ class Tag < ApplicationRecord
 
   # Validations
   validates :name, presence: true
+  validates :name, uniqueness: { case_sensitive: false }
 
   # Relationships
   has_many :taggings

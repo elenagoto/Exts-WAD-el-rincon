@@ -13,8 +13,8 @@ class User < ApplicationRecord
   has_secure_password
 
   # Relationships
-  has_many :posts
-  has_many :bookmarks
+  has_many :posts, dependent: :destroy
+  has_many :bookmarks, dependent: :destroy
   has_many :bookmarked_posts, through: :bookmarks, source: :post
 
   def self.from_omniauth(auth)

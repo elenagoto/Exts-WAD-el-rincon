@@ -72,6 +72,7 @@
   background-color: $primary-color;
   border: 1px solid $primary-color;
   justify-content: center;
+  align-items: center;
   color: $white;
   line-height: 0.5;
 
@@ -81,6 +82,25 @@
     background-color: $white;
     color: $primary-color;
     text-decoration: none;
+  }
+
+  &--delete {
+    align-items: center;
+    justify-content: space-between;
+    
+    a {
+      color: $white;
+      font-size: 1.2rem;
+      padding-right: 1rem;
+    }
+    
+    &:hover,
+    &:active,
+    &:focus {
+      a {
+        color: $primary-color;
+      }
+    }
   }
 }
 

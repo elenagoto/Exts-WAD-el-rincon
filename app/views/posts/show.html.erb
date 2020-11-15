@@ -25,7 +25,7 @@
       <ul class="post__tags bare-list">
         <% @post.tags.each do |tag| %>
           <li>
-            <%= link_to tag.name, tag_path(tag.name), class: 'btn btn--tag' %>
+            <%= link_to tag.name, name_path(tag.name), class: 'btn btn--tag' %>
           </li>
         <% end %>
       </ul>
