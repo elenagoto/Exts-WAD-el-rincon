@@ -13,17 +13,17 @@ class PostsController < ApplicationController
 
   def index
     if params[:tag]
-      posts = Post.tagged_with(params[:tag])
+      po@postssts = Post.tagged_with(params[:tag]).order(created_at: :desc)
     elsif params[:q]
       @search_term = params[:q]
-      posts = Post.search(@search_term)
+      results = Post.search(@search_term)
+      @posts = results.sort_by(&:created_at).reverse
     elsif params[:username]
       author = User.find_by(username: params[:username])
-      posts = author.posts
+      @posts = author.posts.order(created_at: :desc)
     else
-      posts = Post.all
+      @posts = Post.all.order(created_at: :desc)
     end
-    @posts = posts.order(created_at: :desc)
   end
 
   def show

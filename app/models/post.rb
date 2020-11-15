@@ -3,7 +3,7 @@ class Post < ApplicationRecord
 
   # Validation rules
   validates :tags, length: { maximum: 3, message: ": 3 are the maximum allowed." }
-  validates :title, presence: true
+  validates :title, :body, presence: true
 
   # Relationships
   belongs_to :user
@@ -14,11 +14,9 @@ class Post < ApplicationRecord
 
   # Scopes
   scope :most_recent, -> { order(created_at: :desc).limit(6) }
-  scope :title_contains, ->(term) { joins(:tags).where('title LIKE ?', "%#{term}%") }
-  scope :tags_contain, ->(term) { joins(:tags).where('tags.name LIKE ?', "%#{term}%")}
-  scope :search, ->(search_term) { title_contains(search_term)
-    .or(tags_contain(search_term))
-    .group('posts.id')}
+  scope :title_contains, ->(term) { where('title LIKE ?', "%#{term}%") }
+  scope :tags_contain, ->(term) { joins(:tags).where('tags.name LIKE ?', "%#{term}%") }
+  scope :search, ->(search_term) { title_contains(search_term) | tags_contain(search_term) }
   scope :tagged_with, ->(name) { Tag.find_by!(name: name).posts }
 
   # Methods

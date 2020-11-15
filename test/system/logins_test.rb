@@ -7,6 +7,7 @@ class LoginsTest < ApplicationSystemTestCase
                     password: 'password'
     post = Post.new title: "Default title for post",
                     user: user,
+                    body: 'this is the body of the post',
                     image_url: 'https://www.blogtyrant.com/wp-content/uploads/2017/02/how-to-write-a-good-blog-post.png'
     post.save!
     
@@ -28,6 +29,7 @@ class LoginsTest < ApplicationSystemTestCase
                     password: 'password'
     post = Post.new title: "Default title for post",
                     user: user,
+                    body: 'this is the body of the post',
                     image_url: 'https://www.blogtyrant.com/wp-content/uploads/2017/02/how-to-write-a-good-blog-post.png'
     post.save!
 
@@ -44,6 +46,7 @@ class LoginsTest < ApplicationSystemTestCase
                     password: 'password'
     post = Post.new title: "Default title for post",
                     user: user,
+                    body: 'this is the body of the post',
                     image_url: 'https://www.blogtyrant.com/wp-content/uploads/2017/02/how-to-write-a-good-blog-post.png'
     post.save!
 

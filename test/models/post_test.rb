@@ -7,10 +7,12 @@ class PostTest < ActiveSupport::TestCase
                     password: 'password'
 
     first_post = Post.new title: 'This is a title',
+                          body: 'this is the body of the post',
                           user: user
     first_post.save!
 
     second_post = Post.new title: 'This is another title',
+                           body: 'this is the body of the post',
                            user: user
     second_post.save!
 
@@ -23,6 +25,7 @@ class PostTest < ActiveSupport::TestCase
                     password: 'password'
 
     post = Post.new title: 'This is the first title',
+                    body: 'this is the body of the post',
                     user: user
     post.save!
     first_updated_at = post.updated_at
@@ -37,13 +40,15 @@ class PostTest < ActiveSupport::TestCase
     user = User.new username: 'user',
                     email: 'user@email.com',
                     password: 'password'
-    post = Post.new user: user
+    post = Post.new user: user,
+                    body: 'this is the body of the post'
 
     refute post.valid?
   end
 
   test 'validation for Post without user' do
-    post = Post.new title:'This is a title'
+    post = Post.new title:'This is a title',
+                    body: 'this is the body of the post'
 
     refute post.valid?
   end
@@ -55,9 +60,10 @@ class PostTest < ActiveSupport::TestCase
                     email: 'user@email.com',
                     password: 'password'
     post = Post.new title: 'This is a post',
+                    body: 'body of the post',
                     user: user
-
     post.save!
+
     result = Post.search('This')
     assert_equal result.length, 1
   end
@@ -67,6 +73,7 @@ class PostTest < ActiveSupport::TestCase
                     email: 'user@email.com',
                     password: 'password'
     post = Post.new title: 'This is a post',
+                    body: 'this is the body of the post',
                     user: user
     tag = Tag.new name: 'This is a tag'
     post.tags << tag
@@ -80,6 +87,7 @@ class PostTest < ActiveSupport::TestCase
                     email: 'user@email.com',
                     password: 'password'
     post = Post.new title: 'This is a post',
+                    body: 'this is the body of the post',
                     user: user
     post.save!
     assert_empty Post.search('Hello')
@@ -90,12 +98,14 @@ class PostTest < ActiveSupport::TestCase
                     email: 'user@email.com',
                     password: 'password'
     post = Post.new title: 'Tests are important',
+                    body: 'this is the body of the post',
                     user: user
     tag = Tag.new name: 'programming'
     post.tags << tag
     post.save!
 
     post2 = Post.new title: 'Use Capybara',
+                     body: 'this is the body of the post',
                      user: user
     tag2 = Tag.new name: 'test'
     post2.tags << [tag, tag2]

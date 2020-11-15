@@ -2,7 +2,7 @@
   <h1>Usuarios</h1>
   <ul class="bare-list cards">
     <% @users.each do |user| %>
-      <li class="user-card">
+      <li class="user-card" id="user-<%= user.id %>">
         <div class="user-card__thumb">
           <%= image_tag('passifloras/gulupa_1.jpeg', alt: 'Avatar', class: 'avatar') %>
         </div>

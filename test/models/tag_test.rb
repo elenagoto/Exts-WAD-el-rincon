@@ -26,6 +26,7 @@ class TagTest < ActiveSupport::TestCase
                     email: 'user@email.com',
                     password: 'password'
     post = Post.new title: 'This is a title',
+                    body: 'this is the body of the post',
                     user: user
     post.save!
     3.times do |i|
