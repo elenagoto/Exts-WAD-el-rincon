@@ -2,6 +2,9 @@
 
 source 'https://rubygems.org'
 
+# Lock ruby version for deployment
+ruby '2.6.5'
+
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?('/')
   "https://github.com/#{repo_name}.git"
@@ -63,6 +66,6 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'bootsnap', require: false
 
 # For Google sign-up
-gem 'omniauth'
 gem 'dotenv-rails'
+gem 'omniauth'
 gem 'omniauth-google-oauth2'
