@@ -103,8 +103,8 @@
   justify-content: center;
 
   img {
+    align-self: flex-start;
     width: 100%;
-    height: auto;
 
     @include tablet {
       width: 80%;
