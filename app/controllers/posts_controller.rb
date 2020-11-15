@@ -15,7 +15,7 @@ class PostsController < ApplicationController
     if params[:name]
       @posts = Post.tagged_with(params[:name]).order(created_at: :desc)
     elsif params[:q]
-      @search_term = params[:q]
+      @search_term = params[:q].downcase
       results = Post.search(@search_term)
       @posts = results.sort_by(&:created_at).reverse
     elsif params[:username]
