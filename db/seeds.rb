@@ -96,8 +96,8 @@ post6 =Post.create!(title: 'Episodio especial: memorias del 16 de mayo de 1984 e
 
 # Tags
 post1.tag_list =  'historia,colombia,podcast'
-post2.tag_list =  'arte,literatura, historia'
-post3.tag_list =  'colombia,podcast, siglo XX'
-post4.tag_list =  'arte,podcast,cine'
+post2.tag_list =  'arte,literatura,historia'
+post3.tag_list =  'colombia,podcast,siglo xx'
+post4.tag_list =  'arte,cine,historia'
 post5.tag_list =  'podcast,colombia,política'
-post6.tag_list =  'violencia,podcast,siglo XX'
+post6.tag_list =  'violencia,podcast,siglo xx'
