@@ -15,7 +15,9 @@ Rails.application.routes.draw do
 
   
   # Post related routes
-  resources :posts
+  resources :posts do
+    resources :comments, only: [:create, :destroy]
+  end
   # Add comments here later
   get 'search', to: 'posts#index', as: 'search'
   get 'authors/:username', to: 'users#show', as: :username
