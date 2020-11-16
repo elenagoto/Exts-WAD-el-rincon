@@ -31,6 +31,15 @@
         <%= f.email_field :email, class: 'input__field' %>
       </div>
     </div>
+    <!-- Avatar -->
+    <div class="input">
+      <div>
+        <%= f.label :avatar, "Avatar", class: 'input__label' %>
+      </div>
+      <div>
+        <%= f.file_field :avatar, class: 'input__field' %>
+      </div>
+    </div>
     <!-- Bio -->
     <% if current_user.role == 'author'%>
       <div class="input">

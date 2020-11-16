@@ -26,7 +26,7 @@
             <% end %>
             <div class="featured__author">
             <%= link_to username_path(featured.user.username) do %>
-              <%= image_tag('passifloras/gulupa_1.jpeg', alt: 'Avatar', class: 'avatar avatar-medium') %>
+              <%= image_tag(default_avatar(featured.user), alt: 'Avatar', class: 'avatar avatar-medium') %>
             <% end %>
               <span>por <%= link_to featured.user.name, username_path(featured.user.username) %></span>
             </div>

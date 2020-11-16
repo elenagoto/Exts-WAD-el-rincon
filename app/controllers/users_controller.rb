@@ -70,7 +70,7 @@ class UsersController < ApplicationController
   end
 
   def edit_user_params
-    params.require(:user).permit(:email, :name, :role, :username, :bio)
+    params.require(:user).permit(:email, :name, :role, :username, :bio, :avatar)
   end
 
 end

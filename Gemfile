@@ -69,3 +69,10 @@ gem 'bootsnap', require: false
 gem 'dotenv-rails'
 gem 'omniauth'
 gem 'omniauth-google-oauth2'
+
+# Use CarrierWaver to manage uploads
+gem 'carrierwave', '~> 2.0'
+
+# Use Figaro to conect AWS to Heroku
+gem 'figaro'
+gem 'fog-aws'

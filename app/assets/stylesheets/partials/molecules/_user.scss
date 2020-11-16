@@ -53,6 +53,7 @@
 
   img {
     width: 100%;
+    height: auto;
 
     @include tablet {
       height: 100%;

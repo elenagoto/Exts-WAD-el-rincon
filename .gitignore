@@ -181,3 +181,6 @@ run-production.sh
 
 # Ignore yarn file
 yarn.lock
+
+# Ignore uploads
+public/uploads/*
