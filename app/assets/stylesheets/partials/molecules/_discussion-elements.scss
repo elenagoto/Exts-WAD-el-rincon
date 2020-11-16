@@ -3,7 +3,9 @@
 ========================= */
 .comment {
   display: flex;
+  justify-content: flex-start;
   margin: ($pulse * 2) 0;
+  width: 100%;
 }
 
 .comment__avatar {
@@ -74,4 +76,13 @@
     font-size: 0.85em;
   }
 
+}
+
+.comment__delete {
+  flex: 1 0 auto;
+
+  .btn {
+    font-size: 1.1rem;
+    padding: 0.8rem;
+  }
 }

@@ -151,6 +151,14 @@
               <%= comment.body %>
             </p>
           </div>
+          <% if logged_in? && can_delete_comment?(comment) %>
+            <div class="comment__delete">
+              <%= link_to post_comment_path(@post, comment), class: 'btn btn--icon btn--warning', role: 'button', method: :delete do %>
+                <i class="fal fa-trash"></i>
+                Delete
+              <% end %>
+            </div>
+          <% end %>
         </div>
       <% end %>
     </div>

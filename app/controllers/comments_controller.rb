@@ -1,4 +1,8 @@
 class CommentsController < ApplicationController
+  # Includes
+  include RolesHelper
+
+  # Before Actions
   before_action :ensure_authenticated
 
   def create
@@ -12,6 +16,15 @@ class CommentsController < ApplicationController
   end
 
   def destroy
+    @post = Post.find(params[:post_id])
+    @comment = Comment.find(params[:id])
+    logger.info("Comment:  #{@comment}")
+
+    if can_delete_comment?(@comment)
+      @comment.destroy!
+    end
+
+    redirect_to post_path(@post)
   end
 
   private
