@@ -9,7 +9,7 @@
       <span>Registrado desde: <time datetime="<%= @user.created_at %>"><%= @user.created_at.strftime("%d %b '%y") %></time></span>
     </div>
     <div class="profile__thumb">
-      <%= image_tag(@user.avatar, alt: 'Avatar', class: 'avatar') %>
+      <%= image_tag(default_avatar(@user), alt: 'Avatar', class: 'avatar') %>
     </div>
     <div class="profile__main">
       <p class="profile__title">
