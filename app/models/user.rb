@@ -19,7 +19,8 @@ class User < ApplicationRecord
   has_many :comments, dependent: :destroy
 
   # Uploader
-  mount_uploader :avatar, AvatarUploader
+  # mount_uploader :avatar, AvatarUploader
+  has_one_attached :avatar
 
   def self.from_omniauth(auth)
     # Creates a new user only if it doesn't exist

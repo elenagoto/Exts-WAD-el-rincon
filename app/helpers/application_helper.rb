@@ -8,8 +8,8 @@ module ApplicationHelper
   AVATAR_6 = "passifloras/maracuya_2.jpeg"
 
   def default_avatar(user)
-    if user.avatar.present?
-      user.avatar.url.to_s
+    if user.avatar.attached?
+      user.avatar
     else
       case
         when user.name.blank?            then AVATAR_1
