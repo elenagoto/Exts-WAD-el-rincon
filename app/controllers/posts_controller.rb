@@ -27,7 +27,8 @@ class PostsController < ApplicationController
   end
 
   def show
-    logger.info("Truncated text: '#{@post.body.truncate(160)}'")
+    @comment = Comment.new
+    @comments = @post.comments.order(created_at: :desc)
   end
 
   def new

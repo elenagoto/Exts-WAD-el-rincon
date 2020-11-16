@@ -1,22 +1,16 @@
 /* ======================
 * DISCUSSION ELEMENTS
 ========================= */
-.comments {
-  align-items: flex-start;
+.comment {
   display: flex;
-  margin-bottom: $pulse;
-  width: 100%;
-
-  @include desktop {
-    width: 70rem;
-  }
+  margin: ($pulse * 2) 0;
 }
 
-.comments__avatar {
+.comment__avatar {
   padding-right: 2rem;
 }
 
-.comments__text {
+.comment__text {
   width: 100%;
 
   .input {
@@ -47,20 +41,24 @@
   }
 }
 
-.comments__title {
+.comment__title {
   span {
     color: $gray-3;
   }
 }
 
-.comments__user {
+.comment__user {
   margin: 0 0 $pulse 0;
+  color: $black;
+  font-family: 'Roboto Slab',
+  serif;
 
   .user__name {
     a {
       color: $black;
       font-family: 'Roboto Slab',
         serif;
+        text-decoration: underline;
     }
 
     a:hover,
@@ -69,8 +67,10 @@
     }
   }
 
-  .comments__time {
+  .comment__time {
     color: $gray-3;
+    font-family: 'Poppins',
+    sans-serif;
     font-size: 0.85em;
   }
 

@@ -104,47 +104,57 @@
   <!-- START Comments section-->
   <div class="post__comments post__section">
     <h3>Comentarios</h3>
-    <div class="comments comments--add">
-      <!-- <div class="comments__avatar">
-        <img class="avatar avatar-small" src="" alt="Big blue avatar" />
-      </div> -->
-      <div class="comments__text">
-        <!-- START Comments form -->
-
-        <form class="input input--textarea" action="add-comment" method="POST">
-          <label class="input__label sr-only" for="add-comment">Add a comment</label>
-          <textarea class="input__field" id="add-comment" name="add-comment"
-            placeholder="What are your thoughts?"></textarea>
-          <!-- <input id="add-comment" name="add-comment" placeholder="What are your thoughts?" type="hidden"></input>
-          <trix-editor input="add-comment"></trix-editor> -->
-          <button class="btn btn--cta" type="submit" name="action" value="#">
-            Post
-          </button>
-        </form>
-      </div>
-    </div>
-    <!-- END Comments form -->
-    <!-- START Comments display -->
-    <div class="comments comments--display">
-      <div class="comments__avatar">
-        <img class="avatar avatar" src="" alt="Big blue avatar" />
-      </div>
-      <div class="comments__text">
-        <div class="comments__user">
-          <span class="user__name">
-            <a href="#">Name LastName</a>
-            <span class="comments__time">1 week ago</span>
-          </span>
+    <!-- START Comments form -->
+    <% if logged_in? %>
+      <div class="discussion comments--add">
+        <div class="comment__text">
+          <%= form_for([@post, @comment], html: { class: 'input input--textarea' }) do |f| %>
+            <%= f.label :body, 'Agregar comentario', class: 'input__label sr-only' %>
+            <%= f.text_area :body, class: 'input__field' %>
+            <%= f.submit 'Publicar', class: 'btn btn--cta'%>
+          <% end %>
         </div>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-          Ducimus quis saepe et dignissimos beatae maiores eos eveniet
-          perspiciatis quas, cupiditate earum, veritatis consequuntur
-          tempora, facilis nemo molestias ex nostrum animi!
-        </p>
       </div>
+    <% end %>
+    <!-- END Comments form -->
+    <!-- START Discussion -->
+    <div class="discussion">
+      <% @comments.each do |comment| %>
+        <div class="comment">
+          <div class="comment__avatar">
+            <% if comment.user.role == 'author' %>
+              <%= link_to username_path(comment.user.username) do %>
+                <%= image_tag('passifloras/gulupa_1.jpeg', alt: 'Avatar', class: 'avatar') %>
+              <% end %>
+            <% elsif logged_in? && comment.user == current_user %>
+              <%= link_to  profile_path do %>
+                <%= image_tag('passifloras/gulupa_1.jpeg', alt: 'Avatar', class: 'avatar') %>
+              <% end %>
+            <% else %>
+              <%= image_tag('passifloras/gulupa_1.jpeg', alt: 'Avatar', class: 'avatar') %>
+            <% end %>
+          </div>
+          <div class="comment__text">
+            <div class="comment__user">
+              <span class="user__name">
+                <% if comment.user.role == 'author' %>
+                  <%= link_to comment.user.name, username_path(comment.user.username) %>
+                <% elsif logged_in? && comment.user == current_user %>
+                  <%= link_to  comment.user.name, profile_path %>
+                <% else %>
+                  <%= comment.user.name %>
+                <% end %>
+                <span class="comment__time"><time datetime="<%= comment.created_at %>"> <%= time_ago_in_words(comment.created_at) %></span>
+              </span>
+            </div>
+            <p>
+              <%= comment.body %>
+            </p>
+          </div>
+        </div>
+      <% end %>
     </div>
-    <!-- END Comments display -->
+    <!-- END Discussion -->
     <!-- END Comments section-->
   </div>
 </div>

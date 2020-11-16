@@ -14,4 +14,12 @@ module RolesHelper
     else false
     end
   end
+
+  def can_delete_comment?(user)
+    case current_user.role
+    when 'admin' then true
+    when 'author', 'registered' then comment.user == current_user
+    else false
+    end
+  end
 end
