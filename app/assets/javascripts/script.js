@@ -36,9 +36,8 @@ const autoExpand = function (field) {
   field.style.height = height + 'px';
 
 };
-
-window.onload = () => {
-  // Make hamburger work
+document.addEventListener("turbolinks:load", (event) => {
+    // Make hamburger work
   hamburger = document.getElementById('hamburger');
   show = document.getElementById('show');
 
@@ -92,5 +91,8 @@ window.onload = () => {
       autoExpand(event.target);
     }, false);
   }
+});
+// window.onload = () => {
+  
 
-}
+// }
