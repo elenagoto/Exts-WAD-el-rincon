@@ -5,9 +5,8 @@
       </div>
       <div class="nav-footer">
         <ul class="bare-list">
-          <li><a href="/">Nosotros</a></li>
-          <li><a href="/">Registrarse</a></li>
-          <li><a href="/">Contacto</a></li>
+          <li><%= link_to t('header.us'), about_us_path %></li>
+          <li><%= link_to t('header.signup'), new_user_path %></li>
         </ul>
       </div>
       <p>&copy; <a href="www.elenagoto.ch">Laura Gómez</a> 2020</p>

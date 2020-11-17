@@ -7,10 +7,10 @@
           <span class="sr-only">Buscar</span>
         <% end %>
       </li>
-      <li><%= link_to 'Usuarios', users_path %></li>
-      <li><%= link_to 'Artículos',  all_posts_path %></li>
-      <li><%= link_to 'Mi cuenta', profile_path %></li>
-      <li><%= link_to("Cerrar Sesión", logout_path, method: :delete) %></li>
+      <li><%= link_to t('header.users'), users_path %></li>
+      <li><%= link_to t('header.posts'),  all_posts_path %></li>
+      <li><%= link_to t('header.account'), profile_path %></li>
+      <li><%= link_to(t('header.logout'), logout_path, method: :delete) %></li>
     </ul>
   </nav>
 </div>

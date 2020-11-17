@@ -16,5 +16,10 @@ module RinconCuruba
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
     config.generators.javascript_engine = :js
+
+    # Config available locales
+    config.i18n.available_locales = [:es, :en, :fr]
+    config.i18n.default_locale = :es
+    config.i18n.fallbacks      = [:es]
   end
 end

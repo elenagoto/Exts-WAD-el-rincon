@@ -74,6 +74,7 @@ gem 'omniauth-google-oauth2'
 gem 'carrierwave', '~> 2.0'
 
 # Use Figaro to conect AWS to Heroku
-gem 'aws-sdk-s3', require: false
 gem 'figaro'
 gem 'fog-aws'
+
+gem 'aws-sdk-s3', require: false

@@ -4,12 +4,12 @@
     <!-- START Search form -->
     <%= form_tag(search_path, class: 'search search--cta', method: 'GET') do %>
       <!-- START Label -->
-      <%= label_tag('global-search', 'Search', class: 'search__label sr-only', id: 'form-search') %>
+      <%= label_tag('global-search', t('search'), class: 'search__label sr-only', id: 'form-search') %>
       <!-- END Label -->
       <!-- START Search row -->
       <div class="search__row">
-        <%= text_field_tag 'q', nil, class: 'search__field', id: 'global-search', placeholder: 'Search' %>
-        <%= submit_tag 'Search', class: "sr-only" %>
+        <%= text_field_tag 'q', nil, class: 'search__field', id: 'global-search', placeholder: t('search') %>
+        <%= submit_tag t('search'), class: "sr-only" %>
           <%= button_tag 'Reset', type: 'reset', class: 'target icon__big', id: 'reset' do %>
         <i class="fal fa-times-circle target"></i>
         <% end %>

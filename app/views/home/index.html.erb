@@ -1,5 +1,5 @@
 <div class="content-wrapper">
-  <h2 class="alpha">Lo más reciente</h2>
+  <h2 class="alpha"><%= t('home.latest') %></h2>
 
   <ul class="bare-list cards">
     <% @posts.each do |post| %>
@@ -8,5 +8,5 @@
   </ul>
 </div>
 <div class="content-wrapper">
-  <%= link_to 'Ver más', posts_path, class: 'btn btn--index' %>
+  <%= link_to t('home.see_more'), posts_path, class: 'btn btn--index' %>
 </div>
