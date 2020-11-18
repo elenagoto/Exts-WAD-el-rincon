@@ -36,8 +36,10 @@ const autoExpand = function (field) {
   field.style.height = height + 'px';
 
 };
+
+//Event listener
 document.addEventListener("turbolinks:load", (event) => {
-    // Make hamburger work
+  // Make hamburger work
   hamburger = document.getElementById('hamburger');
   show = document.getElementById('show');
 
@@ -74,7 +76,6 @@ document.addEventListener("turbolinks:load", (event) => {
   // Make post text input grow with content
   postContent = document.getElementById('post_body');
   
-
   if (postContent) {
     autoExpand(postContent);
     document.addEventListener('input', function (event) {

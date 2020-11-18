@@ -122,12 +122,12 @@
       <% @comments.each do |comment| %>
         <div class="comment">
           <div class="comment__avatar">
-            <% if comment.user.role == 'author' %>
-              <%= link_to username_path(comment.user.username) do %>
+            <% if logged_in? && comment.user == current_user %>
+              <%= link_to profile_path do %>
                 <%= image_tag(default_avatar(comment.user), alt: 'Avatar', class: 'avatar') %>
               <% end %>
-            <% elsif logged_in? && comment.user == current_user %>
-              <%= link_to  profile_path do %>
+            <% elsif comment.user.role == 'author' %>
+              <%= link_to username_path(comment.user.username) do %>
                 <%= image_tag(default_avatar(comment.user), alt: 'Avatar', class: 'avatar') %>
               <% end %>
             <% else %>
@@ -137,14 +137,14 @@
           <div class="comment__text">
             <div class="comment__user">
               <span class="user__name">
-                <% if comment.user.role == 'author' %>
-                  <%= link_to comment.user.name, username_path(comment.user.username) %>
-                <% elsif logged_in? && comment.user == current_user %>
+                <% if logged_in? && comment.user == current_user %>
                   <%= link_to  comment.user.name, profile_path %>
+                <% elsif comment.user.role == 'author' %>
+                  <%= link_to comment.user.name, username_path(comment.user.username) %>
                 <% else %>
                   <%= comment.user.name %>
                 <% end %>
-                <span class="comment__time"><time datetime="<%= comment.created_at %>"> <%= time_ago_in_words(comment.created_at) %></span>
+                <time  class="comment__time"datetime="<%= comment.created_at %>"> <%= time_ago_in_words(comment.created_at) %></time>
               </span>
             </div>
             <p>
