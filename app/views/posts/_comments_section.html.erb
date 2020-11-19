@@ -4,12 +4,11 @@
     <!-- START Comments form -->
     <% if logged_in? %>
       <div class="discussion comments--add">
-        <p class="comment__text">
-          <%= form_for([post, comment], html: { class: 'input input--textarea' }, remote: true ) do |f| %>
-            <%= f.label :body, 'Agregar comentario', class: 'input__label sr-only' %>
-            <%= f.text_area :body, class: 'input__field' %>
-            <%= f.submit 'Publicar', class: 'btn btn--cta'%>
-          <% end %>
+        <%= form_for([post, comment], html: { class: 'input input--textarea' }, remote: true ) do |f| %>
+          <%= f.label :body, class: 'input__label sr-only' %>
+          <%= f.text_area :body, class: 'input__field' %>
+          <%= f.submit 'Publicar', class: 'btn btn--cta'%>
+        <% end %>
       </div>
     <% end %>
     <!-- END Comments form -->

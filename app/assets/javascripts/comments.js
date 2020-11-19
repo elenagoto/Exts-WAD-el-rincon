@@ -2,7 +2,7 @@
 // All this logic will automatically be available in application.js.
 var Comments;
 
-Comments = {}
+Comments = {};
 
 Comments.builtComment = function(comment) {
   // 1. comment avatar
@@ -78,7 +78,6 @@ Comments.builtComment = function(comment) {
 // Add comment function
 Comments.displayComment = function(comment) {
   var newComment = Comments.builtComment(comment);
-  console.log(newComment);
 
   var discussion = document.getElementById('discussion');
   discussion.insertBefore(newComment, discussion.firstChild);

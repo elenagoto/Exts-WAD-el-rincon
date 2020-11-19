@@ -1,0 +1,9 @@
+var tag = {
+  'id': "<%= @tag.id %>",
+  'name': "<%= @tag.name %>",
+  'tagLink': "<%= name_path(@tag.name) %>",
+  'deleteLink': "<%= tag_path(@tag) %>",
+  'deleteText': "<%= 'Delete' %>"
+};
+
+Tags.displayTag(tag);
