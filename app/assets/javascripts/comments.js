@@ -27,6 +27,8 @@ Comments.builtComment = function(comment) {
   // time
   var commentTime = document.createElement('time');
   commentTime.className = 'comment__time';
+  commentTime.setAttribute('datetime', comment.when);
+  commentTime.appendChild(document.createTextNode(comment.whenInWords));
   // user p
   var commentUserContainer = document.createElement('p');
   commentUserContainer.className = 'comment__user';
