@@ -256,7 +256,7 @@ fr:
     logout: 'Déconnexion'
     signup: 'Inscription'
   home:
-    featured: 'Traduction en attente'
+    featured: 'À la une'
     latest: 'Les plus récentes'
     read_more: "Lire d'avantage"
     see_more: 'Voir plus'
