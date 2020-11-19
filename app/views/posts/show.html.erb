@@ -101,68 +101,7 @@
       <% end %>
     </div>
   </article>
-  <!-- START Comments section-->
-  <div class="post__comments post__section">
-    <h3>Comentarios</h3>
-    <!-- START Comments form -->
-    <% if logged_in? %>
-      <div class="discussion comments--add">
-        <div class="comment__text">
-          <%= form_for([@post, @comment], html: { class: 'input input--textarea' }) do |f| %>
-            <%= f.label :body, 'Agregar comentario', class: 'input__label sr-only' %>
-            <%= f.text_area :body, class: 'input__field' %>
-            <%= f.submit 'Publicar', class: 'btn btn--cta'%>
-          <% end %>
-        </div>
-      </div>
-    <% end %>
-    <!-- END Comments form -->
-    <!-- START Discussion -->
-    <div class="discussion">
-      <% @comments.each do |comment| %>
-        <div class="comment">
-          <div class="comment__avatar">
-            <% if logged_in? && comment.user == current_user %>
-              <%= link_to profile_path do %>
-                <%= image_tag(default_avatar(comment.user), alt: 'Avatar', class: 'avatar') %>
-              <% end %>
-            <% elsif comment.user.role == 'author' %>
-              <%= link_to username_path(comment.user.username) do %>
-                <%= image_tag(default_avatar(comment.user), alt: 'Avatar', class: 'avatar') %>
-              <% end %>
-            <% else %>
-              <%= image_tag(default_avatar(comment.user), alt: 'Avatar', class: 'avatar') %>
-            <% end %>
-          </div>
-          <div class="comment__text">
-            <div class="comment__user">
-              <span class="user__name">
-                <% if logged_in? && comment.user == current_user %>
-                  <%= link_to  comment.user.name, profile_path %>
-                <% elsif comment.user.role == 'author' %>
-                  <%= link_to comment.user.name, username_path(comment.user.username) %>
-                <% else %>
-                  <%= comment.user.name %>
-                <% end %>
-                <time  class="comment__time"datetime="<%= comment.created_at %>"> <%= time_ago_in_words(comment.created_at) %></time>
-              </span>
-            </div>
-            <p>
-              <%= comment.body %>
-            </p>
-          </div>
-          <% if logged_in? && can_delete_comment?(comment) %>
-            <div class="comment__delete">
-              <%= link_to post_comment_path(@post, comment), class: 'btn btn--icon btn--warning', role: 'button', method: :delete do %>
-                <i class="fal fa-trash"></i>
-                Delete
-              <% end %>
-            </div>
-          <% end %>
-        </div>
-      <% end %>
-    </div>
-    <!-- END Discussion -->
-    <!-- END Comments section-->
-  </div>
+  <%= render partial: 'comments_section',  locals: { post: @post,
+                                                     comment: @comment,
+                                                     comments: @comments } %>
 </div>

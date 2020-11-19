@@ -9,7 +9,7 @@ module ApplicationHelper
 
   def default_avatar(user)
     if user.avatar.attached?
-      user.avatar
+      url_for(user.avatar)
     else
       case
         when user.name.blank?            then AVATAR_1

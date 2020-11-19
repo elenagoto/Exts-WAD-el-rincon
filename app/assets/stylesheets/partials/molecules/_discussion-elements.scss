@@ -55,18 +55,16 @@
   font-family: 'Roboto Slab',
   serif;
 
-  .user__name {
-    a {
-      color: $black;
-      font-family: 'Roboto Slab',
-        serif;
-        text-decoration: underline;
-    }
+  a {
+    color: $black;
+    font-family: 'Roboto Slab',
+      serif;
+      text-decoration: underline;
+  }
 
-    a:hover,
-    a:focus {
-      color: $primary-color;
-    }
+  a:hover,
+  a:focus {
+    color: $primary-color;
   }
 
   .comment__time {

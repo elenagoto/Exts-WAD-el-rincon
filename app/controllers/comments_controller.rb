@@ -6,13 +6,15 @@ class CommentsController < ApplicationController
   before_action :ensure_authenticated
 
   def create
-    post = Post.find(params[:post_id])
+    @post = Post.find(params[:post_id])
     @comment = Comment.new(comment_params)
     @comment.user = current_user
-    @comment.post = post
-    @comment.save
+    @comment.post = @post
+    @comment.save!
 
-    redirect_to post_path(post)
+    respond_to do |format|
+      format.js
+    end
   end
 
   def destroy

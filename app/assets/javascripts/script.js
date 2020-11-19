@@ -1,15 +1,4 @@
-// const hamburger = document.getElementById('hamburger');
-// const show = document.getElementById('show');
-
-
-// hamburger.addEventListener('click', (e) => {
-//   if (e.target.classList.contains('hamburger')) {
-//     e.target.classList.toggle('toggle');
-//     show.classList.toggle('visible');
-//     console.log(show);
-//   }
-// });
-
+// Set variables
 let hamburger;
 let show;
 
@@ -36,6 +25,16 @@ const autoExpand = function (field) {
   field.style.height = height + 'px';
 
 };
+
+const expandElement = function (element) {
+  if (element) {
+    autoExpand(element);
+    document.addEventListener('input', function (event) {
+      if (event.target !== element) return;
+      autoExpand(event.target);
+    }, false);
+  }
+}
 
 //Event listener
 document.addEventListener("turbolinks:load", (event) => {
@@ -75,23 +74,13 @@ document.addEventListener("turbolinks:load", (event) => {
 
   // Make post text input grow with content
   postContent = document.getElementById('post_body');
-  
-  if (postContent) {
-    autoExpand(postContent);
-    document.addEventListener('input', function (event) {
-      if (event.target !== postContent) return;
-      autoExpand(event.target);
-    }, false);
-  }
+  expandElement(postContent);
 
   userBio = document.getElementById('user_bio');
-  if (userBio) {
-    autoExpand(userBio);
-    document.addEventListener('input', function (event) {
-      if (event.target !== userBio) return;
-      autoExpand(event.target);
-    }, false);
-  }
+  expandElement(userBio);
+
+  commentBody = document.getElementById('comment_body');
+  expandElement(commentBody);
 });
 // window.onload = () => {
   
