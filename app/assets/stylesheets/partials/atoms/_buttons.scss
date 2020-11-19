@@ -146,6 +146,12 @@
     color: $primary-color;
     background-color: transparent;
   }
+  &.favorite-delete:hover,
+  &.favorite-delete:active,
+  &.favorite-delete:focus {
+    color: $red;
+    background-color: transparent;
+  }
 
   &__big {
     background-color: transparent;

@@ -37,10 +37,21 @@
   }
 
   &__form {
-    background: $white;
+    background-color: rgba(250, 250, 250, 0.8);
+    border-radius: 0 0 0 10%;
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     top: 0px;
     right: 0px;
+    height: $pulse * 2;
+    width: $pulse * 2;
+
+    .svg-inline--fa {
+      height: $pulse;
+      width: $pulse;
+    }
   }
 
   &__thumb {
@@ -94,8 +105,6 @@
         bottom: 0;
       }
     }
-
-
   }
 
   &__text {
@@ -154,7 +163,6 @@
 
     .btn {
       font-size: 1rem;
-
       display: flex;
       align-items: center;
       margin-right: 0.3rem;

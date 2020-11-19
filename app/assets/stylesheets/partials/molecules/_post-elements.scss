@@ -87,6 +87,12 @@
     .svg-inline--fa:hover {
       color: $primary-color;
     }
+    .favorite-delete:focus,
+    .favorite-delete:hover,
+    .favorite-delete .svg-inline--fa:focus,
+    .favorite-delete .svg-inline--fa:hover {
+      color: $red;
+    }
 
     .post__form {
       align-self: center;

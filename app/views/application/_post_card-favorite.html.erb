@@ -28,7 +28,7 @@
     <% if logged_in? %>
       <div class="card__form">
         <% if current_user.bookmarked_posts.exists?(post.id) %>
-          <%= link_to user_bookmark_path(current_user, id: post.id), class: 'btn icon', role: 'button', method: :delete, remote: true do %>
+          <%= link_to user_bookmark_path(current_user, id: post.id), class: 'btn icon favorite-delete', role: 'button', method: :delete, remote: true do %>
             <i class="fas fa-trash"></i>
           <% end %>
         <% end %>
