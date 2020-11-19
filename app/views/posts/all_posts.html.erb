@@ -26,7 +26,7 @@
   <% if @posts.any? %>
     <ul class="bare-list cards post-long__list">
       <% @posts.each do |post| %>
-        <li class="post-long">
+        <li class="post-long" id="post-<%= post.id %>">
           <div class="post-long__main">
             <div class="post-long__thumb">
               <img class="avatar" src="<%= post.image_url %>" />
@@ -57,7 +57,7 @@
               <i class="fal fa-edit"></i> 
               Modificar
             <% end %>
-            <%= link_to post_path(post), class: 'btn btn--icon btn--warning', role: 'button', method: :delete do %>
+            <%= link_to post_path(post), class: 'btn btn--icon btn--warning', role: 'button', method: :delete, remote: true do %>
               <i class="fal fa-trash"></i>
               Borrar
             <% end %>

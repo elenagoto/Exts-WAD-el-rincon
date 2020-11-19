@@ -32,7 +32,7 @@
             Modificar
           <% end %>
 
-          <%= link_to user_path(user), class: 'btn btn--icon btn--warning', role: 'button', method: :delete do %>
+          <%= link_to user_path(user), class: 'btn btn--icon btn--warning', role: 'button', method: :delete, remote: true do %>
             <i class="fal fa-trash"></i>
             Borrar
           <% end %>
