@@ -75,7 +75,7 @@ Comments.builtComment = function(comment) {
 
   return commentItem;
 }
-
+// Add comment function
 Comments.displayComment = function(comment) {
   var newComment = Comments.builtComment(comment);
   console.log(newComment);
@@ -85,4 +85,9 @@ Comments.displayComment = function(comment) {
 
   var textImput = document.getElementById('comment_body');
   textImput.value = '';
+}
+
+// Remove comment function
+Comments.removeComment = function(commentId) {
+  document.getElementById('comment-' + commentId).remove();
 }

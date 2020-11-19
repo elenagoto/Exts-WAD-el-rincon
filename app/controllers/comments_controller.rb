@@ -26,7 +26,9 @@ class CommentsController < ApplicationController
       @comment.destroy!
     end
 
-    redirect_to post_path(@post)
+    respond_to do |format|
+      format.js
+    end
   end
 
   private
