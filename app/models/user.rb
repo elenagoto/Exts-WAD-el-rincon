@@ -8,6 +8,7 @@ class User < ApplicationRecord
   # Validation rules
   validates :username, :email, presence: true
   validates :username, :email, uniqueness: { case_sensitive: false }
+  validates :username, length: { maximum: 15 }
   validates :password, confirmation: true
   validates :role, inclusion: { in: %w(registered author admin) }
   has_secure_password
@@ -25,7 +26,8 @@ class User < ApplicationRecord
   def self.from_omniauth(auth)
     # Creates a new user only if it doesn't exist
     where(email: auth.info.email).first_or_initialize do |user|
-      user.username = auth.info.name.tr(" ", "_")
+      user.name = auth.info.name
+      user.username = auth.info.name.tr(" ", "_").truncate(14)
       user.email = auth.info.email
       if auth.info.uid
         user.uid = auth.info.uid

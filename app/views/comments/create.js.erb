@@ -4,7 +4,7 @@ var comment = {
   'when': "<%= @comment.created_at.strftime('%e %b %Y at %H: %M') %>",
   'whenInWords': "<%= time_ago_in_words(@comment.created_at).html_safe %>",
   'userName': "<%= @comment.user.name %>",
-  'userAvatar': "<%= default_avatar(@comment.user) %>",
+  'userAvatar': "<%= image_url(default_avatar(@comment.user)) %>",
   'userLink': "<%= profile_path %>",
   'deleteLink': "<%= post_comment_path(@post, @comment) %>"
 };

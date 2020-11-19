@@ -32,6 +32,50 @@
   }
 }
 
+/* Social Media nav */
+
+.social-media-nav {
+  /* Spotify */
+  .fa-spotify {
+    transition: all ease 0.2s;
+  }
+  .fa-spotify:hover,
+  .fa-spotify:active,
+  .fa-spotify:focus {
+    color: #1db954;
+  }
+  /* Instagram */
+  .fa-instagram {
+    transition: all ease 0.2s;
+  }
+  .fa-instagram:hover,
+  .fa-instagram:active,
+  .fa-instagram:focus {
+    color: #000;
+  }
+  /* Twitter */
+  .fa-twitter {
+    transition: all ease 0.2s;
+  }
+  .fa-twitter:hover,
+  .fa-twitter:active,
+  .fa-twitter:focus {
+    color: #1da1f2;
+  }
+}
+.locales {
+  a {
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+
+  a:hover,
+  a:active,
+  a:focus {
+    text-decoration: underline;
+  }
+}
+
 /* Footer Navigation */
 .nav-footer {
   display: flex;

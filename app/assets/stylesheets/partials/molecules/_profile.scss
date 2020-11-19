@@ -27,6 +27,10 @@
   justify-content: center;
   margin-bottom: $pulse;
 
+  h1 {
+    word-wrap: break-word;
+  }
+
   @include tablet {
     padding-bottom: $pulse;
     border-bottom: 1px solid $gray-3;
