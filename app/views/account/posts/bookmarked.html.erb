@@ -2,7 +2,7 @@
   <% if @posts.any? %>
     <ul class="bare-list cards">
       <% @posts.each do |post| %>
-        <%= render partial: 'post_card', locals: { post: post} %>
+        <%= render partial: 'post_card-favorite', locals: { post: post} %>
       <% end %>
     </ul>
   <% else %>

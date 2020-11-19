@@ -1,4 +1,4 @@
-<li class="card">
+<li class="card" id="post-<%= post.id %>">
   <div class="card__main">
     <div class="card__thumb">
       <img src="<%= post.image_url %>" alt="Podcast" srcset="" />
@@ -26,8 +26,12 @@
     </div>
     
     <% if logged_in? %>
-      <div class="card__form" id="form-post-<%= post.id %>">
-        <%= render partial: 'post_card-form', locals: { post: post} %>
+      <div class="card__form">
+        <% if current_user.bookmarked_posts.exists?(post.id) %>
+          <%= link_to user_bookmark_path(current_user, id: post.id), class: 'btn icon', role: 'button', method: :delete, remote: true do %>
+            <i class="fas fa-trash"></i>
+          <% end %>
+        <% end %>
       </div>
     <% end %>
   </div>

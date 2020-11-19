@@ -1,0 +1,25 @@
+<% if current_user.bookmarked_posts.exists?(post.id) %>
+  <%# delete link visible %>
+  <%= link_to user_bookmark_path(current_user, id: post.id), class: 'btn icon favorite-delete', role: 'button', method: :delete, remote: true do %>
+    <i class="fas fa-trash"></i>
+  <% end %>
+  <%# form invisible %>
+  <%= form_tag user_bookmarks_path(current_user), class: 'favorite-add invisible ', method: :post, remote: true do  %>
+    <%= hidden_field_tag :post_id, post.id %>
+    <%= button_tag class: 'btn icon', type: 'submit' do %>
+      <span class="fas fa-bookmark"></span>
+    <% end %>
+  <% end %>
+<% else %>
+  <%# delete link invisible %>
+  <%= link_to user_bookmark_path(current_user, id: post.id), class: 'btn icon favorite-delete invisible', role: 'button', method: :delete, remote: true do %>
+    <i class="fas fa-trash"></i>
+  <% end %>
+  <%# form visible %>
+  <%= form_tag user_bookmarks_path(current_user), class: 'favorite-add', method: :post, remote: true do  %>
+    <%= hidden_field_tag :post_id, post.id %>
+    <%= button_tag class: 'btn icon', type: 'submit' do %>
+      <span class="fas fa-bookmark"></span>
+    <% end %>
+  <% end %>
+<% end %>
