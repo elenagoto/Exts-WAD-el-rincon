@@ -71,4 +71,10 @@ gem 'omniauth'
 gem 'omniauth-google-oauth2'
 
 # Use AWS to manage uploads
+gem 'carrierwave', '~> 2.0'
+
+# Use Figaro to conect AWS to Heroku
+gem 'figaro'
+gem 'fog-aws'
+
 gem 'aws-sdk-s3', require: false
