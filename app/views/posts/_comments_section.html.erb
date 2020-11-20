@@ -4,9 +4,9 @@
     <!-- START Comments form -->
     <% if logged_in? %>
       <div class="discussion comments--add">
-        <%= form_for([post, comment], html: { class: 'input input--textarea' }, remote: true ) do |f| %>
+        <%= form_for([post, comment], html: { class: 'input' }, remote: true ) do |f| %>
           <%= f.label :body, class: 'input__label sr-only' %>
-          <%= f.text_area :body, class: 'input__field' %>
+          <%= f.text_field :body, class: 'input__field' %>
           <%= f.submit t('post.commentNew'), class: 'btn btn--cta'%>
         <% end %>
       </div>

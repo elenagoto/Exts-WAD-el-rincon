@@ -80,11 +80,19 @@
 
   .profile__bio {
     margin: 0 0 ($pulse * 1.5);
-
-    @include tablet {
+    p, li {
       font-size: 1.6rem;
-      line-height: 1.8;
+      padding-bottom: 1em;
     }
+    ul {
+      margin-left: 1em;
+    }
+    
+
+    // @include tablet {
+    //   font-size: 1.6rem;
+    //   line-height: 1.8;
+    // }
   }
 }
 

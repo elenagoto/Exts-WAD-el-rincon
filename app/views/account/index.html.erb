@@ -12,23 +12,29 @@
       <%= image_tag(default_avatar(@user), alt: 'Avatar', class: 'avatar') %>
     </div>
     <div class="profile__main">
-      <p class="profile__title">
-        <%= t('user.name') %>:
-      </p>
-      <p class="profile__bio"><%= @user.name %></p>
-      <p class="profile__title">
-        <%= t('user.username') %>:
-      </p>
-      <p class="profile__bio"><%= @user.username %></p>
-      <p class="profile__title">
-        <%= t('user.email') %>:
-      </p>
-      <p class="profile__bio"><%= @user.email %></p>
+      <div class="profile__title">
+        <p><%= t('user.name') %>:</p>
+      </div>
+      <div class="profile__bio">
+      <p><%= @user.name %></p>
+      </div>
+      <div class="profile__title">
+        <p><%= t('user.username') %>:</p>
+      </div>
+      <div class="profile__bio">
+      <p><%= @user.username %></p>
+      </div>
+      <div class="profile__title">
+        <p><%= t('user.email') %>:</p>
+      </div>
+      <div class="profile__bio">
+      <p><%= @user.email %></p>
+      </div>
       <% if author? %>
-        <p class="profile__title">
-          <%= t('user.bio') %>:
-        </p>
-        <p class="profile__bio"><%= @user.bio %></p>
+        <div class="profile__title">
+        <p ><%= t('user.bio') %>:</p>
+        </div>
+        <div class="profile__bio"><%= markdown(@user.bio) %></div>
       <% end %>
     </div>
     <div class="profile__footer">

@@ -77,9 +77,9 @@
     </div>
     <div class="post__main post__section">
       <div class="post__content">
-        <p>
-          <%= @post.body %>
-        </p>
+        
+          <%= markdown(@post.body)%>
+        
       </div>
       <% if @post.spotify_code.present? %>
         <div class="post__episode">

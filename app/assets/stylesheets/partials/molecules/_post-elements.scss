@@ -125,8 +125,11 @@
     max-width: 75em;
     align-self: center;
 
-    p {
-      padding: $pulse;
+    p, ul {
+      padding-bottom: $pulse;
+    }
+    ul {
+      margin-left: 1em;
     }
   }
 

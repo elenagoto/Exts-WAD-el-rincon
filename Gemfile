@@ -78,3 +78,6 @@ gem 'figaro'
 gem 'fog-aws'
 
 gem 'aws-sdk-s3', require: false
+
+# For markdown
+gem 'redcarpet', '~> 3.4'
