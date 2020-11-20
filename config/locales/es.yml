@@ -7,6 +7,7 @@ es:
       post: 'Artículo'
       tag: 'Etiqueta'
       user: 'Usuario'
+      bookmark: 'Favorito'
     attributes:
       user:
         email: 'Correo Electrónico'
@@ -26,6 +27,8 @@ es:
         updated_at: 'Actualizado el'
         image_url: 'URL de la imagen'
         spotify_code: 'Código Spotify'
+      comment:
+        body: 'Contenido'
     errors:
       messages:
         record_invalid: 'La validación falló: %{errors}'
@@ -261,3 +264,13 @@ es:
   post:
     by: 'por'
   search: 'Buscar'
+  login:
+    email: 'Correo Electrónico'
+    password: 'Contraseña'
+    google: 'Iniciar sesión con Google'
+    message: '¿Aún no tienes una cuenta?'
+    messageLink: 'Regístrate aquí'
+  register:
+    google: 'Crear una cuenta con Google'
+    message: '¿Ya tienes una cuenta?'
+    messageLink: 'Inicia sesión aquí'

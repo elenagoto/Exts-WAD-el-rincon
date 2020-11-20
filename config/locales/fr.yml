@@ -7,6 +7,7 @@ fr:
       post: 'Publication'
       tag: 'Étiquette'
       user: 'Utilisateur'
+      bookmark: 'Favorit'
     attributes:
       user:
         email: 'Adresse e-mail'
@@ -26,6 +27,8 @@ fr:
         updated_at: 'Mis à jour le'
         image_url: "URL de l'image"
         spotify_code: 'Code Spotify'
+      comment:
+        body: 'Contenu'
     errors:
       messages:
         record_invalid: 'La validation a échoué : %{errors}'
@@ -252,14 +255,24 @@ fr:
     favorites: 'Mes favorits'
     myposts: 'Mes publications'
     account: 'Mon Compte'
-    login: 'Connexion'
+    login: "S'identifier"
     logout: 'Déconnexion'
-    signup: 'Inscription'
+    signup: "S'inscrire"
   home:
     featured: 'À la une'
-    latest: 'Les plus récentes'
-    read_more: "Lire d'avantage"
+    latest: 'Dernières publications'
+    read_more: 'Lire davantage'
     see_more: 'Voir plus'
   post:
     by: 'par'
   search: 'Recherche'
+  login:
+    email: 'Adresse e-mail'
+    password: 'Mot de passe'
+    google: "S'identifier avec Google"
+    message: "Vous n'avez pas un compte chez nous?"
+    messageLink: 'Inscrivez-vous ici'
+  register:
+    google: "S'inscrire avec Google"
+    message: 'Dejà inscrit(e)?'
+    messageLink: "S'identifier"

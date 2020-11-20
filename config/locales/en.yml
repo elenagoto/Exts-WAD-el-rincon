@@ -38,6 +38,7 @@ en:
       post: 'Post'
       tag: 'Tag'
       user: 'User'
+      bookmark: 'Bookmark'
     attributes:
       user:
         email: 'Email'
@@ -57,6 +58,8 @@ en:
         updated_at: 'Updated at'
         image_url: 'Image URL'
         spotify_code: 'Spotify Code'
+      comment:
+        body: 'Content'
     errors:
       messages:
         record_invalid: 'Validation failed: %{errors}'
@@ -288,3 +291,13 @@ en:
   post:
     by: 'by'
   search: 'Search'
+  login:
+    email: 'Email'
+    password: 'Password'
+    google: 'Login with Google'
+    message: "You don't have an account yet?"
+    messageLink: 'Sign up here'
+  register:
+    google: 'Sign up with Google'
+    message: 'You already have an account?'
+    messageLink: 'Log in here'

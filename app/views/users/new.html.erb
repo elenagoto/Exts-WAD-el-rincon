@@ -1,12 +1,12 @@
 <div class="content-wrapper">
   <!-- START Form -->
   <div class="form-container">
-    <h1 class="alpha">Crear cuenta</h1>
+    <h1 class="alpha"><%= t('header.signup') %></h1>
     <div class="form__text">
-      <span>¿Ya tienes una cuenta? <%= link_to t('header.login'), login_path %></span>
+      <span><%= t('register.message') %> <%= link_to t('register.messageLink'), login_path %></span>
     </div>
     <%= link_to '/auth/google_oauth2', class: 'btn btn--google' do %>
-      <%= image_tag('google.png', alt: 'Google Logo') %> <span>Crear cuenta con Google</span>
+      <%= image_tag('google.png', alt: 'Google Logo') %> <span><%= t('register.google') %></span>
     <% end %>
     <%= form_for @user, html: { class: 'form'} do |f| %>
       <div class="alert alert--wide">
