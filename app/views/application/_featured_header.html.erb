@@ -5,7 +5,7 @@
         <div class="featured">
           <div class="featured__header">
             <h1 class="alpha"><%= t('home.featured') %></h1>
-            <span><time datetime='<%= featured.created_at %>'><%= featured.created_at.strftime(" %d/%m/%Y") %></time></span>
+            <span><time datetime='<%= featured.created_at %>'><%= l(featured.created_at, format: :long) %></time></span>
           </div>
           <div class="featured__thumb">
             <img

@@ -1,24 +1,24 @@
 <div class="content-wrapper">
-  <h1>Artículos</h1>
+  <h1><%= t('header.posts') %></h1>
 
   <div class="tags">
-    <h2>Etiquetas:</h2>
+    <h2><%= t('post.tags') %></h2>
     <ul class="bare-list tags__list" id="tags-list">
       <% @tags.each do |tag| %>
         <li class="btn btn--tag btn--tag--delete" id="tag-<%= tag.id %>">
           <%= link_to tag.name, name_path(tag.name) %>
           <%= link_to tag_path(tag),  role: 'button', method: :delete, remote: true do %>
               <i class="fal fa-times"></i>
-              <span class="sr-only">Borrar</span>
+              <span class="sr-only"><%= t('edit.delete') %></span>
           <% end %>
         </li>
       <% end %>
     </ul>
     <div class="tags__form form-container">
       <%= form_for @tag, html: { class: 'form'}, remote: true do |f| %>
-        <%= f.label :name, "Etiqueta:", class: 'input__label' %>
+        <%= f.label :name, class: 'input__label' %>
         <%= f.text_field :name, class: 'input__field' %>
-        <%= f.submit "Crear", class: 'btn btn--cta prompt__confirm'%>
+        <%= f.submit class: 'btn btn--cta prompt__confirm'%>
       <% end %>
     </div>
   </div>
@@ -38,16 +38,16 @@
                 <% end %>
               </div>
               <div class="post-long__author">
-                <span> Autor: <%= link_to post.user.name, username_path(post.user.username), class: 'card_link' %></span>
+                <span> <%= t('post.author') %>: <%= link_to post.user.name, username_path(post.user.username), class: 'card_link' %></span>
               </div>
               <div class="post-long__date">
-                <span>Publicado el <time datetime='<%= post.created_at %>'><%= post.created_at.strftime(" %d/%m/%Y") %></time></span>
+                <span><%= t('post.created') %> <time datetime='<%= post.created_at %>'><%= l(post.created_at, format: :concise) %></time></span>
               </div>
               <div class="post-long__users">
                 <% if  post.users.count == 1%>
-                  <span> <%= post.users.count %> usuario lo ha agregado a sus favoritos</span>
+                  <span><%= post.users.count %> <%= t('post.user') %></span>
                 <% else %>
-                  <span> <%= post.users.count %> usuarios lo han agregado a sus favoritos</span>
+                  <span> <%= post.users.count %> <%= t('post.users') %></span>
                 <% end %>
               </div>
             </div>
@@ -55,17 +55,17 @@
           <div class="post-long__btn">
             <%= link_to edit_post_path(post), class: 'btn btn--icon', role: 'button' do %>
               <i class="fal fa-edit"></i> 
-              Modificar
+              <%= t('edit.modify') %>
             <% end %>
             <%= link_to post_path(post), class: 'btn btn--icon btn--warning', role: 'button', method: :delete, remote: true do %>
               <i class="fal fa-trash"></i>
-              Borrar
+              <%= t('edit.delete') %>
             <% end %>
           </div>
         </li>
       <% end %>
     </ul>
   <% else %>
-    <p>No hay ningún artículo</p>
+    <p><%= t('post.empty') %></p>
   <% end %>
 </div>

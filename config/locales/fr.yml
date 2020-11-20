@@ -29,6 +29,8 @@ fr:
         spotify_code: 'Code Spotify'
       comment:
         body: 'Contenu'
+      tag:
+        name: 'Étiquette'
     errors:
       messages:
         record_invalid: 'La validation a échoué : %{errors}'
@@ -243,9 +245,10 @@ fr:
   time:
     am: am
     formats:
-      default: '%d %B %Y %Hh %Mmin %Ss'
-      long: '%A %d %B %Y %Hh%M'
-      short: '%d %b %Hh%M'
+      default: '%A %d %B %Y'
+      long: '%d %B %Y'
+      short: '%d %b'
+      concise: '%d/%b/%y'
     pm: pm
   header:
     search: 'Chercher'
@@ -265,6 +268,17 @@ fr:
     see_more: 'Voir plus'
   post:
     by: 'par'
+    comments: 'Commentaires'
+    tag: 'Étiquette'
+    tags: 'Étiquettes'
+    newPost: 'Nouvelle Publication'
+    created: 'Publiée le'
+    users: " utilisateurs l'ont ajoutée à leurs favorits"
+    user: " utilisateur l'a ajoutée à ses favorits"
+    author: 'Créateur(trice)'
+    empty: "Aucune publication n'a pas été crée"
+    notFound: ''
+    commentNew: 'Publier'
   search: 'Recherche'
   login:
     email: 'Adresse e-mail'
@@ -276,3 +290,15 @@ fr:
     google: "S'inscrire avec Google"
     message: 'Dejà inscrit(e)?'
     messageLink: "S'identifier"
+  edit:
+    modify: 'Modifier'
+    delete: 'Supprimer'
+    cancel: 'Annuler'
+  user:
+    registered: 'Inscrit(e) depuis le'
+    role: "Rôle de l'utilisateur"
+    bio: 'Biographie'
+    email: 'Adresse e-mail'
+    name: 'Nom'
+    username: "Nom d'utilisateur"
+    modify: 'Modifier mes données'

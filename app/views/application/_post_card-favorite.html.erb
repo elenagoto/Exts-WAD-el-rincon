@@ -39,6 +39,6 @@
     <%= link_to username_path(post.user.username), class: 'card__meta__avatar' do %>
       <%= image_tag(default_avatar(post.user), alt: 'Avatar', class: 'avatar avatar-small') %>
     <% end %>
-    <span><%= t('post.by') %> <%= link_to post.user.name, username_path(post.user.username) %> - <time datetime='<%= post.created_at %>'><%= post.created_at.strftime(" %d/%m/%Y") %></time></span>
+    <span><%= t('post.by') %> <%= link_to post.user.name, username_path(post.user.username) %> - <time datetime='<%= post.created_at %>'><%= l(post.created_at, format: :concise) %></time></span>
   </div>
 </li>

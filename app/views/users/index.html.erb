@@ -17,24 +17,23 @@
           <% end %>
           </h3>
           <div class="user-card__meta">
-            <h4 class="user-card__account">Registrado desde el <time datetime="<%= user.created_at %>"><%= user.created_at.strftime("%d %b '%y") %></time></h4>
-            <h4 class="user-card__account">Tipo de usuario: <%= user.role %></h4>
+            <h4 class="user-card__account"><%= t('user.registered') %> <time datetime="<%= user.created_at %>"><%= l(user.created_at, format: :concise) %></time></h4>
+            <h4 class="user-card__account"><%= t('user.role') %>: <%= user.role %></h4>
             <% if user.role == 'author' %>
-              <h4 class="user-card__account">Arículos: <%= user.posts.count %></h4>
-            <% elsif user.role == 'registered' %>
-              <h4 class="user-card__account">Comentarios (corregir): <%= user.posts.count %></h4>
+              <h4 class="user-card__account"><%= t('header.posts') %> <%= user.posts.count %></h4>
             <% end %>
+              <h4 class="user-card__account"><%= t('post.comments') %>: <%= user.comments.count %></h4>
           </div>
         </div>
         <div class="user-card__form">
           <%= link_to edit_user_path(user), class: 'btn btn--icon', role: 'button' do %>
             <i class="fal fa-user-edit"></i> 
-            Modificar
+            <%= t('edit.modify') %>
           <% end %>
 
           <%= link_to user_path(user), class: 'btn btn--icon btn--warning', role: 'button', method: :delete, remote: true do %>
             <i class="fal fa-trash"></i>
-            Borrar
+            <%= t('edit.delete') %>
           <% end %>
         </div>
       </li>

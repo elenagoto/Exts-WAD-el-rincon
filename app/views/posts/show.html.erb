@@ -4,14 +4,14 @@
       <ul class="bare-list">
         <li>
           <%= link_to edit_post_path(@post), class: 'btn btn--icon', role: 'button' do %>
-            <i class="fal fa-edit"></i> 
-            Modify
+            <i class="fal fa-edit"></i>
+            <%= t('edit.modify') %>
           <% end %>
         </li>
         <li>
           <%= link_to post_path(@post), class: 'btn btn--icon btn--warning', role: 'button', method: :delete do %>
             <i class="fal fa-trash"></i>
-            Delete
+            <%= t('edit.delete') %>
           <% end %>
         </li>
       </ul>
@@ -41,12 +41,11 @@
           <div class="meta-text">
             <div class="post__author">
               <!-- Author -->
-              <span>por <%= link_to @post.user.name, username_path(@post.user.username) %></span>
+              <span><%= t('post.by') %> <%= link_to @post.user.name, username_path(@post.user.username) %></span>
             </div>
             <div class="post__date">
               <!-- Date -->
-              
-              <span><time datetime="<%= @post.created_at %>"><%= @post.created_at.strftime("%d %b '%y") %></time></span>
+              <span><time datetime="<%= @post.created_at %>"><%= l(@post.created_at, format: :long) %></time></span>
             </div>
           </div>
         </div>

@@ -1,13 +1,13 @@
   <!-- START Comments section-->
   <div class="post__comments post__section">
-    <h3>Comentarios</h3>
+    <h3><%= t('post.comments') %></h3>
     <!-- START Comments form -->
     <% if logged_in? %>
       <div class="discussion comments--add">
         <%= form_for([post, comment], html: { class: 'input input--textarea' }, remote: true ) do |f| %>
           <%= f.label :body, class: 'input__label sr-only' %>
           <%= f.text_area :body, class: 'input__field' %>
-          <%= f.submit 'Publicar', class: 'btn btn--cta'%>
+          <%= f.submit t('post.commentNew'), class: 'btn btn--cta'%>
         <% end %>
       </div>
     <% end %>
@@ -48,7 +48,7 @@
             <div class="comment__delete">
               <%= link_to post_comment_path(post, comment), class: 'btn btn--icon btn--warning', role: 'button', method: :delete, remote: true do %>
                 <i class="fal fa-trash"></i>
-                Delete
+                <%= t('edit.delete') %>
               <% end %>
             </div>
           <% end %>

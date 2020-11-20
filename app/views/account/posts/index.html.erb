@@ -23,11 +23,11 @@
           <div class="post-long__btn">
             <%= link_to edit_post_path(post), class: 'btn btn--icon', role: 'button' do %>
               <i class="fal fa-edit"></i> 
-              Modify
+              <%= t('edit.modify') %>
             <% end %>
             <%= link_to post_path(post), class: 'btn btn--icon btn--warning', role: 'button', method: :delete, remote: true do %>
               <i class="fal fa-trash"></i>
-              Delete
+              <%= t('edit.delete') %>
             <% end %>
           </div>
         </li>

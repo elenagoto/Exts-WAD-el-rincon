@@ -5,7 +5,7 @@
   <!-- Title -->
   <div class="input">
     <div>
-      <%= f.label :title, 'Título', class: 'input__label' %>
+      <%= f.label :title, class: 'input__label' %>
     </div>
     <div>
       <%= f.text_field :title, class: 'input__field' %>
@@ -14,7 +14,7 @@
   <!-- Image url -->
   <div class="input">
     <div>
-      <%= f.label :image_url, 'URL de la imagen', class: 'input__label' %>
+      <%= f.label :image_url, class: 'input__label' %>
     </div>
     <div>
       <%= f.text_field :image_url, class: 'input__field' %>
@@ -23,7 +23,7 @@
   <!-- Tags -->
   <div class="input">
     <div>
-      <%= f.label :tag_ids, 'Tags', class: 'input__label' %>
+      <%= f.label :tag_ids, class: 'input__label' %>
     </div>
     <div>
       <%= f.collection_select( :tag_ids, Tag.order(:name), :id, :name, {}, html_options = { class: 'input__field', multiple: true})%>
@@ -32,7 +32,7 @@
   <!-- Spotify id -->
   <div class="input">
     <div>
-      <%= f.label :spotify_code, 'Código Spotify', class: 'input__label' %>
+      <%= f.label :spotify_code, class: 'input__label' %>
     </div>
     <div>
       <%= f.text_field :spotify_code, class: 'input__field' %>
@@ -49,7 +49,7 @@
   </div>
   
   <div class="form__text">
-    <%= link_to 'Cancelar', account_posts_path %>
+    <%= link_to t('edit.cancel'), account_posts_path %>
   </div>
   <!-- Submit -->
   <div class="form__text input__btn--alone">

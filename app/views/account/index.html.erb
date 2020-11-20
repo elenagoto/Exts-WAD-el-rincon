@@ -6,33 +6,33 @@
     <% else %>
       <h1 class="alpha"><%= @user.username %></h1>
     <% end %>
-      <span>Registrado desde: <time datetime="<%= @user.created_at %>"><%= @user.created_at.strftime("%d %b '%y") %></time></span>
+      <span><%= t('user.registered') %> <time datetime="<%= @user.created_at %>"><%= l(@user.created_at, format: :concise) %></time></span>
     </div>
     <div class="profile__thumb">
       <%= image_tag(default_avatar(@user), alt: 'Avatar', class: 'avatar') %>
     </div>
     <div class="profile__main">
       <p class="profile__title">
-        Nombre:
+        <%= t('user.name') %>:
       </p>
       <p class="profile__bio"><%= @user.name %></p>
       <p class="profile__title">
-        Usuario:
+        <%= t('user.username') %>:
       </p>
       <p class="profile__bio"><%= @user.username %></p>
       <p class="profile__title">
-        Email:
+        <%= t('user.email') %>:
       </p>
       <p class="profile__bio"><%= @user.email %></p>
       <% if author? %>
         <p class="profile__title">
-          Biografía:
+          <%= t('user.bio') %>:
         </p>
         <p class="profile__bio"><%= @user.bio %></p>
       <% end %>
     </div>
     <div class="profile__footer">
-        <%= link_to 'Modificar mis datos', account_path, class: 'btn' %>
+        <%= link_to t('user.modify'), account_path, class: 'btn' %>
     </div>
   </div>
 </div>

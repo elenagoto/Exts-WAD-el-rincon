@@ -60,6 +60,8 @@ en:
         spotify_code: 'Spotify Code'
       comment:
         body: 'Content'
+      tag:
+        name: 'Tag name'
     errors:
       messages:
         record_invalid: 'Validation failed: %{errors}'
@@ -268,9 +270,10 @@ en:
   time:
     am: am
     formats:
-      default: '%a, %d %b %Y %H:%M:%S %z'
-      long: '%B %d, %Y %H:%M'
-      short: '%d %b %H:%M'
+      default: '%a, %d %b %Y'
+      long: '%B %d, %Y'
+      short: '%d %b'
+      concise: '%d/%b/%y'
     pm: pm
   header:
     search: 'Search'
@@ -290,6 +293,17 @@ en:
     see_more: 'See More'
   post:
     by: 'by'
+    comments: 'Comments'
+    tag: 'Tag'
+    tags: 'Tags'
+    newPost: 'New Post'
+    created: 'Created on'
+    users: ' users have added it to their bookmarks'
+    user: ' user has added it to his/her bookmarks'
+    author: 'Author'
+    empty: "There aren't any posts yet"
+    notFound: ''
+    commentNew: 'Add'
   search: 'Search'
   login:
     email: 'Email'
@@ -301,3 +315,15 @@ en:
     google: 'Sign up with Google'
     message: 'You already have an account?'
     messageLink: 'Log in here'
+  edit:
+    modify: 'Modify'
+    delete: 'Delete'
+    cancel: 'Cancel'
+  user:
+    registered: 'Registered since'
+    role: 'User role'
+    bio: 'Bio'
+    email: 'Email'
+    name: 'Name'
+    username: 'Username'
+    modify: 'Modify my details'

@@ -6,7 +6,7 @@ es:
       comment: 'Comentario'
       post: 'Artículo'
       tag: 'Etiqueta'
-      user: 'Usuario'
+      user: 'Usuario(a)'
       bookmark: 'Favorito'
     attributes:
       user:
@@ -29,6 +29,8 @@ es:
         spotify_code: 'Código Spotify'
       comment:
         body: 'Contenido'
+      tag:
+        name: 'Etiqueta'
     errors:
       messages:
         record_invalid: 'La validación falló: %{errors}'
@@ -241,15 +243,16 @@ es:
   time:
     am: am
     formats:
-      default: '%A, %-d de %B de %Y %H:%M:%S %z'
-      long: '%-d de %B de %Y %H:%M'
-      short: '%-d de %b %H:%M'
+      default: '%A, %-d de %B de %Y'
+      long: '%-d de %B de %Y'
+      short: '%-d de %b'
+      concise: '%d/%b/%y'
     pm: pm
   header:
     search: 'Buscar'
     us: 'Nosotros'
     posts: 'Artículos'
-    users: 'Usuarios'
+    users: 'Usuarios(as)'
     favorites: 'Mis favoritos'
     myposts: 'Mis artículos'
     account: 'Mi cuenta'
@@ -263,6 +266,17 @@ es:
     see_more: 'Ver más'
   post:
     by: 'por'
+    comments: 'Comentarios'
+    tag: 'Etiqueta'
+    tags: 'Etiquetas'
+    newPost: 'Nuevo Artículo'
+    created: 'Publicado el '
+    users: ' usuarios(as) lo han agregado a sus favoritos'
+    user: ' usuario(a) lo ha agregado a sus favoritos'
+    author: 'Autor(a)'
+    empty: 'No hay ningún artículo aún'
+    notFound: ''
+    commentNew: 'Publicar'
   search: 'Buscar'
   login:
     email: 'Correo Electrónico'
@@ -274,3 +288,15 @@ es:
     google: 'Crear una cuenta con Google'
     message: '¿Ya tienes una cuenta?'
     messageLink: 'Inicia sesión aquí'
+  edit:
+    modify: 'Modificar'
+    delete: 'Borrar'
+    cancel: 'Cancelar'
+  user:
+    registered: 'Registrado(a) desde el'
+    role: 'Tipo de usuario(a)'
+    bio: 'Biografía'
+    email: 'Correo Electrónico'
+    name: 'Nombre'
+    username: 'Nombre de usuario'
+    modify: 'Modificar mis datos'
