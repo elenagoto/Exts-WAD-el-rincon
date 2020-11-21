@@ -2,9 +2,11 @@
   <!-- START Form -->
   <div class="form-container">
     <h1 class="alpha"><%= t('edit.modify') %></h1>
-      <div class="alert alert--wide">
-        <%= @user.errors.full_messages.join('<br />').html_safe  %>
-      </div>
+    <div class="alert alert--wide">
+      <% @user.errors.full_messages.each do |message| %>
+        <p><%= message %></p>
+      <% end %>
+    </div>
     <%= form_for @user, html: { class: 'form'} do |f| %>
       <!-- Name -->
       <div class="input">

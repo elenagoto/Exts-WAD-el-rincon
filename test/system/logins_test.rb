@@ -13,10 +13,10 @@ class LoginsTest < ApplicationSystemTestCase
     
     visit new_user_path
     fill_in 'Nombre', with: 'John Smith'
-    fill_in 'Usuario', with: 'littlejohn'
+    fill_in 'Nombre de usuario', with: 'littlejohn'
     fill_in 'Correo Electrónico', with: 'john@elrincon.ch'
     fill_in 'Contraseña', with: 'password'
-    fill_in 'Confirmación de la contraseña', with: 'password'
+    fill_in 'Confirmar contraseña', with: 'password'
 
     click_button 'Registrarse', match: :first
     assert_equal User.all.length, 2

@@ -1,6 +1,8 @@
 <%= form_for post, html: { class: 'form'} do |f| %>
   <div class="alert alert--wide">
-     <%= post.errors.full_messages.join('<br />')  %>
+    <% post.errors.full_messages.each do |message| %>
+      <p><%= message %></p>
+    <% end %>
   </div>
   <!-- Title -->
   <div class="input">

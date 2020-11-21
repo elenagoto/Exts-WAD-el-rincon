@@ -25,7 +25,7 @@ class PostsTest < ApplicationSystemTestCase
 
     fill_in 'Título', with: 'Este es el título del post'
     fill_in 'Contenido', with: 'Sweet cupcake cotton candy ice cream dessert topping powder carrot cake bonbon. Bonbon tiramisu jujubes bonbon cheesecake gummies bonbon lollipop biscuit. Croissant tart dessert croissant ice cream lemon drops. Lollipop brownie donut jujubes. Candy canes powder dessert lollipop powder pastry brownie cake biscuit. Gingerbread brownie chocolate bar chocolate cake icing powder cheesecake. Halvah cupcake bonbon apple pie. Cotton candy liquorice chocolate cake brownie bonbon. Cookie cheesecake chocolate cake candy cookie. Fruitcake ice cream cheesecake.'
-    click_button 'Create Post', match: :first
+    click_button 'Crear Artículo', match: :first
 
     assert page.has_content? 'Este es el título del post'
   end
@@ -54,8 +54,8 @@ class PostsTest < ApplicationSystemTestCase
 
     
     fill_in 'Contenido', with: 'Sweet cupcake cotton candy ice cream dessert topping powder carrot cake bonbon. Bonbon tiramisu jujubes bonbon cheesecake gummies bonbon lollipop biscuit. Croissant tart dessert croissant ice cream lemon drops. Lollipop brownie donut jujubes. Candy canes powder dessert lollipop powder pastry brownie cake biscuit. Gingerbread brownie chocolate bar chocolate cake icing powder cheesecake. Halvah cupcake bonbon apple pie. Cotton candy liquorice chocolate cake brownie bonbon. Cookie cheesecake chocolate cake candy cookie. Fruitcake ice cream cheesecake.'
-    click_button 'Create Post', match: :first
+    click_button 'Crear Artículo', match: :first
 
-    assert page.has_content? "Title can't be blank"
+    assert page.has_content? "Título no puede estar en blanco"
   end
 end
