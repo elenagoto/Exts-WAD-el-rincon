@@ -1,7 +1,7 @@
   <header class="header">
     <div class="header__image">
       <!-- Add here Featured image -->
-      <% if current_page?('/') || current_page?(root_path) %>
+      <% if @featured.present? %>
         <img src="<%= @featured.image_url %>" alt="Podcast" srcset="" />
       <% end %>
     </div>
@@ -27,17 +27,17 @@
             <nav>
               <ul class="global-nav bare-list social-media-nav">
                 <li>
-                  <a href="#" aria-label="Link to Spotify">
+                  <a href="https://open.spotify.com/show/6ClS5WrBXFANCiYpdTVQNV?si=91_HREZNReaQCm9ufaZW3w" aria-label="Link to Spotify" target="_blank">
                     <i class="fab fa-spotify"></i>
                   </a>
                 </li>
                 <li>
-                  <a href="#" aria-label="Link to Instagram">
-                    <i class="fab fa-instagram"></i>
+                  <a href="https://www.instagram.com/olordelacuruba/" aria-label="Link to Instagram" target="_blank">
+                    <i class="fab fa-instagram" ></i>
                   </a>
                 </li>
                 <li>
-                  <a href="#" aria-label="Link to Twitter">
+                  <a href="https://twitter.com/Olordelacuruba" aria-label="Link to Twitter" target="_blank">
                     <i class="fab fa-twitter"></i>
                   </a>
                 </li>
@@ -56,10 +56,10 @@
         </div>
       </div>
     </div>
-    <% if current_page?('/') || current_page?(root_path)%>
+    <% if @featured.present? %>
       <%= render partial: 'featured_header', locals: { featured: @featured } %>
     <% end %>
-    <% if current_page?(search_path) %>
+    <% if current_page?(search_path) || current_page?(posts_path) %>
       <%= render partial: 'search' %>
     <% end %>
   </header>
