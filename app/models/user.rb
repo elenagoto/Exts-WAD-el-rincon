@@ -19,6 +19,9 @@ class User < ApplicationRecord
   has_many :bookmarked_posts, through: :bookmarks, source: :post
   has_many :comments, dependent: :destroy
 
+  # Pagination
+  paginates_per 6
+
   # Uploader
   # mount_uploader :avatar, AvatarUploader
   has_one_attached :avatar

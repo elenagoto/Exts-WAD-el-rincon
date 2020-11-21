@@ -33,7 +33,10 @@
         </li>
       <% end %>
     </ul>
+    <div class="pagination-container">
+      <%= paginate @posts %>
+    </div>
   <% else %>
-    <p>No has publicado ningún artículo</p>
+    <p><%= t('results.posts') %></p>
   <% end %>
 </div>

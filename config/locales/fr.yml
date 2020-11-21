@@ -45,6 +45,13 @@ fr:
     admin:
       sessions:
         error: "Email ou mot de passe incorrects. Essayez de nouveau s'il vous plaît"
+  views:
+    pagination:
+      first: '&laquo; Première page'
+      last: 'Dernière page &raquo;'
+      next: 'Suivante &rsaquo;'
+      previous: '&lsaquo; Précédente'
+      truncate: "..."
   date:
     abbr_day_names:
       - dim
@@ -191,6 +198,14 @@ fr:
       create: Créer un(e) %{model}
       submit: Enregistrer ce(tte) %{model}
       update: Modifier ce(tte) %{model}
+    page_entries_info: 
+      one_page: 
+        display_entries: 
+          zero: "Aucun %{entry_name} trouvé(e)" 
+          one: "Nombre d'%{entry_name}s affichés: <b>1</b>" 
+          other: "Nombre d'%{entry_name}s affichés: %{count}</b>" 
+      more_pages: 
+        display_entries: "Nombre d'%{entry_name}s affichés: <b>%{first}&nbsp;-&nbsp;%{last}</b> de <b>%{total}</b> au total" 
   number:
     currency:
       format:
@@ -200,7 +215,7 @@ fr:
         separator: ','
         significant: false
         strip_insignificant_zeros: false
-        unit: '€'
+        unit: 'CHF'
     format:
       delimiter: ' '
       precision: 3
@@ -307,6 +322,11 @@ fr:
     name: 'Nom'
     username: "Nom d'utilisateur"
     modify: 'Modifier mes données'
+  filter: 'Filtrer par étiquettes'
+  results: 
+    search: 'Aucune publication ne correspond à votre recherche'
+    favorites: "Vous n'avez pas des publications dans vos favorits!"
+    posts: "Vous n'avez rien publié pour l'instant."
   us: "Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec ullamcorper nulla non metus auctor fringilla.
   <br>
   <br>

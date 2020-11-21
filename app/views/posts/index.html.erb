@@ -8,7 +8,7 @@
       <% end %>
     </ul>
     <% else %>
-    <p>Ningún artículo corresponde a tu búsqueda</p>
+    <p><%= t('results.search') %></p>
     <% end %>
   <% else %>
     <%= render partial: 'filter', locals: { tags: @tags} %>

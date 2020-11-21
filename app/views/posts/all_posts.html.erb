@@ -65,6 +65,9 @@
         </li>
       <% end %>
     </ul>
+    <div class="pagination-container">
+      <%= paginate @posts %>
+    </div>
   <% else %>
     <p><%= t('post.empty') %></p>
   <% end %>

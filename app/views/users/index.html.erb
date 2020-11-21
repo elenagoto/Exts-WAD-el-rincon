@@ -1,5 +1,6 @@
 <div class="content-wrapper">
   <h1>Usuarios</h1>
+  <p><%= page_entries_info @users %></p>
   <ul class="bare-list cards">
     <% @users.each do |user| %>
       <li class="user-card" id="user-<%= user.id %>">
@@ -39,4 +40,7 @@
       </li>
     <% end %>
   </ul>
+  <div class="pagination-container">
+    <%= paginate @users %>
+  </div>
 </div>

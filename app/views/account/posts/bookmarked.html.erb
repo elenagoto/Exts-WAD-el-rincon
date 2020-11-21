@@ -6,6 +6,9 @@
       <% end %>
     </ul>
   <% else %>
-    <p>No tienes ningún artículo en tu lista de favoritos</p>
+    <p><%= t('results.favorites') %></p>
   <% end %>
+  <div class="pagination-container">
+    <%= paginate @posts %>
+  </div>
 </div>

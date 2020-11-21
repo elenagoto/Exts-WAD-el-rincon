@@ -51,6 +51,51 @@ visitor3 = User.create!  email: 'matt@elrincon.ch',
                           username: 'visitormatt',
                           password: 'password',
                           password_confirmation: 'password'
+visitor4 = User.create!  email: 'martin@elrincon.ch',
+                          name: 'martin Visitor',
+                          username: 'visitormartin',
+                          password: 'password',
+                          password_confirmation: 'password'
+visitor5 = User.create!  email: 'camila@elrincon.ch',
+                          name: 'camila Visitor',
+                          username: 'visitorcamila',
+                          password: 'password',
+                          password_confirmation: 'password'
+visitor6 = User.create!  email: 'daniel@elrincon.ch',
+                          name: 'daniel Visitor',
+                          username: 'visitordaniel',
+                          password: 'password',
+                          password_confirmation: 'password'
+visitor7 = User.create!  email: 'sabrina@elrincon.ch',
+                          name: 'sabrina Visitor',
+                          username: 'visitorsabrina',
+                          password: 'password',
+                          password_confirmation: 'password'
+visitor8 = User.create!  email: 'angela@elrincon.ch',
+                          name: 'angela Visitor',
+                          username: 'visitorangela',
+                          password: 'password',
+                          password_confirmation: 'password'
+visitor9 = User.create!  email: 'jules@elrincon.ch',
+                          name: 'jules Visitor',
+                          username: 'visitorjules',
+                          password: 'password',
+                          password_confirmation: 'password'
+visitor10 = User.create!  email: 'alex@elrincon.ch',
+                          name: 'alex Visitor',
+                          username: 'visitoralex',
+                          password: 'password',
+                          password_confirmation: 'password'
+visitor2 = User.create!  email: 'maria@elrincon.ch',
+                          name: 'maria Visitor',
+                          username: 'visitormaria',
+                          password: 'password',
+                          password_confirmation: 'password'
+visitor3 = User.create!  email: 'martha@elrincon.ch',
+                          name: 'martha Visitor',
+                          username: 'visitormartha',
+                          password: 'password',
+                          password_confirmation: 'password'
 
 
 # Posts
@@ -246,7 +291,7 @@ post29 = Post.create!(title: 'Episodio 19: El Frente Nacional y el surgimiento d
 post30 = Post.create!(title: 'Episodio 20: memorias del 16 de mayo de 1984 en la UN ',
              body: 'Cupcake ipsum dolor sit amet dragée. Tart cheesecake biscuit marzipan jelly beans carrot cake icing toffee. Candy candy jujubes. Sweet fruitcake jelly croissant. Tootsie roll candy lollipop fruitcake soufflé pudding gummies. Halvah marshmallow cake. Toffee powder oat cake chupa chups icing cake marshmallow apple pie danish. Fruitcake jelly topping. Tart croissant icing. Marzipan chocolate bar powder. Halvah brownie carrot cake bonbon wafer gingerbread jelly beans. Dessert marshmallow pastry pie chupa chups jujubes pudding. Apple pie sweet roll tiramisu sugar plum ice cream gummies gummi bears candy fruitcake. Tootsie roll gingerbread cheesecake liquorice sweet roll sweet. Caramels chupa chups jelly-o icing liquorice marzipan. Dessert biscuit donut jelly oat cake pastry oat cake pudding pudding. Soufflé carrot cake liquorice. Dessert lemon drops sesame snaps ice cream dragée topping tootsie roll.',
              spotify_code: '06x2DoPgO4dSVaTtbASzcp',
-             image_url: 'https://upload.wikimedia.org/wikipedia/commons/e/ea/00-130_Universidad_Nacional_de_Colombia._Facultad_de_Arquitectura4.jpg',
+             image_url: 'https://upload.wikimedia.org/wikipedia/commons/7/73/Plaza_Che%2C_Bogotá.jpg',
              user: olo_curuba)
 
 

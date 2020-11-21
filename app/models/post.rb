@@ -14,7 +14,7 @@ class Post < ApplicationRecord
   has_many :comments, dependent: :destroy
 
   # Pagination
-  paginates_per 9
+  paginates_per 6
 
   # Scopes
   scope :most_recent, -> { order(created_at: :desc).limit(6) }

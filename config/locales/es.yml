@@ -41,6 +41,13 @@ es:
     admin:
       sessions:
         error: 'Correo electrónico or contraseña incorrectos.  Por favor intentalo de nuevo'
+  views:
+    pagination:
+      first: '&laquo; Primera página'
+      last: 'Última página &raquo;'
+      next: 'Siguiente &rsaquo;'
+      previous: '&lsaquo; Anterior'
+      truncate: "..."
   date:
     abbr_day_names:
       - dom
@@ -185,6 +192,14 @@ es:
       create: Crear %{model}
       submit: Guardar %{model}
       update: Actualizar %{model}
+    page_entries_info: 
+      one_page: 
+        display_entries: 
+          zero: "Ningún %{entry_name} encontrado" 
+          one: "Mostrando <b>1</b> %{entry_name}" 
+          other: "Mostrando <b>todos %{count}</b> %{entry_name}s" 
+      more_pages: 
+        display_entries: "Mostrando %{entry_name}s <b>%{first}&nbsp;-&nbsp;%{last}</b> de <b>%{total}</b> en total" 
   number:
     currency:
       format:
@@ -305,6 +320,11 @@ es:
     name: 'Nombre'
     username: 'Nombre de usuario'
     modify: 'Modificar mis datos'
+  filter: 'Filtrar por etiquetas'
+  results: 
+    search: 'Ningún artículo corresponde a tu búsqueda.'
+    favorites: 'No tienes ningún artículo en tu lista de favoritos!'
+    posts: 'No has publicado ningún artículo'
   us: "Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Sed posuere consectetur est at lobortis. Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus _dolor auctor_. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.
   <br>
   <br>

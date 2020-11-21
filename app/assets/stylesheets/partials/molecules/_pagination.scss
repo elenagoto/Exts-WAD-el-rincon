@@ -1,0 +1,33 @@
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  margin: ($pulse * 2) 0;
+}
+
+.pagination {
+  display: flex;
+  gap: ($pulse/2);
+
+  span {
+    display: inline-block;
+    padding: 0 ($pulse/2);
+  }
+
+  .current {
+    background-color: $dark-violet;
+    color: $white;
+  }
+
+  a {
+    text-decoration: underline;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $dark-violet;
+      font-weight: 500;
+    }
+  }
+
+  
+}

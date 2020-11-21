@@ -66,7 +66,7 @@ class PostsController < ApplicationController
   end
 
   def all_posts
-    @posts = Post.all.order(updated_at: :desc)
+    @posts = Post.all.order(updated_at: :desc).page(params[:page])
     @tags = Tag.all.order(:name)
     @tag = Tag.new
   end

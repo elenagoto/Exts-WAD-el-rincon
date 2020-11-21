@@ -4,11 +4,11 @@ class Account::PostsController < ApplicationController
   before_action :has_posts, only: [:index]
 
   def index
-    @posts = current_user.posts.order(updated_at: :desc)
+    @posts = current_user.posts.order(updated_at: :desc).page(params[:page])
   end
 
   def bookmarked
-    @posts = current_user.bookmarked_posts.order(updated_at: :desc)
+    @posts = current_user.bookmarked_posts.order(updated_at: :desc).page(params[:page])
   end
 
   private

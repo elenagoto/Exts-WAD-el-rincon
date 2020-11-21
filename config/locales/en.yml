@@ -1,35 +1,4 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
-# Locales from rails-i18n repo
+# Locales from rails-i18n repo improved
 ---
 en:
   activerecord:
@@ -72,6 +41,13 @@ en:
     admin:
       sessions:
         error: 'Email or password were invalid.  Please try again'
+  views:
+    pagination:
+      first: '&laquo; First page'
+      last: 'Last page &raquo;'
+      next: 'Next &rsaquo;'
+      previous: '&lsaquo; Previous'
+      truncate: "..."
   date:
     abbr_day_names:
       - Sun
@@ -216,6 +192,14 @@ en:
       create: Create %{model}
       submit: Save %{model}
       update: Update %{model}
+    page_entries_info: 
+      one_page: 
+        display_entries: 
+          zero: "No %{entry_name} found!" 
+          one: "Displaying <b>1</b> %{entry_name}" 
+          other: "Displaying <b>all %{count}</b> %{entry_name}s" 
+      more_pages: 
+        display_entries: "Displaying %{entry_name}s <b>%{first}&nbsp;-&nbsp;%{last}</b> of <b>%{total}</b> in total" 
   number:
     currency:
       format:
@@ -332,6 +316,11 @@ en:
     name: 'Name'
     username: 'Username'
     modify: 'Modify my details'
+  filter: 'Filter by tags'
+  results: 
+    search: 'No results found.'
+    favorites: 'You have no bookmarked posts!'
+    posts: "You haven't published any post yet."
   us: "Topping gingerbread soufflé. Cake sugar plum biscuit tootsie roll apple pie wafer chocolate cake. Powder donut ice cream. Chocolate cake ice cream. Pudding wafer candy lemon drops macaroon oat cake danish danish apple pie. Pastry jelly-o chocolate bar topping chocolate bar halvah tiramisu candy marzipan. Jelly beans toffee cotton candy brownie donut carrot cake danish donut. Liquorice sweet cake lemon drops __carrot cake dessert__. Croissant jelly beans pie cotton candy. Liquorice muffin sugar plum biscuit sweet marzipan marzipan liquorice powder. Danish danish marshmallow cake tootsie roll macaroon chocolate bar croissant gummies. Chocolate cake gummies icing gummi bears croissant brownie.
   <br>
   <br>
