@@ -1,4 +1,4 @@
-<li class="card">
+<li class="card" id="card-<%= post.id %>">
   <div class="card__main">
     <div class="card__thumb">
       <img src="<%= post.image_url %>" alt="Podcast" srcset="" />
@@ -6,7 +6,7 @@
     <% if post.tag_ids.present? %>
       <ul class="card__footer bare-list">
         <% post.tags.each do |tag| %>
-          <li>
+          <li class="tag">
             <%= link_to tag.name, name_path(tag.name), class: 'btn btn--tag' %>
           </li>
         <% end %>

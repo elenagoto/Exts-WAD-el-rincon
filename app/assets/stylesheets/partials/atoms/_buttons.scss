@@ -106,6 +106,12 @@
   }
 }
 
+.selected {
+  background-color: $white;
+  color: $primary-color;
+  text-decoration: none;
+}
+
 .btn--google {
   background-color: #4285F4;
   border: #4285F4 solid 1px;

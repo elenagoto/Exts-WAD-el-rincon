@@ -24,6 +24,7 @@ class PostsController < ApplicationController
     else
       @posts = Post.all.order(created_at: :desc)
     end
+    @tags = Tag.all.order(:name)
   end
 
   def show

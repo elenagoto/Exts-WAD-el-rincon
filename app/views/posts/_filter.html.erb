@@ -1,0 +1,15 @@
+<div class="filter">
+  <input type="checkbox" class="toggler">
+  <div class="filter__header">
+    <p class="filter__text">Filter by category</p>
+    <div class="arrow">
+    </div>
+  </div>
+  <div class="filter__tags tags">
+    <ul class="tags__list">
+      <% tags.each do |tag| %>
+        <li class="btn btn--tag"><%= tag.name %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
