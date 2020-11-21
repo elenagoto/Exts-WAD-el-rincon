@@ -5,12 +5,12 @@
     <div class="form__text">
       <span><%= t('login.message') %> <%= link_to  t('login.messageLink'), new_user_path %>
     </div>
+    <% flash.each do |name, message| %>
+      <div class="alert alert--wide <%= name %>"> 
+      <%= message %>
+      </div>
+    <% end %>
     <%= form_tag sessions_path, html: { class: 'form' } do %>
-      <% flash.each do |name, message| %>
-        <div class="alert alert--wide <%= name %>"> 
-        <p><%= message %></p> 
-        </div>
-      <% end %>
       <div class="input">
         <div>
           <%= label_tag(:email, t('login.email'), class: 'input__label')  %>

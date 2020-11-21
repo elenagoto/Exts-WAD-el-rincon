@@ -68,6 +68,10 @@ en:
         restrict_dependent_destroy:
           has_one: Cannot delete record because a dependent %{record} exists
           has_many: Cannot delete record because dependent %{record} exist
+  controllers:
+    admin:
+      sessions:
+        error: 'Email or password were invalid.  Please try again'
   date:
     abbr_day_names:
       - Sun
@@ -304,6 +308,7 @@ en:
     empty: "There aren't any posts yet"
     notFound: ''
     commentNew: 'Add'
+    newPost: 'New post'
   search: 'Search'
   login:
     email: 'Email'
@@ -327,3 +332,7 @@ en:
     name: 'Name'
     username: 'Username'
     modify: 'Modify my details'
+  us: "Topping gingerbread soufflé. Cake sugar plum biscuit tootsie roll apple pie wafer chocolate cake. Powder donut ice cream. Chocolate cake ice cream. Pudding wafer candy lemon drops macaroon oat cake danish danish apple pie. Pastry jelly-o chocolate bar topping chocolate bar halvah tiramisu candy marzipan. Jelly beans toffee cotton candy brownie donut carrot cake danish donut. Liquorice sweet cake lemon drops __carrot cake dessert__. Croissant jelly beans pie cotton candy. Liquorice muffin sugar plum biscuit sweet marzipan marzipan liquorice powder. Danish danish marshmallow cake tootsie roll macaroon chocolate bar croissant gummies. Chocolate cake gummies icing gummi bears croissant brownie.
+  <br>
+  <br>
+  Caramels tart liquorice apple pie gummies. Wafer tart liquorice chupa chups lemon drops cookie. Cotton candy soufflé soufflé donut ice cream gingerbread marzipan cake tiramisu. Powder cotton candy chocolate cake bear claw pastry marzipan donut chupa chups cupcake. Liquorice carrot cake biscuit marshmallow lemon drops dessert topping donut chocolate cake. Cotton candy jelly beans toffee jelly beans dragée. **Fruitcake halvah** soufflé gingerbread pastry pastry. Brownie tiramisu gummi bears icing tootsie roll donut gingerbread tiramisu croissant. Biscuit sesame snaps cookie. Gingerbread chocolate bar cheesecake cookie lollipop cake marshmallow. Cookie lemon drops carrot cake lemon drops chocolate cake sweet roll gingerbread sweet roll. Danish sesame snaps sugar plum fruitcake pie pastry lollipop bear claw."

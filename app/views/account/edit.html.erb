@@ -1,61 +1,67 @@
 <div class="content-wrapper">
-  <h1 class="alpha">Modificar mi perfil</h1>
-  <%= form_for @user, html: { class: 'form'} do |f| %>
-    <div class="alert alert--wide">
-      <%= @user.errors.full_messages.join('<br />').html_safe  %>
-    </div>
-    <!-- Name -->
-    <div class="input">
-      <div>
-        <%= f.label :name, "Nombre", class: 'input__label' %>
+  <h1 class="alpha"><%= t('edit.modify') %></h1>
+  <div class="form-container">
+    <%= form_for @user, html: { class: 'form'} do |f| %>
+      <div class="alert alert--wide">
+        <%= @user.errors.full_messages.join('<br />').html_safe  %>
       </div>
-      <div>
-        <%= f.text_field :name, class: 'input__field' %>
-      </div>
-    </div>
-    <!-- Username -->
-    <div class="input">
-      <div>
-        <%= f.label :username, "Usuario", class: 'input__label' %>
-      </div>
-      <div>
-        <%= f.text_field :username, class: 'input__field' %>
-      </div>
-    </div>
-    <!-- Email -->
-    <div class="input">
-      <div>
-        <%= f.label :email, "Correo Electrónico", class: 'input__label' %>
-      </div>
-      <div>
-        <%= f.email_field :email, class: 'input__field' %>
-      </div>
-    </div>
-    <!-- Avatar -->
-    <div class="input">
-      <div>
-        <%= f.label :avatar, "Avatar", class: 'input__label' %>
-      </div>
-      <div>
-        <%= f.file_field :avatar, class: 'input__field' %>
-      </div>
-    </div>
-    <!-- Bio -->
-    <% if current_user.role == 'author'%>
+      <!-- Name -->
       <div class="input">
         <div>
-          <%= f.label :bio, "Biografía", class: 'input__label' %>
+          <%= f.label :name, "Nombre", class: 'input__label' %>
         </div>
-        <div class="input--textarea input--post-text">
-          <%= f.text_area :bio, class: 'input__field'%>
+        <div>
+          <%= f.text_field :name, class: 'input__field' %>
+        </div>
+      </div>
+      <!-- Username -->
+      <div class="input">
+        <div>
+          <%= f.label :username, "Usuario", class: 'input__label' %>
+        </div>
+        <div>
+          <%= f.text_field :username, class: 'input__field' %>
+        </div>
+      </div>
+      <!-- Email -->
+      <div class="input">
+        <div>
+          <%= f.label :email, "Correo Electrónico", class: 'input__label' %>
+        </div>
+        <div>
+          <%= f.email_field :email, class: 'input__field' %>
+        </div>
+      </div>
+      <!-- Avatar -->
+      <div class="input">
+        <div>
+          <%= f.label :avatar, "Avatar", class: 'input__label' %>
+        </div>
+        <div>
+          <%= f.file_field :avatar, class: 'input__field' %>
+        </div>
+      </div>
+      <!-- Bio -->
+      <% if current_user.role == 'author'%>
+        <div class="input">
+          <div>
+            <%= f.label :bio, "Biografía", class: 'input__label' %>
+          </div>
+          <div class="input--textarea input--post-text">
+            <%= f.text_area :bio, class: 'input__field'%>
+          </div>
+        </div>
+      <% end %>
+      <!-- Cancel link -->
+      <div class="form__text">
+        <%= link_to t('edit.cancel'), profile_path %>
+      </div>
+      <!-- Submit -->
+      <div class="form__text input__btn--alone">
+        <div class="prompt">
+          <%= f.submit 'Modificar', class: 'btn btn--cta prompt__confirm' %>
         </div>
       </div>
     <% end %>
-    <!-- Submit -->
-    <div class="form__text input__btn--alone">
-      <div class="prompt">
-        <%= f.submit 'Modificar', class: 'btn btn--cta prompt__confirm' %>
-      </div>
-    </div>
-  <% end %>
+  </div>
 </div>

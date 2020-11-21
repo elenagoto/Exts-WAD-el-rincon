@@ -10,8 +10,8 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to root_path
     else
-      flash[:alert] = 'Email or password were invalid.  Please try again'
-      render 'new'
+      flash[:alert] = t('controllers.admin.sessions.error')
+      redirect_to login_path
     end
   end
 
@@ -24,7 +24,7 @@ class SessionsController < ApplicationController
 
   def destroy
     session.delete(:user_id)
-    redirect_to root_path
+    redirect_to login_path
   end
 
 

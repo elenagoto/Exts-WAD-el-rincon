@@ -41,6 +41,10 @@ fr:
           has_many:
             Vous ne pouvez pas supprimer l'enregistrement parce que les %{record}
             dépendants existent
+  controllers:
+    admin:
+      sessions:
+        error: "Email ou mot de passe incorrects. Essayez de nouveau s'il vous plaît"
   date:
     abbr_day_names:
       - dim
@@ -279,6 +283,7 @@ fr:
     empty: "Aucune publication n'a pas été crée"
     notFound: ''
     commentNew: 'Publier'
+    newPost: 'Nouvelle publication'
   search: 'Recherche'
   login:
     email: 'Adresse e-mail'
@@ -302,3 +307,7 @@ fr:
     name: 'Nom'
     username: "Nom d'utilisateur"
     modify: 'Modifier mes données'
+  us: "Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec ullamcorper nulla non metus auctor fringilla.
+  <br>
+  <br>
+  Etiam porta sem malesuada magna mollis euismod. Nullam quis risus eget urna mollis ornare vel eu leo. Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam id dolor id nibh ultricies vehicula ut id elit. **Nullam quis risus eget urna mollis ornare vel eu leo**. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Curabitur blandit tempus porttitor. Aenean lacinia bibendum nulla sed consectetur."

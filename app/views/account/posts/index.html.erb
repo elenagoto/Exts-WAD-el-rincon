@@ -1,7 +1,7 @@
 <div class="content-wrapper">
   <%= link_to new_post_path, class: 'btn btn--icon btn--alone', role: 'button' do %>
     <i class="fal fa-marker"></i> 
-    Nuevo Artículo
+    <%= t('post.newPost') %>
   <% end %>
   <% if @posts.any? %>
     <ul class="bare-list cards post-long__list">
@@ -17,7 +17,7 @@
                   <%= post.title %>
                 <% end %>
               </div>
-              <div class="post-long__date"><time datetime='<%= post.created_at %>'><%= post.created_at.strftime(" %d/%m/%Y") %></time></div>
+              <div class="post-long__date"><time datetime='<%= post.created_at %>'><%= l(post.created_at, format: :concise) %></time></div>
             </div>
           </div>
           <div class="post-long__btn">

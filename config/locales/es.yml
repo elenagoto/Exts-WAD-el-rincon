@@ -37,6 +37,10 @@ es:
         restrict_dependent_destroy:
           has_one: No se puede eliminar el registro porque existe un %{record} dependiente
           has_many: No se puede eliminar el registro porque existen %{record} dependientes
+  controllers:
+    admin:
+      sessions:
+        error: 'Correo electrónico or contraseña incorrectos.  Por favor intentalo de nuevo'
   date:
     abbr_day_names:
       - dom
@@ -277,6 +281,7 @@ es:
     empty: 'No hay ningún artículo aún'
     notFound: ''
     commentNew: 'Publicar'
+    newPost: 'Nuevo artículo'
   search: 'Buscar'
   login:
     email: 'Correo Electrónico'
@@ -300,3 +305,10 @@ es:
     name: 'Nombre'
     username: 'Nombre de usuario'
     modify: 'Modificar mis datos'
+  us: "Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Sed posuere consectetur est at lobortis. Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus _dolor auctor_. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.
+  <br>
+  <br>
+  Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur est at lobortis.
+  <br>
+  <br>
+  Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Fusce dapibus, tellus ac cursus commodo, **tortor mauris condimentum nibh**, ut fermentum massa justo sit amet risus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas faucibus mollis interdum. Cras mattis consectetur purus sit amet fermentum."
