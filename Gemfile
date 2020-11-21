@@ -70,9 +70,6 @@ gem 'dotenv-rails'
 gem 'omniauth'
 gem 'omniauth-google-oauth2'
 
-# Use AWS to manage uploads
-gem 'carrierwave', '~> 2.0'
-
 # Use Figaro to conect AWS to Heroku
 gem 'figaro'
 gem 'fog-aws'
@@ -81,3 +78,6 @@ gem 'aws-sdk-s3', require: false
 
 # For markdown
 gem 'redcarpet', '~> 3.4'
+
+# For pagination
+gem 'kaminari'

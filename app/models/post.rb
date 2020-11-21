@@ -13,6 +13,9 @@ class Post < ApplicationRecord
   has_many :users, through: :bookmarks
   has_many :comments, dependent: :destroy
 
+  # Pagination
+  paginates_per 9
+
   # Scopes
   scope :most_recent, -> { order(created_at: :desc).limit(6) }
   scope :title_contains, ->(term) { where('lower(title) LIKE ?', "%#{term}%") }
