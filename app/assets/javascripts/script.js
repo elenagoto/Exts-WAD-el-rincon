@@ -7,6 +7,9 @@ let reset;
 let form;
 let postContent;
 
+// ** FUNCTIONS TO EXPAND TEXTAREA INPUTS **
+
+// This function will calculate the expansion and expand the input
 const autoExpand = function (field) {
 
   // Reset field height
@@ -26,6 +29,7 @@ const autoExpand = function (field) {
 
 };
 
+// This function will call the previous function as soon as there is a textarea input passed
 const expandElement = function (element) {
   if (element) {
     autoExpand(element);
@@ -36,7 +40,33 @@ const expandElement = function (element) {
   }
 }
 
-//Event listener
+// ** FUNCTIONS FOR FILTERING SEARCH
+
+const tagList = function(taglist) {
+  tagsArray = [];
+  for (let tag of taglist) {
+    tagsArray.push(tag.innerText.toLowerCase())
+  }
+  return tagsArray;
+}
+
+const filter = function (tag) {
+  const postsList = document.getElementsByClassName('card');
+  // Get list of posts
+  for (let post of postsList) {
+    if (!post.classList.contains('invisible')){
+      postID = post.id
+      postTagsList = tagList(document.querySelectorAll(`#${postID} .btn--tag`));
+      if(postTagsList.indexOf(tag)=== -1) {
+        post.classList.add('invisible')
+      }
+    }
+  }
+}
+
+
+
+//** EVENT LISTENER */
 document.addEventListener("turbolinks:load", (event) => {
   // Make hamburger work
   hamburger = document.getElementById('hamburger');
@@ -81,8 +111,38 @@ document.addEventListener("turbolinks:load", (event) => {
 
   commentBody = document.getElementById('comment_body');
   expandElement(commentBody);
-});
-// window.onload = () => {
-  
 
-// }
+  // Filter posts
+  const tags_list = document.getElementById('tagsList');
+
+  if(tags_list) {
+    // Event listener
+    tags_list.addEventListener('click', function(e) {
+
+    classList = e.target.classList
+
+    // If tag is not selected
+    if(classList.contains('btn--tag') && !classList.contains('selected')) {
+      e.target.classList.add('selected');
+      tag = e.target.innerText.toLowerCase();
+      filter(tag);
+    
+      // If tag is selected
+    } else if (classList.contains('btn--tag') && classList.contains('selected')) {
+      e.target.classList.remove('selected');
+      // make all cards visible
+      cards = document.getElementsByClassName('card');
+      for (let card of cards) {
+        card.classList.remove('invisible');
+      }
+      // get selected tags
+      selectedTags = tagList(document.getElementsByClassName('selected'));
+      // call filter for selected tags
+      for (let tag of selectedTags) {
+        filter(tag);
+      }
+    }
+  })
+  }
+
+});
