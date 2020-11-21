@@ -81,3 +81,6 @@ gem 'redcarpet', '~> 3.4'
 
 # For pagination
 gem 'kaminari'
+
+# For social media sharing
+gem 'social-share-button'

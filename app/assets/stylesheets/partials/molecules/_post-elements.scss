@@ -73,6 +73,7 @@
 
   .post__links {
     display: flex;
+    gap: 1rem;
     align-items: flex-end;
 
     &>li {
@@ -85,12 +86,6 @@
       color: $gray-1;
     }
 
-    a:focus,
-    a:hover,
-    .svg-inline--fa:focus,
-    .svg-inline--fa:hover {
-      color: $primary-color;
-    }
     .favorite-delete:focus,
     .favorite-delete:hover,
     .favorite-delete .svg-inline--fa:focus,
@@ -103,6 +98,17 @@
 
       .btn {
         padding: 0;
+      }
+    }
+
+    .social-share-button {
+      display: flex;
+      gap: 1rem;
+
+      .ssb-icon {
+        height: 2.5rem;
+        width: 2.5rem;
+        background-size: 2.5rem 2.5rem;
       }
     }
   }

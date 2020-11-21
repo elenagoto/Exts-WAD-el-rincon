@@ -49,23 +49,14 @@
             </div>
           </div>
         </div>
-        <ul class="post__links bare-list">
-          <li>
-            <a href="#" aria-label="Share on Twitter">
-              <i class="fab fa-twitter"></i>
-            </a>
-          </li>
-          <li>
-            <a href="#" aria-label="Share on Facebook">
-              <i class="fab fa-facebook-square"></i>
-            </a>
-          </li>
+        <div class="post__links">
+          <%= social_share_button_tag(@post.title) %>
           <% if logged_in? %>
-            <li class="post__form" id="form-post-<%= @post.id %>">
+            <div class="post__form" id="form-post-<%= @post.id %>">
               <%= render partial: 'post_card-form', locals: { post: @post} %>
-            </li>
+            </div>
           <% end %>
-        </ul>
+        </div>
         <!-- Add to reading list form /Remove from list-->
       </div>
 
