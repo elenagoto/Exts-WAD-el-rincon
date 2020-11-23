@@ -27,6 +27,7 @@ fr:
         updated_at: 'Mis à jour le'
         image_url: "URL de l'image"
         spotify_code: 'Code Spotify'
+        tag_ids: 'Étiquettes'
       comment:
         body: 'Contenu'
       tag:

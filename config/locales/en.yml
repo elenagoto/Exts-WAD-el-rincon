@@ -27,6 +27,7 @@ en:
         updated_at: 'Updated at'
         image_url: 'Image URL'
         spotify_code: 'Spotify Code'
+        tag_ids: 'Tags'
       comment:
         body: 'Content'
       tag:
