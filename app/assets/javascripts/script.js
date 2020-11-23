@@ -112,6 +112,7 @@ document.addEventListener("turbolinks:load", (event) => {
   commentBody = document.getElementById('comment_body');
   expandElement(commentBody);
 
+
   // Filter posts
   const tags_list = document.getElementById('tagsList');
 
@@ -145,4 +146,11 @@ document.addEventListener("turbolinks:load", (event) => {
   })
   }
 
+  // Choices.js
+
+  const inputMultiselect = document.querySelector('#post_tag_ids');
+  if(inputMultiselect) {
+    const choices = new Choices(inputMultiselect);
+  }
+  
 });
