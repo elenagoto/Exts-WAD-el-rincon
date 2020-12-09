@@ -15,8 +15,8 @@ class PostsController < ApplicationController
     if params[:name]
       @posts = Post.tagged_with(params[:name]).order(created_at: :desc)
     elsif params[:q]
-      @search_term = params[:q].downcase
-      results = Post.search(@search_term)
+      @search_term = params[:q]
+      results = Post.search(@search_term.downcase)
       @posts = results.sort_by(&:created_at).reverse
     elsif params[:username]
       author = User.find_by(username: params[:username])

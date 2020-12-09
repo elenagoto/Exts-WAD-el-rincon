@@ -8,7 +8,12 @@
       <!-- END Label -->
       <!-- START Search row -->
       <div class="search__row">
-        <%= text_field_tag 'q', nil, class: 'search__field', id: 'global-search', placeholder: t('search') %>
+        <% if @search_term.present? %>
+          <%= text_field_tag 'q', nil, class: 'search__field', id: 'global-search', placeholder: t('search'), value: @search_term %>
+        <% else %>
+          <%= text_field_tag 'q', nil, class: 'search__field', id: 'global-search', placeholder: t('search') %>
+        <% end %>
+        
         <%= submit_tag t('search'), class: "sr-only" %>
           <%= button_tag 'Reset', type: 'reset', class: 'target icon__big', id: 'reset' do %>
         <i class="fal fa-times-circle target"></i>
