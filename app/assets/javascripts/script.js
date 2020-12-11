@@ -131,10 +131,9 @@ document.addEventListener('turbolinks:load', (event) => {
         const selectedTags = tagList(
           document.getElementsByClassName('selected')
         );
+        console.log(selectedTags);
         // call filter for selected tags
-        for (let tag of selectedTags) {
-          filter(tag);
-        }
+        selectedTags.forEach(filter);
       }
     });
   }
