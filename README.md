@@ -2,7 +2,7 @@
 
 This is the Capstone Project for the Web Application Development Program. This project was developed by [Laura Gomez](https://elenagoto.ch/), as a final step to complete the full program of the [**My Digital Future Fellowship**](https://www.mydigitalfuture.ch/), and was defended and approved in December 2020.
 
-The main goal of this project is to put into practice the knowledge I have acquired while completing the 4 courses included in the Program:
+The main goal of this project is to put into practice the knowledge I have acquired while completing the 4 courses included in the WAD program:
 
 1. HTML and CSS
 2. Interactive web pages
