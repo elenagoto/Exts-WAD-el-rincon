@@ -9,8 +9,6 @@ The main goal of this project is to put into practice the knowledge I have acqui
 3. Introduction to Ruby on Rails
 4. Dynamic web applications
 
-The app has been deployed in Heroku to the following URL: [https://rincon-de-la-curuba.herokuapp.com](https://rincon-de-la-curuba.herokuapp.com).
-
 ## The "Rincon de la Curuba" app
 
 "Rincon de la Curuba" was imagined as a blog where the colombian podcasters creators of the "El olor de la Curuba Podcast" would be able to share their written content, as well as the episodes of their podcasts.
